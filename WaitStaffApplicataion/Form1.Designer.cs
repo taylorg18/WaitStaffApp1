@@ -1,6 +1,6 @@
 ﻿namespace WaitStaffApplicataion
 {
-    partial class Form1
+    partial class Sections
     {
         /// <summary>
         /// Required designer variable.
@@ -52,15 +52,15 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Form1
+            // Sections
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Sections";
+            this.Text = "Table Sections";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 

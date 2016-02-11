@@ -10,26 +10,11 @@ using System.Windows.Forms;
 
 namespace WaitStaffApplicataion
 {
-    public partial class Sections : Form
+    public partial class Tables : Form
     {
-        public Sections()
+        public Tables()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
