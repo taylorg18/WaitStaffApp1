@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WaitStaffApplicataion
 {
-    public partial class Tables : Form
+    public partial class ReceiptForm : Form
     {
-        public Tables()
+        public ReceiptForm()
         {
             InitializeComponent();
         }
