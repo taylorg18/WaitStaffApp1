@@ -1,20 +1,20 @@
 ﻿namespace WaitStaffApplicataion
 {
-    internal class FoodMenu
+    class FoodMenu
     {
-        FoodItem[] items;
-        
-        void setMenu()
+        private FoodItem[] items;
+
+        public void setMenu()
         {
 
         }
 
-        FoodItem getMenuItem(int id)
+        public FoodItem getMenuItem(int id)
         {
             return items[id];
         }
 
-        bool getItemAvaliablity(int id)
+        public bool getItemAvaliablity(int id)
         {
             return items[id].getAvaliability();
         }
