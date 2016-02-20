@@ -14,6 +14,7 @@ namespace WaitStaffApplicataion
     {
         Table[,] tables = new Table[5, 3];
         Button[] buttons;
+        TableForm2 hello = new TableForm2();
         public Sections()
         {
             InitializeComponent();
@@ -41,7 +42,7 @@ namespace WaitStaffApplicataion
 
         private void tableClick(object sender, EventArgs e)
         {
-            
+           
         }
     }
 }
