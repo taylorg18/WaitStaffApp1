@@ -64,11 +64,11 @@
       <DependentUpon>ReceiptForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Table.cs" />
-    <Compile Include="TableForm.cs">
+    <Compile Include="TableForm2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TableForm.Designer.cs">
-      <DependentUpon>TableForm.cs</DependentUpon>
+    <Compile Include="TableForm2.Designer.cs">
+      <DependentUpon>TableForm2.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -85,8 +85,8 @@
     <EmbeddedResource Include="ReceiptForm.resx">
       <DependentUpon>ReceiptForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TableForm.resx">
-      <DependentUpon>TableForm.cs</DependentUpon>
+    <EmbeddedResource Include="TableForm2.resx">
+      <DependentUpon>TableForm2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
