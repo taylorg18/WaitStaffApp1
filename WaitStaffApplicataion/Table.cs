@@ -17,14 +17,15 @@ namespace WaitStaffApplicataion
 {
     class Table
     {
-        int iNumPeople,
-            iTableStatus,
-            iFoodStatus;
-        Receipt receipt;
-        String sSpecial;
-        Menu menu;
+        private int iNumPeople,
+                    iTableStatus,
+                    iFoodStatus;
+        private Receipt receipt;
+        private string sSpecial;
+        private FoodMenu menu;
 
-        void updateTableStatus()
+
+        public void updateTableStatus()
         {
             iTableStatus++;
 
@@ -32,28 +33,58 @@ namespace WaitStaffApplicataion
                 iTableStatus = 0;
         }
 
-        void updateFoodStatus(int newStatus)
+        public void updateFoodStatus(int newStatus)
         {
             iFoodStatus = newStatus;
         }
 
+        public void updateMenu()
+        {
+            menu.setMenu();
+        }
+
         //setter methods
 
-        void setNumPeople(int people)
+        public void setNumPeople(int people)
         {
             iNumPeople = people;
         }
 
+        public void setSpecial(string special)
+        {
+            sSpecial = special;
+        }
+
         //getter methods
 
-        int getTableStatus()
+        public int getTableStatus()
         {
             return iTableStatus;
         }
 
-        int getFoodStatus()
+        public int getFoodStatus()
         {
             return iFoodStatus;
+        }
+
+        public string getSpecial()
+        {
+            return sSpecial;
+        }
+
+        public Receipt getReceipt()
+        {
+            return receipt;
+        }
+
+        public int getNumPeople()
+        {
+            return iNumPeople;
+        }
+
+        public FoodMenu getMenu()
+        {
+            return menu;
         }
     }
 }
