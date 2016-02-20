@@ -22,7 +22,7 @@ namespace WaitStaffApplicataion
             iFoodStatus;
         Receipt receipt;
         String sSpecial;
-        Menu menu;
+        FoodMenu menu;
 
         void updateTableStatus()
         {
