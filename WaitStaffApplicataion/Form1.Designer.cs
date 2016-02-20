@@ -113,7 +113,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Lime;
+            this.pictureBox2.BackColor = System.Drawing.Color.Silver;
             this.pictureBox2.Location = new System.Drawing.Point(87, 135);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 24);
@@ -122,7 +122,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Yellow;
+            this.pictureBox1.BackColor = System.Drawing.Color.Silver;
             this.pictureBox1.Location = new System.Drawing.Point(87, 52);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 24);
