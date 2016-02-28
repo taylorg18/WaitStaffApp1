@@ -15,7 +15,7 @@ using System.Windows.Forms;
 */
 namespace WaitStaffApplicataion
 {
-    class Table
+    public class Table
     {
         private int iNumPeople,
                     iTableStatus,

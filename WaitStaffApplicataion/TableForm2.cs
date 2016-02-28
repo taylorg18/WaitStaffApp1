@@ -12,9 +12,18 @@ namespace WaitStaffApplicataion
 {
     public partial class TableForm2 : Form
     {
+        public TableForm2(Table inTable)
+        {
+            InitializeComponent();
+        }
+
         public TableForm2()
         {
             InitializeComponent();
+        }
+        private void TableForm2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
