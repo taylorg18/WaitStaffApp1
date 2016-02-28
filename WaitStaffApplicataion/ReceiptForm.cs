@@ -25,6 +25,7 @@ namespace WaitStaffApplicataion
             rCurrentReceipt = newReceipt;
         }
 
+
         private void ReceiptForm_Load(object sender, EventArgs e)
         {
 
