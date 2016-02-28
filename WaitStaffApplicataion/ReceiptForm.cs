@@ -27,6 +27,7 @@ namespace WaitStaffApplicataion
             ReceiptView.Text = rCurrentReceipt.getDesc();
         }
 
+
         private void ReceiptForm_Load(object sender, EventArgs e)
         {
 
