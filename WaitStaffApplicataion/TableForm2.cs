@@ -40,5 +40,9 @@ namespace WaitStaffApplicataion
         {
 
         }
+        private void TableForm2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

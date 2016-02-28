@@ -12,9 +12,8 @@ namespace WaitStaffApplicataion
 {
     public partial class Sections : Form
     {
-        Table[,] tables = new Table[5, 3];
+        Table[] tables = new Table[15];
         Button[] buttons;
-        TableForm2 hello = new TableForm2();
         public Sections()
         {
             InitializeComponent();
@@ -25,6 +24,10 @@ namespace WaitStaffApplicataion
             {
                 buttons[i].Text = "Table " + (i+1);
                 buttons[i].BackColor = Color.Green;
+            }
+            for(int i = 0; i < tables.Length; i++)
+            {
+                tables[i] = new Table();
             }
         }
 
@@ -42,7 +45,23 @@ namespace WaitStaffApplicataion
 
         private void tableClick(object sender, EventArgs e)
         {
-           
+
+            int indexSelected = -1;
+           for( int i = 0; i < buttons.Length;i++)
+            {
+                if(sender == buttons[i])
+                {
+                    indexSelected = i;
+                }
+            }
+
+           if(indexSelected == -1)
+            {
+                return;
+            }
+
+            TableForm2 tableForm = new TableForm2(tables[indexSelected]);
+            tableForm.Visible = true;
         }
     }
 }

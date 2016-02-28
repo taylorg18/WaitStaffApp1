@@ -1,6 +1,6 @@
 ﻿namespace WaitStaffApplicataion
 {
-    class FoodMenu
+    public class FoodMenu
     {
         private FoodItem[] items;
 

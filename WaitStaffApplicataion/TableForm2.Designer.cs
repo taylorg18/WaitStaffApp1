@@ -102,6 +102,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TableForm2";
             this.Text = "TableForm2";
+            this.Load += new System.EventHandler(this.TableForm2_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

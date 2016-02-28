@@ -1,6 +1,6 @@
 ﻿namespace WaitStaffApplicataion
 {
-    class Receipt
+   public class Receipt
     {
         private string sDesc;
         private FoodItem[] items;
