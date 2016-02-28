@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 /**
 * Name: Table 
@@ -19,18 +20,22 @@ namespace WaitStaffApplicataion
     {
         private int iNumPeople,
                     iTableStatus,
-                    iFoodStatus;
-        private Receipt receipt;
+                    iFoodStatus,
+                    iNumReciepts = -1;
         private string sSpecial;
         private FoodMenu menu;
-
+        private ArrayList receipts = new ArrayList();
 
         public void updateTableStatus()
         {
             iTableStatus++;
 
             if (iTableStatus > 2)
+            {
                 iTableStatus = 0;
+                receipts.Add(new Receipt());
+                iNumReciepts++;
+            }
         }
 
         public void updateFoodStatus(int newStatus)
@@ -74,7 +79,13 @@ namespace WaitStaffApplicataion
 
         public Receipt getReceipt()
         {
-            return receipt;
+            if (iNumReciepts == -1)
+            {
+                receipts.Add(new Receipt());
+                iNumReciepts = 0;
+            }
+
+            return (Receipt) receipts[iNumReciepts];
         }
 
         public int getNumPeople()
