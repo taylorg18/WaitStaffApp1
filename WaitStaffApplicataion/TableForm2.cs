@@ -12,9 +12,33 @@ namespace WaitStaffApplicataion
 {
     public partial class TableForm2 : Form
     {
+        private Table tCurrentTable = null;
+
         public TableForm2()
         {
+        }
+
+        public TableForm2(Table newTable)
+        {
             InitializeComponent();
+            tCurrentTable = newTable;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Receipt rReceipt = tCurrentTable.getReceipt();
+            ReceiptForm frm = new ReceiptForm(rReceipt);
+            frm.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
