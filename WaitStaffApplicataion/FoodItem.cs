@@ -32,5 +32,10 @@
             return fPrice;
         }
 
+        public string getName()
+        {
+            return sName;
+        }
+
     }
 }

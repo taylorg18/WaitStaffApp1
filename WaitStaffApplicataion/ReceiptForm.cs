@@ -23,8 +23,9 @@ namespace WaitStaffApplicataion
         {
             InitializeComponent();
             rCurrentReceipt = newReceipt;
-        }
 
+            ReceiptView.Text = rCurrentReceipt.getDesc();
+        }
 
         private void ReceiptForm_Load(object sender, EventArgs e)
         {
