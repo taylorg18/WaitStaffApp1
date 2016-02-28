@@ -69,7 +69,7 @@
             this.menuButton.TabIndex = 2;
             this.menuButton.Text = "Orders";
             this.menuButton.UseVisualStyleBackColor = true;
-            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
+            this.menuButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // receiptButton
             // 
@@ -80,7 +80,7 @@
             this.receiptButton.TabIndex = 1;
             this.receiptButton.Text = "Receipt";
             this.receiptButton.UseVisualStyleBackColor = true;
-            this.receiptButton.Click += new System.EventHandler(this.receiptButton_Click);
+            this.receiptButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox1
             // 
