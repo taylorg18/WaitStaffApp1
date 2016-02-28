@@ -21,7 +21,7 @@ namespace WaitStaffApplicataion
         private int iNumPeople,
                     iTableStatus,
                     iFoodStatus,
-                    iNumReciepts = -1;
+                    iNumReciepts = 0;
         private string sSpecial;
         private FoodMenu menu;
         private ArrayList receipts = new ArrayList();
