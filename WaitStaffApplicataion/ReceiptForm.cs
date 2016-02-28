@@ -24,6 +24,7 @@ namespace WaitStaffApplicataion
 
         }
 
+
         private void ReceiptForm_Load(object sender, EventArgs e)
         {
 
