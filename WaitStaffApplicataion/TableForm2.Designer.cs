@@ -30,8 +30,8 @@
         {
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.menuButton = new System.Windows.Forms.Button();
+            this.receiptButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -58,9 +58,9 @@
             this.groupBox1.Size = new System.Drawing.Size(311, 617);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Table";
             // 
-            // button1
+            // menuButton
             // 
             this.button1.Location = new System.Drawing.Point(8, 82);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
@@ -71,7 +71,7 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // receiptButton
             // 
             this.button2.Location = new System.Drawing.Point(8, 138);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
@@ -113,8 +113,8 @@
 
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button menuButton;
+        private System.Windows.Forms.Button receiptButton;
         private System.Windows.Forms.TextBox textBox1;
     }
 }
