@@ -49,8 +49,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.menuButton);
+            this.groupBox1.Controls.Add(this.receiptButton);
             this.groupBox1.Location = new System.Drawing.Point(44, 17);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -62,25 +62,25 @@
             // 
             // menuButton
             // 
-            this.button1.Location = new System.Drawing.Point(8, 82);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "addOrder";
-            this.button1.Size = new System.Drawing.Size(293, 48);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Orders";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.menuButton.Location = new System.Drawing.Point(8, 82);
+            this.menuButton.Margin = new System.Windows.Forms.Padding(4);
+            this.menuButton.Name = "addOrder";
+            this.menuButton.Size = new System.Drawing.Size(293, 48);
+            this.menuButton.TabIndex = 2;
+            this.menuButton.Text = "Orders";
+            this.menuButton.UseVisualStyleBackColor = true;
+            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
             // 
             // receiptButton
             // 
-            this.button2.Location = new System.Drawing.Point(8, 138);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "veiwReceipt";
-            this.button2.Size = new System.Drawing.Size(293, 48);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Receipt";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.receiptButton.Location = new System.Drawing.Point(8, 138);
+            this.receiptButton.Margin = new System.Windows.Forms.Padding(4);
+            this.receiptButton.Name = "veiwReceipt";
+            this.receiptButton.Size = new System.Drawing.Size(293, 48);
+            this.receiptButton.TabIndex = 1;
+            this.receiptButton.Text = "Receipt";
+            this.receiptButton.UseVisualStyleBackColor = true;
+            this.receiptButton.Click += new System.EventHandler(this.receiptButton_Click);
             // 
             // textBox1
             // 
