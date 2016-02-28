@@ -7,6 +7,15 @@
         private float fPrice;
         private bool bAvaliability = true;
 
+        //constructor for food items
+        public FoodItem(string name, string special, float price, bool avaliability)
+        {
+            sName = name;
+            sSpecial = special;
+            fPrice = price;
+            bAvaliability = avaliability;
+        }
+
         public void setName(string name)
         {
             sName = name;
