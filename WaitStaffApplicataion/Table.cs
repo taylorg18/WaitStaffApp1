@@ -21,7 +21,7 @@ namespace WaitStaffApplicataion
         private int iNumPeople,
                     iTableStatus,
                     iFoodStatus,
-                    iNumReciepts = 0;
+                    iNumReciepts = -1;
         private string sSpecial;
         private FoodMenu menu;
         private ArrayList receipts = new ArrayList();
@@ -79,6 +79,12 @@ namespace WaitStaffApplicataion
 
         public Receipt getReceipt()
         {
+            if (iNumReciepts == -1)
+            {
+                receipts.Add(new Receipt());
+                iNumReciepts = 0;
+            }
+
             return (Receipt) receipts[iNumReciepts];
         }
 
