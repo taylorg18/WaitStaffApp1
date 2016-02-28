@@ -16,6 +16,7 @@ namespace WaitStaffApplicataion
 
         public TableForm2()
         {
+            InitializeComponent();
         }
 
         public TableForm2(Table newTable)
