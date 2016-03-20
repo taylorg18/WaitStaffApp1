@@ -22,7 +22,7 @@ namespace WaitStaffApplicataion
                     iTableStatus,
                     iFoodStatus,
                     iNumReciepts = -1,
-                    iTableMerged = -1;
+                    iTableMerged = -1; //tableMergedTo
         private string sSpecial;
         private FoodMenu menu;
         private ArrayList receipts = new ArrayList();
