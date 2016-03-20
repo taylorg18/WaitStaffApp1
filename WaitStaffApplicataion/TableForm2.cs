@@ -17,12 +17,15 @@ namespace WaitStaffApplicataion
         public TableForm2()
         {
             InitializeComponent();
+           
         }
 
         public TableForm2(Table newTable)
         {
             InitializeComponent();
             tCurrentTable = newTable;
+            textBox1.Text = "Table Number: " + tCurrentTable.getTableNum() + "\r\n Number of People: " + tCurrentTable.getNumPeople()
+                + " \r\n" + tCurrentTable.getSpecial();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,5 +48,6 @@ namespace WaitStaffApplicataion
         {
             this.DialogResult = DialogResult.OK;
         }
+        
     }
 }

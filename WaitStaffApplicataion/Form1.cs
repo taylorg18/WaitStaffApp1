@@ -30,6 +30,7 @@ namespace WaitStaffApplicataion
             for(int i = 0; i < tables.Length; i++)
             {
                 tables[i] = new Table();
+                tables[i].setTableNum(i+1);
             }
         }
 
@@ -48,7 +49,7 @@ namespace WaitStaffApplicataion
         private void tableClick(object sender, EventArgs e)
         {
 
-            int indexSelected = -1;
+           int indexSelected = -1;
            for( int i = 0; i < buttons.Length;i++)
             {
                 if(sender == buttons[i])
@@ -64,6 +65,56 @@ namespace WaitStaffApplicataion
 
             TableForm2 tableForm = new TableForm2(tables[indexSelected]);
             tableForm.Visible = true;
+        }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            string[] recInput = System.IO.File.ReadAllLines(@"C:\waitData\recwait.txt");
+            Table temp = null;
+            int counter = 0;
+            foreach (string tableInfo in recInput)
+            {
+                Console.WriteLine("\t" + tableInfo);
+                if (tableInfo == "" && temp != null) 
+                {
+                    buttons[temp.getTableNum()-1].BackColor = Color.Red;
+                    buttons[temp.getTableNum() - 1].Text = "" + temp.getNumPeople();
+                    counter = 0;
+                    continue;
+                }
+                if(counter == 0)
+                {
+                    if(tableInfo == "")
+                    {
+                        break;
+                    }
+
+                    temp = tables[Int32.Parse(tableInfo)-1];
+                    temp.updateTableStatus();
+                    
+                }
+                else if(counter == 1)
+                {
+                    temp.setNumPeople(Int32.Parse(tableInfo));
+                }
+                else if(counter == 2)
+                {
+                    temp.setSpecial(tableInfo);
+                }
+                else
+                {
+                    tables[Int32.Parse(tableInfo)-1].setMerged();
+                    tables[Int32.Parse(tableInfo)-1].setTableMerged(temp.getTableNum());
+                    buttons[Int32.Parse(tableInfo)-1].BackColor = Color.DarkGray;
+                }
+                counter++;          
+            }
+            System.IO.File.WriteAllLines(@"C:\waitData\recwait.txt", new string[]{""});
+        }
+
+        private void updateRec_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
