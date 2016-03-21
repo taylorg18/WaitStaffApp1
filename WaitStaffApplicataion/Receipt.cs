@@ -15,7 +15,15 @@
 
         public string printReceipt()
         {
-            return sDesc;
+            string temp = "";
+
+            foreach (FoodItem fi in items)
+            {
+                temp += fi.getName() + " " + fi.getPrice() + "/n";
+            }
+
+            temp += "/n/n/n" + sDesc;
+            return temp;
         }
 
         public void setPaymentType(bool type)

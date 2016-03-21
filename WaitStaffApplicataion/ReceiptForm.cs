@@ -23,6 +23,8 @@ namespace WaitStaffApplicataion
         {
             InitializeComponent();
             rCurrentReceipt = newReceipt;
+
+            ReceiptView.Text = rCurrentReceipt.getDesc();
         }
 
 

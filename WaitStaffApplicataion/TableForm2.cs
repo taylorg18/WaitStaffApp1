@@ -18,6 +18,7 @@ namespace WaitStaffApplicataion
         public TableForm2()
         {
             InitializeComponent();
+           
         }
 
         public TableForm2(Table newTable, Button passedButton)
@@ -46,7 +47,8 @@ namespace WaitStaffApplicataion
         }
         private void TableForm2_Load(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.OK;
+        }
 
         }
     }
-}

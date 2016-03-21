@@ -19,9 +19,11 @@ namespace WaitStaffApplicataion
     public class Table
     {
         private int iNumPeople,
+                    iTableNum,
                     iTableStatus,
                     iFoodStatus,
-                    iNumReciepts = -1;
+                    iNumReciepts = -1,
+                    iTableMerged = -1; //tableMergedTo
         private string sSpecial;
         private FoodMenu menu;
         private ArrayList receipts = new ArrayList();
@@ -36,6 +38,16 @@ namespace WaitStaffApplicataion
                 receipts.Add(new Receipt());
                 iNumReciepts++;
             }
+        }
+
+        public void setTableMerged(int table)
+        {
+            iTableMerged = table;
+        }
+
+        public void setMerged()
+        {
+            iTableStatus = 3;
         }
 
         public void updateFoodStatus(int newStatus)
@@ -55,6 +67,12 @@ namespace WaitStaffApplicataion
             iNumPeople = people;
         }
 
+
+        public void setTableNum(int num)
+        {
+            iTableNum = num;
+        }
+
         public void setSpecial(string special)
         {
             sSpecial = special;
@@ -62,9 +80,19 @@ namespace WaitStaffApplicataion
 
         //getter methods
 
+        public int getTableNum()
+        {
+            return iTableNum;
+        }
+
         public int getTableStatus()
         {
             return iTableStatus;
+        }
+
+        public int getTableMerged()
+        {
+            return iTableMerged;
         }
 
         public int getFoodStatus()
