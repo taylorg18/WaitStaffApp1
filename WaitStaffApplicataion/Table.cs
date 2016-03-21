@@ -32,9 +32,12 @@ namespace WaitStaffApplicataion
         {
             iTableStatus++;
 
-            if (iTableStatus > 2)
+            if (iTableStatus > 1)
             {
                 iTableStatus = 0;
+                iNumPeople = 0;
+                iFoodStatus = 0;
+
                 receipts.Add(new Receipt());
                 iNumReciepts++;
             }
