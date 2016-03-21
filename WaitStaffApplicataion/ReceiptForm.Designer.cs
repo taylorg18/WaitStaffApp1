@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Card = new System.Windows.Forms.Button();
             this.Cash = new System.Windows.Forms.Button();
+            this.FinReciept = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ReceiptView
@@ -79,11 +80,24 @@
             this.Cash.UseVisualStyleBackColor = true;
             this.Cash.Click += new System.EventHandler(this.Cash_Click);
             // 
+            // FinReciept
+            // 
+            this.FinReciept.Location = new System.Drawing.Point(934, 448);
+            this.FinReciept.Name = "FinReciept";
+            this.FinReciept.Size = new System.Drawing.Size(92, 51);
+            this.FinReciept.TabIndex = 5;
+            this.FinReciept.Text = "Finish Receipt";
+            this.FinReciept.UseVisualStyleBackColor = true;
+            this.FinReciept.UseWaitCursor = true;
+            this.FinReciept.Visible = false;
+            this.FinReciept.Click += new System.EventHandler(this.FinReciept_Click);
+            // 
             // ReceiptForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1038, 511);
+            this.Controls.Add(this.FinReciept);
             this.Controls.Add(this.Cash);
             this.Controls.Add(this.Card);
             this.Controls.Add(this.label1);
@@ -104,5 +118,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Card;
         private System.Windows.Forms.Button Cash;
+        private System.Windows.Forms.Button FinReciept;
     }
 }

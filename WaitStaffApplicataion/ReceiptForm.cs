@@ -36,11 +36,22 @@ namespace WaitStaffApplicataion
         private void Card_Click(object sender, EventArgs e)
         {
             ReceiptView.Text += "\n\nTip $" + TipView.Text + "\n\nCard Number ##########\n\n\nPayed with Cash";
+
+            FinReciept.Visible = true;
+            rCurrentReceipt.setPaymentType(true);
         }
 
         private void Cash_Click(object sender, EventArgs e)
         {
             ReceiptView.Text += "\n\nTip $" + TipView.Text + "\n\nPayed with Cash";
+
+            FinReciept.Visible = true;
+            rCurrentReceipt.setPaymentType(false);
+        }
+
+        private void FinReciept_Click(object sender, EventArgs e)
+        {
+            rCurrentReceipt.setDesc(ReceiptView.Text);
         }
     }
 }
