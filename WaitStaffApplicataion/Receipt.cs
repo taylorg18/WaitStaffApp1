@@ -55,5 +55,10 @@
         {
             return sDesc;
         }
+
+        public void setDesc(string newDesc)
+        {
+            sDesc = newDesc;
+        }
     }
 }
