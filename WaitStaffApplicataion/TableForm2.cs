@@ -24,9 +24,18 @@ namespace WaitStaffApplicataion
         {
             InitializeComponent();
             tCurrentTable = newTable;
-            textBox1.Text = "Table Number: " + tCurrentTable.getTableNum() + "\r\n Number of People: " + tCurrentTable.getNumPeople()
-                + " \r\n" + tCurrentTable.getSpecial();
+            if (tCurrentTable.getTableMerged() > 0)
+            {
+                textBox1.Text = "Table Number: " + tCurrentTable.getTableNum() + "\r\n Number of People: " + tCurrentTable.getNumPeople()
+                    + " \r\n" + tCurrentTable.getSpecial() + "Table Merged with: Table " + tCurrentTable.getTableMerged();
+            }
+            else
+            {
+                textBox1.Text = "Table Number: " + tCurrentTable.getTableNum() + "\r\n Number of People: " + tCurrentTable.getNumPeople()
+                    + " \r\n" + tCurrentTable.getSpecial();
+            }
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
