@@ -39,8 +39,8 @@ namespace WaitStaffApplicataion
 
         }
 
-     
-
+ 
+        //comemnt
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -63,7 +63,7 @@ namespace WaitStaffApplicataion
                 return;
             }
 
-            TableForm2 tableForm = new TableForm2(tables[indexSelected]);
+            TableForm2 tableForm = new TableForm2(tables[indexSelected], buttons[indexSelected]);
             tableForm.Visible = true;
         }
 
@@ -114,6 +114,19 @@ namespace WaitStaffApplicataion
 
         private void updateRec_Click(object sender, EventArgs e)
         {
+            System.IO.File.WriteAllText(@"C:\waitData/tablesOpen.txt", "");
+
+            foreach (Table holderTable in tables)
+            {
+                if (holderTable.getFoodStatus() == 0)
+                {
+                    string holderAddedLine = holderTable.getTableNum() + "\r\n";
+                    System.IO.File.AppendAllText(@"C:\waitData/tablesOpen.txt", holderAddedLine);
+                }
+            }
+
+            System.IO.File.AppendAllText(@"C:\waitData/tablesOpen.txt", "\r\n");
+
 
         }
     }
