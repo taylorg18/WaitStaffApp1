@@ -16,13 +16,14 @@
         public string printReceipt()
         {
             string temp = "";
-
-            foreach (FoodItem fi in items)
+            if (items != null && items.Length != 0)
             {
-                temp += fi.getName() + " " + fi.getPrice() + "/n";
+                foreach (FoodItem fi in items)
+                {
+                    temp += fi.getName() + " " + fi.getPrice() + "/n";
+                }
             }
-
-            temp += "/n/n/n" + sDesc;
+                temp += "\r\n\r\n\r\n" + sDesc;
             return temp;
         }
 

@@ -35,7 +35,7 @@ namespace WaitStaffApplicataion
 
         private void Card_Click(object sender, EventArgs e)
         {
-            ReceiptView.Text += "\n\nTip $" + TipView.Text + "\n\nCard Number ##########\n\n\nPayed with Cash";
+            ReceiptView.Text += "\r\n\r\nTip $" + TipView.Text + "\r\n\r\nCard Number ##########\r\n\r\n\r\nPayed with Card";
 
             FinReciept.Visible = true;
             rCurrentReceipt.setPaymentType(true);
@@ -43,7 +43,7 @@ namespace WaitStaffApplicataion
 
         private void Cash_Click(object sender, EventArgs e)
         {
-            ReceiptView.Text += "\n\nTip $" + TipView.Text + "\n\nPayed with Cash";
+            ReceiptView.Text += "\r\n\r\nTip $" + TipView.Text + "\r\n\r\nPayed with Cash";
 
             FinReciept.Visible = true;
             rCurrentReceipt.setPaymentType(false);
