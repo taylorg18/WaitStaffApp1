@@ -38,8 +38,8 @@ namespace WaitStaffApplicataion
 
         }
 
-     
-
+ 
+        //comemnt
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -62,7 +62,7 @@ namespace WaitStaffApplicataion
                 return;
             }
 
-            TableForm2 tableForm = new TableForm2(tables[indexSelected]);
+            TableForm2 tableForm = new TableForm2(tables[indexSelected], buttons[indexSelected]);
             tableForm.Visible = true;
         }
     }

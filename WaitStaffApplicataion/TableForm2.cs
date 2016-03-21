@@ -13,16 +13,19 @@ namespace WaitStaffApplicataion
     public partial class TableForm2 : Form
     {
         private Table tCurrentTable = null;
+        private Button tableButton = null;
 
         public TableForm2()
         {
             InitializeComponent();
         }
 
-        public TableForm2(Table newTable)
+        public TableForm2(Table newTable, Button passedButton)
         {
             InitializeComponent();
             tCurrentTable = newTable;
+            tableButton = passedButton;
+            passedButton.Text = "Hello Grayson " + 5;
         }
 
         private void button1_Click(object sender, EventArgs e)
