@@ -114,18 +114,18 @@ namespace WaitStaffApplicataion
 
         private void updateRec_Click(object sender, EventArgs e)
         {
-            System.IO.File.WriteAllText(@"C:\waitData/tablesOpen.txt", "");
+            System.IO.File.WriteAllText(@"C:\waitData\tablesOpen.txt", "");
 
             foreach (Table holderTable in tables)
             {
-                if (holderTable.getFoodStatus() == 0)
+                if (holderTable.getTableStatus() == 0)
                 {
                     string holderAddedLine = holderTable.getTableNum() + "\r\n";
-                    System.IO.File.AppendAllText(@"C:\waitData/tablesOpen.txt", holderAddedLine);
+                    System.IO.File.AppendAllText(@"C:\waitData\tablesOpen.txt", holderAddedLine);
                 }
             }
 
-            System.IO.File.AppendAllText(@"C:\waitData/tablesOpen.txt", "\r\n");
+            System.IO.File.AppendAllText(@"C:\waitData\tablesOpen.txt", "\r\n");
 
 
         }
