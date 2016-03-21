@@ -20,7 +20,7 @@ namespace WaitStaffApplicataion
            
         }
 
-        public TableForm2(Table newTable)
+        public TableForm2(Table newTable, Button inButton)
         {
             InitializeComponent();
             tCurrentTable = newTable;
