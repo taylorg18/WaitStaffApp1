@@ -37,7 +37,7 @@ namespace WaitStaffApplicataion
                 iTableStatus = 0;
                 iNumPeople = 0;
                 iFoodStatus = 0;
-
+                sSpecial = "";
                 receipts.Add(new Receipt());
                 iNumReciepts++;
             }
