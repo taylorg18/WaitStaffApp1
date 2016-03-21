@@ -33,6 +33,7 @@
             this.menuButton = new System.Windows.Forms.Button();
             this.receiptButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Clean = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +49,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.Clean);
             this.groupBox1.Controls.Add(this.menuButton);
             this.groupBox1.Controls.Add(this.receiptButton);
             this.groupBox1.Location = new System.Drawing.Point(33, 14);
@@ -85,6 +87,16 @@
             this.textBox1.Size = new System.Drawing.Size(313, 231);
             this.textBox1.TabIndex = 3;
             // 
+            // Clean
+            // 
+            this.Clean.Location = new System.Drawing.Point(6, 157);
+            this.Clean.Name = "Clean";
+            this.Clean.Size = new System.Drawing.Size(221, 41);
+            this.Clean.TabIndex = 6;
+            this.Clean.Text = "Clean";
+            this.Clean.UseVisualStyleBackColor = true;
+            this.Clean.Click += new System.EventHandler(this.Clean_Click);
+            // 
             // TableForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,5 +121,6 @@
         private System.Windows.Forms.Button menuButton;
         private System.Windows.Forms.Button receiptButton;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Clean;
     }
 }

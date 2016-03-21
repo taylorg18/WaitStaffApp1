@@ -13,6 +13,7 @@ namespace WaitStaffApplicataion
     public partial class TableForm2 : Form
     {
         private Table tCurrentTable = null;
+        private Button tCurrentButton = null;
 
         public TableForm2()
         {
@@ -22,8 +23,12 @@ namespace WaitStaffApplicataion
 
         public TableForm2(Table newTable, Button inButton)
         {
+
+
             InitializeComponent();
             tCurrentTable = newTable;
+            tCurrentButton = inButton; 
+
             if (tCurrentTable.getTableMerged() > 0)
             {
                 textBox1.Text = "Table Number: " + tCurrentTable.getTableNum() + "\r\n Number of People: " + tCurrentTable.getNumPeople()
@@ -57,6 +62,17 @@ namespace WaitStaffApplicataion
         {
             this.DialogResult = DialogResult.OK;
         }
-        
+
+        private void Clean_Click(object sender, EventArgs e)
+        {
+            tCurrentTable.updateTableStatus();
+            tCurrentTable.setTableMerged(-1);
+            tCurrentButton.BackColor=Color.Green;
+            tCurrentButton.Text = "" + tCurrentTable.getTableNum();
+
+            textBox1.Text = "Table Number: " + tCurrentTable.getTableNum() + "\r\n Number of People: " + tCurrentTable.getNumPeople()
+                   + " \r\n" + tCurrentTable.getSpecial();
+
+        }
     }
 }
