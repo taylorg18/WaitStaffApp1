@@ -44,7 +44,8 @@ namespace WaitStaffApplicataion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            MenuForm MenuForm = new MenuForm();
+            MenuForm.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
