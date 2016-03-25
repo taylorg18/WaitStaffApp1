@@ -68,6 +68,7 @@ namespace WaitStaffApplicataion
             rCurrentReceipt.setDesc(ReceiptView.Text);
             if(eCurrentEmployee != null)
                 eCurrentEmployee.updateTips(rCurrentReceipt.getTip());
+            Close();
         }
     }
 }
