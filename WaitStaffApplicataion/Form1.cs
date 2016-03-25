@@ -170,6 +170,8 @@ namespace WaitStaffApplicataion
                 string empLine = dayOweek + "," + emp.getName() + "," + emp.getTips() + "\r\n";
                 System.IO.File.AppendAllText(@"C:\waitData\waitMan.txt", empLine);
             }
+
+            
         }
     }
 }
