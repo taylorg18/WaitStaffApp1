@@ -84,7 +84,7 @@ namespace WaitStaffApplicataion
                 }
                 if(counter == 0)
                 {
-                    if(tableInfo == "")
+                    if(tableInfo == "" || Int32.Parse(tableInfo) > 15)
                     {
                         break;
                     }
