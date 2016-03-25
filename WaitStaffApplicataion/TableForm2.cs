@@ -57,7 +57,7 @@ namespace WaitStaffApplicataion
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            Close();
         }
         private void TableForm2_Load(object sender, EventArgs e)
         {

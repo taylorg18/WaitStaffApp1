@@ -79,6 +79,7 @@ namespace WaitStaffApplicataion
         private TextBox textBox46;
         private TextBox textBox47;
         private TextBox textBox48;
+        private Button OrderPlace;
         private MenuForm tCurrentTable = null;
 
         public MenuForm()
@@ -169,6 +170,7 @@ namespace WaitStaffApplicataion
             this.textBox46 = new System.Windows.Forms.TextBox();
             this.textBox47 = new System.Windows.Forms.TextBox();
             this.textBox48 = new System.Windows.Forms.TextBox();
+            this.OrderPlace = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -694,6 +696,7 @@ namespace WaitStaffApplicataion
             this.button1.TabIndex = 68;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // textBox43
             // 
@@ -750,9 +753,20 @@ namespace WaitStaffApplicataion
             this.textBox48.Text = "Price";
             this.textBox48.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // OrderPlace
+            // 
+            this.OrderPlace.Location = new System.Drawing.Point(639, 459);
+            this.OrderPlace.Name = "OrderPlace";
+            this.OrderPlace.Size = new System.Drawing.Size(110, 23);
+            this.OrderPlace.TabIndex = 75;
+            this.OrderPlace.Text = "Place Order";
+            this.OrderPlace.UseVisualStyleBackColor = true;
+            this.OrderPlace.Click += new System.EventHandler(this.OrderPlace_Click);
+            // 
             // MenuForm
             // 
             this.ClientSize = new System.Drawing.Size(873, 510);
+            this.Controls.Add(this.OrderPlace);
             this.Controls.Add(this.textBox48);
             this.Controls.Add(this.textBox47);
             this.Controls.Add(this.textBox46);
@@ -867,6 +881,16 @@ namespace WaitStaffApplicataion
         private void textBox43_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void OrderPlace_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
