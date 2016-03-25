@@ -41,23 +41,23 @@ namespace WaitStaffApplicataion
                 tables[i] = new Table();
                 tables[i].setTableNum(i + 1);
                 
-                if(i < 2)
+                if(i < 3)
                 {
                     tables[i].setEmployee(staff[0]);
                 }
-                else if( i < 5 )
+                else if( i < 6 )
                 {
                     tables[i].setEmployee(staff[1]);
                 }
-                else if( i < 8)
+                else if( i < 9)
                 {
                     tables[i].setEmployee(staff[2]);
                 }
-                else if( i < 11)
+                else if( i < 12)
                 {
                     tables[i].setEmployee(staff[3]);
                 }
-                else if( i < 14)
+                else if( i < 15)
                 {
                     tables[i].setEmployee(staff[4]);
                 }
