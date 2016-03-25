@@ -55,6 +55,12 @@ namespace WaitStaffApplicataion
 
             FinReciept.Visible = true;
             rCurrentReceipt.setPaymentType(false);
+
+            if (Double.TryParse(TipView.Text, out rCurrentReceipt.fTip)) { }
+            else
+            {
+                TipView.Text = "Please Enter A Number";
+            }
         }
 
         private void FinReciept_Click(object sender, EventArgs e)
