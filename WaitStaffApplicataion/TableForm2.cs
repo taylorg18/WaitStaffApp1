@@ -44,13 +44,14 @@ namespace WaitStaffApplicataion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            MenuForm MenuForm = new MenuForm();
+            MenuForm.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Receipt rReceipt = tCurrentTable.getReceipt();
-            ReceiptForm frm = new ReceiptForm(rReceipt);
+            ReceiptForm frm = new ReceiptForm(rReceipt, tCurrentTable.getEmployee());
             frm.Show();
         }
 

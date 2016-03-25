@@ -29,7 +29,7 @@ namespace WaitStaffApplicataion
 
             // Read the file and display it line by line.
             System.IO.StreamReader file =
-               new System.IO.StreamReader("c:\\menu.txt");
+               new System.IO.StreamReader("c:/waitData/menu.txt");
 
             //reading the file for every line
             /*
