@@ -14,6 +14,7 @@ namespace WaitStaffApplicataion
     {
         Table[] tables = new Table[15];
         Button[] buttons;
+        Employee[] staff = new Employee[5];
         public Sections()
         {
             InitializeComponent();
@@ -84,7 +85,7 @@ namespace WaitStaffApplicataion
                 }
                 if(counter == 0)
                 {
-                    if(tableInfo == "" || Int32.Parse(tableInfo) > 15)
+                    if(tableInfo == "" || Int32.Parse(tableInfo) > 15) 
                     {
                         break;
                     }
