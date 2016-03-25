@@ -64,6 +64,12 @@ namespace WaitStaffApplicataion
             menu.setMenu();
         }
 
+        public void addNewReciept()
+        {
+            iNumReciepts++;
+            receipts.Add(new Receipt());
+        }
+
         //setter methods
 
         public void setNumPeople(int people)

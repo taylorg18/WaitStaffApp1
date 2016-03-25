@@ -71,6 +71,8 @@ namespace WaitStaffApplicataion
             tCurrentButton.BackColor=Color.Green;
             tCurrentButton.Text = "Table " + tCurrentTable.getTableNum();
 
+            tCurrentTable.addNewReciept();
+
             textBox1.Text = "Table Number: " + tCurrentTable.getTableNum() + "\r\n Number of People: " + tCurrentTable.getNumPeople()
                    + " \r\n" + tCurrentTable.getSpecial();
 
