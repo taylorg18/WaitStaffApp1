@@ -122,6 +122,7 @@ namespace WaitStaffApplicataion
                 {
                     string holderAddedLine = holderTable.getTableNum() + "\r\n";
                     System.IO.File.AppendAllText(@"C:\waitData\tablesOpen.txt", holderAddedLine);
+                    
                 }
             }
 
