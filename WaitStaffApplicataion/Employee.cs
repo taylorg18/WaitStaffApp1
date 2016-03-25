@@ -8,8 +8,8 @@ namespace WaitStaffApplicataion
 {
     public class Employee
     {
-        String sEmployee;
-        double dTips;
+        private String sEmployee;
+        private double dTips;
 
         public Employee(String name)
         {
@@ -17,9 +17,19 @@ namespace WaitStaffApplicataion
             dTips = 0;
         }
 
-        public void updateTips(double addTip )
+        public void updateTips(double addTip)
         {
             dTips += addTip;
+        }
+
+        public string getName()
+        {
+            return sEmployee;
+        }
+
+        public double getTips()
+        {
+            return dTips;
         }
     }
 }

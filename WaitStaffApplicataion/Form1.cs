@@ -28,10 +28,39 @@ namespace WaitStaffApplicataion
                 buttons[i].BackColor = Color.Green;
             }
 
-            for(int i = 0; i < tables.Length; i++)
+          
+            
+            for(int i = 0; i < staff.Length; i++)
+            {
+                staff[i] = new Employee("Employee " + (i + 1));
+            }
+
+
+            for (int i = 0; i < tables.Length; i++)
             {
                 tables[i] = new Table();
-                tables[i].setTableNum(i+1);
+                tables[i].setTableNum(i + 1);
+                
+                if(i < 2)
+                {
+                    tables[i].setEmployee(staff[0]);
+                }
+                else if( i < 5 )
+                {
+                    tables[i].setEmployee(staff[1]);
+                }
+                else if( i < 8)
+                {
+                    tables[i].setEmployee(staff[2]);
+                }
+                else if( i < 11)
+                {
+                    tables[i].setEmployee(staff[3]);
+                }
+                else if( i < 14)
+                {
+                    tables[i].setEmployee(staff[4]);
+                }
             }
         }
 
@@ -129,6 +158,18 @@ namespace WaitStaffApplicataion
             System.IO.File.AppendAllText(@"C:\waitData\tablesOpen.txt", "\r\n");
 
 
+        }
+
+        private void updateMan_Click(object sender, EventArgs e)
+        {
+            System.IO.File.WriteAllText(@"C:\waitData\waitMan.txt", "");
+            string dayOweek = DateTime.Now.DayOfWeek.ToString();
+            dayOweek = dayOweek.ToUpper().Substring(0,3);
+            foreach( Employee emp in staff)
+            {
+                string empLine = dayOweek + "," + emp.getName() + "," + emp.getTips() + "\r\n";
+                System.IO.File.AppendAllText(@"C:\waitData\waitMan.txt", empLine);
+            }
         }
     }
 }

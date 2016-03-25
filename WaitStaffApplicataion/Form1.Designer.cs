@@ -65,6 +65,7 @@
             this.tableButton13 = new System.Windows.Forms.Button();
             this.refreshButton = new System.Windows.Forms.Button();
             this.updateRec = new System.Windows.Forms.Button();
+            this.updateMan = new System.Windows.Forms.Button();
             this.Section1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -453,29 +454,40 @@
             // 
             // refreshButton
             // 
-            this.refreshButton.Location = new System.Drawing.Point(926, 45);
+            this.refreshButton.Location = new System.Drawing.Point(885, 45);
             this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(75, 23);
+            this.refreshButton.Size = new System.Drawing.Size(116, 23);
             this.refreshButton.TabIndex = 4;
-            this.refreshButton.Text = "Refresh";
+            this.refreshButton.Text = "Refresh Tables";
             this.refreshButton.UseVisualStyleBackColor = true;
             this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // updateRec
             // 
-            this.updateRec.Location = new System.Drawing.Point(926, 74);
+            this.updateRec.Location = new System.Drawing.Point(885, 74);
             this.updateRec.Name = "updateRec";
-            this.updateRec.Size = new System.Drawing.Size(75, 23);
+            this.updateRec.Size = new System.Drawing.Size(116, 23);
             this.updateRec.TabIndex = 5;
             this.updateRec.Text = "Send Update";
             this.updateRec.UseVisualStyleBackColor = true;
             this.updateRec.Click += new System.EventHandler(this.updateRec_Click);
+            // 
+            // updateMan
+            // 
+            this.updateMan.Location = new System.Drawing.Point(885, 103);
+            this.updateMan.Name = "updateMan";
+            this.updateMan.Size = new System.Drawing.Size(116, 23);
+            this.updateMan.TabIndex = 6;
+            this.updateMan.Text = "Update Management";
+            this.updateMan.UseVisualStyleBackColor = true;
+            this.updateMan.Click += new System.EventHandler(this.updateMan_Click);
             // 
             // Sections
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1013, 540);
+            this.Controls.Add(this.updateMan);
             this.Controls.Add(this.updateRec);
             this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.groupBox4);
@@ -549,6 +561,7 @@
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Button refreshButton;
         private System.Windows.Forms.Button updateRec;
+        private System.Windows.Forms.Button updateMan;
     }
 }
 
