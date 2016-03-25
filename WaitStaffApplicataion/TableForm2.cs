@@ -51,7 +51,7 @@ namespace WaitStaffApplicataion
         private void button2_Click(object sender, EventArgs e)
         {
             Receipt rReceipt = tCurrentTable.getReceipt();
-            ReceiptForm frm = new ReceiptForm(rReceipt);
+            ReceiptForm frm = new ReceiptForm(rReceipt, tCurrentTable.getEmployee());
             frm.Show();
         }
 

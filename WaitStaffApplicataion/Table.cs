@@ -77,6 +77,11 @@ namespace WaitStaffApplicataion
             iTableNum = num;
         }
 
+        public Employee getEmployee()
+        {
+            return employee;
+        }
+
         public void setSpecial(string special)
         {
             sSpecial = special;
