@@ -706,6 +706,7 @@ namespace WaitStaffApplicataion
             this.button1.TabIndex = 68;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // textBox43
             // 
@@ -905,7 +906,7 @@ namespace WaitStaffApplicataion
             for (int i = 0; i < menuValues.Length; i++)
             {
                 if ( menuValues[i] != 0 && menuValues[i] >0)
-                {
+        {
 
                     {
                         //gonna decide how to get the names in there later when I do the importing of menuItems from the txt file
@@ -924,6 +925,11 @@ namespace WaitStaffApplicataion
             //System.IO.File.AppendAllText(@"C:\waitData\MenuItemOrdered.txt", "\r\n");
 
             //System.IO.File.WriteAllLines(@"C:\waitData\MenuItemOrdered.txt", new string[] { "" });
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

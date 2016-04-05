@@ -51,13 +51,13 @@ namespace WaitStaffApplicataion
         private void button2_Click(object sender, EventArgs e)
         {
             Receipt rReceipt = tCurrentTable.getReceipt();
-            ReceiptForm frm = new ReceiptForm(rReceipt);
+            ReceiptForm frm = new ReceiptForm(rReceipt, tCurrentTable.getEmployee());
             frm.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            Close();
         }
         private void TableForm2_Load(object sender, EventArgs e)
         {
@@ -70,6 +70,8 @@ namespace WaitStaffApplicataion
             tCurrentTable.setTableMerged(-1);
             tCurrentButton.BackColor=Color.Green;
             tCurrentButton.Text = "Table " + tCurrentTable.getTableNum();
+
+            tCurrentTable.addNewReciept();
 
             textBox1.Text = "Table Number: " + tCurrentTable.getTableNum() + "\r\n Number of People: " + tCurrentTable.getNumPeople()
                    + " \r\n" + tCurrentTable.getSpecial();

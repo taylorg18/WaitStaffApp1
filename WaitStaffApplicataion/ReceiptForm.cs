@@ -13,16 +13,18 @@ namespace WaitStaffApplicataion
 {
     public partial class ReceiptForm : Form
     {
-        private Receipt rCurrentReceipt = null;
+        private Receipt     rCurrentReceipt  = null;
+        private Employee    eCurrentEmployee = null;
 
         public ReceiptForm()
         {
             InitializeComponent();
         }
-        public ReceiptForm(Receipt newReceipt)
+        public ReceiptForm(Receipt newReceipt, Employee newEmployee)
         {
             InitializeComponent();
             rCurrentReceipt = newReceipt;
+            eCurrentEmployee = newEmployee;
 
             ReceiptView.Text = rCurrentReceipt.printReceipt();
         }
@@ -39,6 +41,12 @@ namespace WaitStaffApplicataion
 
             FinReciept.Visible = true;
             rCurrentReceipt.setPaymentType(true);
+
+            if (Double.TryParse(TipView.Text, out rCurrentReceipt.fTip)) { }
+            else
+            {
+                TipView.Text = "Please Enter A Number";
+            }
         }
 
         private void Cash_Click(object sender, EventArgs e)
@@ -47,11 +55,20 @@ namespace WaitStaffApplicataion
 
             FinReciept.Visible = true;
             rCurrentReceipt.setPaymentType(false);
+
+            if (Double.TryParse(TipView.Text, out rCurrentReceipt.fTip)) { }
+            else
+            {
+                TipView.Text = "Please Enter A Number";
+            }
         }
 
         private void FinReciept_Click(object sender, EventArgs e)
         {
             rCurrentReceipt.setDesc(ReceiptView.Text);
+            if(eCurrentEmployee != null)
+                eCurrentEmployee.updateTips(rCurrentReceipt.getTip());
+            Close();
         }
     }
 }

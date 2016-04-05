@@ -27,6 +27,7 @@ namespace WaitStaffApplicataion
         private string sSpecial;
         private FoodMenu menu;
         private ArrayList receipts = new ArrayList();
+        private Employee employee;
 
         public void updateTableStatus()
         {
@@ -63,6 +64,12 @@ namespace WaitStaffApplicataion
             menu.setMenu();
         }
 
+        public void addNewReciept()
+        {
+            iNumReciepts++;
+            receipts.Add(new Receipt());
+        }
+
         //setter methods
 
         public void setNumPeople(int people)
@@ -70,11 +77,16 @@ namespace WaitStaffApplicataion
             iNumPeople = people;
         }
 
+        public void setEmployee(Employee newEmployee)
+        {
+            employee = newEmployee;
+        }
 
         public void setTableNum(int num)
         {
             iTableNum = num;
         }
+
 
         public void setSpecial(string special)
         {
@@ -91,6 +103,11 @@ namespace WaitStaffApplicataion
         public int getTableStatus()
         {
             return iTableStatus;
+        }
+
+        public Employee getEmployee()
+        {
+            return employee;
         }
 
         public int getTableMerged()

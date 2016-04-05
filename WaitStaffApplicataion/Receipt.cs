@@ -5,8 +5,8 @@
         private string sDesc;
         private FoodItem[] items;
         private bool bPaymentType = false;
-        private float fTip,
-                      fBill;
+        public double fTip;
+        private float fBill;
 
         public void addItem(FoodItem newItem)
         {
@@ -42,7 +42,7 @@
             return fBill;
         }
 
-        public float getTip()
+        public double getTip()
         {
             return fTip;
         }
