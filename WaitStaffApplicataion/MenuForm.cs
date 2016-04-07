@@ -95,7 +95,7 @@ namespace WaitStaffApplicataion
             for (int i = 0; i < menuValues.Length; i++)
             {
                 menuValues[i] = 0;
-            }
+        }
         }
 
       
@@ -908,7 +908,7 @@ namespace WaitStaffApplicataion
                 if ( menuValues[i] != 0 && menuValues[i] >0)
         {
 
-                    {
+        {
                         //gonna decide how to get the names in there later when I do the importing of menuItems from the txt file
                         string Orders = "chickenFingers," + menuValues[i] + "\r\n";
                         System.IO.File.AppendAllText(@"C:\waitData\MenuItemOrdered.txt", Orders);
