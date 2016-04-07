@@ -79,13 +79,23 @@ namespace WaitStaffApplicataion
         private TextBox textBox46;
         private TextBox textBox47;
         private TextBox textBox48;
-        private Button OrderPlace;
+        private Button button2;
         private MenuForm tCurrentTable = null;
+        //===================================================
+        int[] menuValues = new int[15];
+
+
 
         public MenuForm()
         {
             InitializeComponent();
 
+
+            //Changes all the values of the int array to 0. Used for storing the amount of orders for each item
+            for (int i = 0; i < menuValues.Length; i++)
+            {
+                menuValues[i] = 0;
+        }
         }
 
       
@@ -170,7 +180,7 @@ namespace WaitStaffApplicataion
             this.textBox46 = new System.Windows.Forms.TextBox();
             this.textBox47 = new System.Windows.Forms.TextBox();
             this.textBox48 = new System.Windows.Forms.TextBox();
-            this.OrderPlace = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -753,20 +763,20 @@ namespace WaitStaffApplicataion
             this.textBox48.Text = "Price";
             this.textBox48.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // OrderPlace
+            // button2
             // 
-            this.OrderPlace.Location = new System.Drawing.Point(639, 459);
-            this.OrderPlace.Name = "OrderPlace";
-            this.OrderPlace.Size = new System.Drawing.Size(110, 23);
-            this.OrderPlace.TabIndex = 75;
-            this.OrderPlace.Text = "Place Order";
-            this.OrderPlace.UseVisualStyleBackColor = true;
-            this.OrderPlace.Click += new System.EventHandler(this.OrderPlace_Click);
+            this.button2.Location = new System.Drawing.Point(755, 426);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 75;
+            this.button2.Text = "Send Order";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // MenuForm
             // 
             this.ClientSize = new System.Drawing.Size(873, 510);
-            this.Controls.Add(this.OrderPlace);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox48);
             this.Controls.Add(this.textBox47);
             this.Controls.Add(this.textBox46);
@@ -856,6 +866,9 @@ namespace WaitStaffApplicataion
             this.ResumeLayout(false);
             this.PerformLayout();
 
+            //==============================================================================
+          
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -873,9 +886,10 @@ namespace WaitStaffApplicataion
 
         }
 
+        //First up/down
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-
+            menuValues[0] = (int)numericUpDown1.Value;
         }
 
         private void textBox43_TextChanged(object sender, EventArgs e)
@@ -883,9 +897,34 @@ namespace WaitStaffApplicataion
 
         }
 
-        private void OrderPlace_Click(object sender, EventArgs e)
+        //send order button
+        private void button2_Click(object sender, EventArgs e)
         {
-            Close();
+
+            System.IO.File.WriteAllText(@"C:\waitData\MenuItemOrdered.txt", "");
+
+            for (int i = 0; i < menuValues.Length; i++)
+            {
+                if ( menuValues[i] != 0 && menuValues[i] >0)
+        {
+
+        {
+                        //gonna decide how to get the names in there later when I do the importing of menuItems from the txt file
+                        string Orders = "chickenFingers," + menuValues[i] + "\r\n";
+                        System.IO.File.AppendAllText(@"C:\waitData\MenuItemOrdered.txt", Orders);
+                    }
+
+                }
+            }
+
+            
+        
+             
+            
+
+            //System.IO.File.AppendAllText(@"C:\waitData\MenuItemOrdered.txt", "\r\n");
+
+            //System.IO.File.WriteAllLines(@"C:\waitData\MenuItemOrdered.txt", new string[] { "" });
         }
 
         private void button1_Click_1(object sender, EventArgs e)
