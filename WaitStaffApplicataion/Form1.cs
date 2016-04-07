@@ -21,7 +21,7 @@ namespace WaitStaffApplicataion
     public partial class Sections : Form
     {
         
-        Table[] tables = new Table[15]; //an array representing the table objects for the restaurant 
+        Table[] tables = new Table[16]; //an array representing the table objects for the restaurant 
         Button[] buttons; //the buttons for the tables on the form
         Employee[] staff = new Employee[5]; //an array representing the Waitstaff of the restaurant
 
@@ -123,7 +123,9 @@ namespace WaitStaffApplicataion
         */
         private void refreshButton_Click(object sender, EventArgs e)
         {
-            string[] recInput = System.IO.File.ReadAllLines(@"C:\waitData\recwait.txt");
+            string userName = Environment.UserName;
+            Console.WriteLine(userName);
+            string[] recInput = System.IO.File.ReadAllLines(@"C:\Users\" + userName + @"\Dropbox\CS 341\Waitstaff\recWait.txt");
             Table temp = null;
             int counter = 0;
             //parses the file from reception
@@ -131,6 +133,7 @@ namespace WaitStaffApplicataion
             {
                 Console.WriteLine("\t" + tableInfo);
                 //goes through and gets the required information from each line
+               
                 if (tableInfo == "" && temp != null) 
                 {
                     buttons[temp.getTableNum()-1].BackColor = Color.Red;
@@ -140,14 +143,25 @@ namespace WaitStaffApplicataion
                 }
                 if(counter == 0)
                 {
-                    if(tableInfo == "" || Int32.Parse(tableInfo) > 15) 
+                    if(tableInfo == "" || Int32.Parse(tableInfo) > 17) 
                     {
                         break;
                     }
 
-                    temp = tables[Int32.Parse(tableInfo)-1];
+                    if(Int32.Parse(tableInfo) == 17)
+                    {
+                        temp = tables[15];
+                    }
+                    else
+                    {
+                        temp = tables[Int32.Parse(tableInfo) - 1];
+                    }
                     temp.updateTableStatus();
                     
+                }
+                else if(temp == tables[15])
+                {
+
                 }
                 else if(counter == 1)
                 {
@@ -165,7 +179,7 @@ namespace WaitStaffApplicataion
                 }
                 counter++;          
             }
-            System.IO.File.WriteAllLines(@"C:\waitData\recwait.txt", new string[]{""});
+            System.IO.File.WriteAllLines((@"C:\Users\" + userName + @"\Dropbox\CS 341\Waitstaff\recWait.txt"), new string[]{""});
         }
 
         /*
@@ -196,17 +210,24 @@ namespace WaitStaffApplicataion
         */
         private void updateMan_Click(object sender, EventArgs e)
         {
-            System.IO.File.WriteAllText(@"C:\waitData\waitMan.txt", "");
+            string userName = Environment.UserName;
+            System.IO.File.WriteAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Management\waitMan.txt"), "");
             string dayOweek = DateTime.Now.DayOfWeek.ToString();
             dayOweek = dayOweek.ToUpper().Substring(0,3);
-            //send info about the employee
+
+            Double totalTips = 0;
+            //
             foreach( Employee emp in staff)
             {
-                string empLine = dayOweek + "," + emp.getName() + "," + emp.getTips() + "\r\n";
-                System.IO.File.AppendAllText(@"C:\waitData\waitMan.txt", empLine);
+                totalTips += emp.getTips();
             }
 
-            
+
+            string empLine = dayOweek + "," + "," + "totaltips" + "\r\n";
+            System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Management\waitMan.txt"), empLine);
+
+
+
         }
     }
 }
