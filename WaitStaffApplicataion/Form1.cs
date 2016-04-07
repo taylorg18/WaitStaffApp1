@@ -187,7 +187,8 @@ namespace WaitStaffApplicataion
         */
         private void updateRec_Click(object sender, EventArgs e)
         {
-            System.IO.File.WriteAllText(@"C:\waitData\tablesOpen.txt", "");
+            string userName = Environment.UserName;
+            System.IO.File.WriteAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Reception\waitRec.txt"), "");
 
             //if a table is open put in file
             foreach (Table holderTable in tables)
@@ -195,23 +196,23 @@ namespace WaitStaffApplicataion
                 if (holderTable.getTableStatus() == 0)
                 {
                     string holderAddedLine = holderTable.getTableNum() + "\r\n";
-                    System.IO.File.AppendAllText(@"C:\waitData\tablesOpen.txt", holderAddedLine);
+                    System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Reception\waitRec.txt"), holderAddedLine);
                 }
             }
 
-            System.IO.File.AppendAllText(@"C:\waitData\tablesOpen.txt", "\r\n");
+            System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Reception\waitRec.txt"), "\r\n");
 
 
         }
 
         /*
             Sends our outputs to Management.
-            This will include staff information and order information.
+            This will include order information and tips.
         */
         private void updateMan_Click(object sender, EventArgs e)
         {
             string userName = Environment.UserName;
-            System.IO.File.WriteAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Management\waitMan.txt"), "");
+            //System.IO.File.WriteAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Management\waitMan.txt"), "");
             string dayOweek = DateTime.Now.DayOfWeek.ToString();
             dayOweek = dayOweek.ToUpper().Substring(0,3);
 
@@ -224,7 +225,7 @@ namespace WaitStaffApplicataion
 
 
             string empLine = dayOweek + "," + "," + "totaltips" + "\r\n";
-            System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Management\waitMan.txt"), empLine);
+           // System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Management\waitMan.txt"), empLine);
 
 
 
