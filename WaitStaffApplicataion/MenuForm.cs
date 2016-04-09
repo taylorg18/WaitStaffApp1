@@ -114,11 +114,11 @@ namespace WaitStaffApplicataion
             InitializeComponent();
 
             //array of food prices
-            TextBox[] FoodPrices = new TextBox[18]{priceAppetizer1, priceAppetizer2, priceAppetizer3,priceSoupSalad1, priceSoupSalad2, priceSoupSalad3,
+            this.FoodPrices = new TextBox[18]{priceAppetizer1, priceAppetizer2, priceAppetizer3,priceSoupSalad1, priceSoupSalad2, priceSoupSalad3,
             priceEntree1, priceEntree2, priceEntree3, priceDesserts1, priceDesserts2, priceDesserts3,  priceDrinkKid1, priceDrinkKid2, priceDrinkKid3,
             priceDrinkAdult1, priceDrinkAdult2, priceDrinkAdult3 };
 
-            tbFoodNames = new TextBox[18] {appetizer1, appetizer2, appetizer3, soupSalad1,soupSalad2, soupSalad3,
+            this.tbFoodNames = new TextBox[18] {appetizer1, appetizer2, appetizer3, soupSalad1,soupSalad2, soupSalad3,
                                             entree1,entree2,entree3,desserts1,desserts2,dessert3,
                                             drinkKid1, drinkKid2, drinkKid3, drinkAdult1, drinkAdult2,drinkAdult3 };
 
