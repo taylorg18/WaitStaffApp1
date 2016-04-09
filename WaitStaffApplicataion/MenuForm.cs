@@ -110,8 +110,9 @@ namespace WaitStaffApplicataion
 
         private NumericUpDown[] nudSelectors = new NumericUpDown[18];
 
+        private Receipt usingReceipt = null;
 
-        public MenuForm()
+        public MenuForm(Receipt curReceipt)
         {
             InitializeComponent();
 
@@ -128,6 +129,7 @@ namespace WaitStaffApplicataion
                 selectSoupSalad3, selectEntree1, selectEntree2, selectEntree3, selectDesserts1, selectDesserts2, selectDesserts3, selectDrinkKid1,
                 selectDrinkKid2, selectDrinkKid3, selectDrinkAdult1, selectDrinkAdult2, selectDrinkAdult3 };
 
+            usingReceipt = curReceipt;
             /*For initializing the prices later
             for (int i= 0; i< FoodPrices.Length; i++){
 
@@ -1214,6 +1216,11 @@ namespace WaitStaffApplicataion
                     //gonna decide how to get the names in there later when I do the importing of menuItems from the txt file
                     string Orders = tbFoodNames[i].Text + " " + nudSelectors[i].Value + "\r\n";
                     System.IO.File.AppendAllText(@"C:\waitData\MenuItemOrdered.txt", Orders);
+
+                    for(int j=0; i< nudSelectors[i].Value; j++)
+                    {
+                        //TODO: add items to receipt and adjust items sold
+                    }
                 }
             }
 
