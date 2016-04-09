@@ -12,12 +12,12 @@ namespace WaitStaffApplicataion
 {
     public partial class MenuForm : Form
     {
-        private NumericUpDown numericUpDown1;
-        private NumericUpDown numericUpDown2;
-        private NumericUpDown numericUpDown3;
-        private NumericUpDown numericUpDown4;
-        private NumericUpDown numericUpDown5;
-        private NumericUpDown numericUpDown6;
+        private NumericUpDown selectAppetizer1;
+        private NumericUpDown selectAppetizer2;
+        private NumericUpDown selectAppetizer3;
+        private NumericUpDown selectSoupSalad1;
+        private NumericUpDown selectSoupSalad2;
+        private NumericUpDown selectSoupSalad3;
         private TextBox appetizer1;
         private TextBox appetizer2;
         private TextBox appetizer3;
@@ -25,16 +25,16 @@ namespace WaitStaffApplicataion
         private TextBox soupSalad2;
         private TextBox soupSalad3;
         private TextBox entree1;
-        private NumericUpDown numericUpDown7;
+        private NumericUpDown selectEntree1;
         private TextBox drinkAdult3;
         private TextBox drinkAdult2;
         private TextBox drinkAdult1;
         private TextBox drinkKid3;
-        private NumericUpDown numericUpDown11;
-        private NumericUpDown numericUpDown12;
-        private NumericUpDown numericUpDown13;
-        private NumericUpDown numericUpDown14;
-        private NumericUpDown numericUpDown15;
+        private NumericUpDown selectDrinkAdult3;
+        private NumericUpDown selectDrinkAdult2;
+        private NumericUpDown selectDrinkAdult1;
+        private NumericUpDown selectDrinkKid3;
+        private NumericUpDown selectDrinkKid2;
         private TextBox drinkKid2;
         private TextBox drinkKid1;
         private TextBox dessert3;
@@ -42,12 +42,12 @@ namespace WaitStaffApplicataion
         private TextBox desserts1;
         private TextBox entree3;
         private TextBox entree2;
-        private NumericUpDown numericUpDown16;
-        private NumericUpDown numericUpDown17;
-        private NumericUpDown numericUpDown18;
-        private NumericUpDown numericUpDown19;
-        private NumericUpDown numericUpDown20;
-        private NumericUpDown numericUpDown21;
+        private NumericUpDown selectDrinkKid1;
+        private NumericUpDown selectDesserts3;
+        private NumericUpDown selectDesserts2;
+        private NumericUpDown selectDesserts1;
+        private NumericUpDown selectEntree3;
+        private NumericUpDown selectEntree2;
         private TextBox drinkAdultName;
         private TextBox entreeName;
         private TextBox drinkKidName;
@@ -134,12 +134,12 @@ namespace WaitStaffApplicataion
 
         private void InitializeComponent()
         {
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.selectAppetizer1 = new System.Windows.Forms.NumericUpDown();
+            this.selectAppetizer2 = new System.Windows.Forms.NumericUpDown();
+            this.selectAppetizer3 = new System.Windows.Forms.NumericUpDown();
+            this.selectSoupSalad1 = new System.Windows.Forms.NumericUpDown();
+            this.selectSoupSalad2 = new System.Windows.Forms.NumericUpDown();
+            this.selectSoupSalad3 = new System.Windows.Forms.NumericUpDown();
             this.appetizer1 = new System.Windows.Forms.TextBox();
             this.appetizer2 = new System.Windows.Forms.TextBox();
             this.appetizer3 = new System.Windows.Forms.TextBox();
@@ -147,16 +147,16 @@ namespace WaitStaffApplicataion
             this.soupSalad2 = new System.Windows.Forms.TextBox();
             this.soupSalad3 = new System.Windows.Forms.TextBox();
             this.entree1 = new System.Windows.Forms.TextBox();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.selectEntree1 = new System.Windows.Forms.NumericUpDown();
             this.drinkAdult3 = new System.Windows.Forms.TextBox();
             this.drinkAdult2 = new System.Windows.Forms.TextBox();
             this.drinkAdult1 = new System.Windows.Forms.TextBox();
             this.drinkKid3 = new System.Windows.Forms.TextBox();
-            this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown13 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown14 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown15 = new System.Windows.Forms.NumericUpDown();
+            this.selectDrinkAdult3 = new System.Windows.Forms.NumericUpDown();
+            this.selectDrinkAdult2 = new System.Windows.Forms.NumericUpDown();
+            this.selectDrinkAdult1 = new System.Windows.Forms.NumericUpDown();
+            this.selectDrinkKid3 = new System.Windows.Forms.NumericUpDown();
+            this.selectDrinkKid2 = new System.Windows.Forms.NumericUpDown();
             this.drinkKid2 = new System.Windows.Forms.TextBox();
             this.drinkKid1 = new System.Windows.Forms.TextBox();
             this.dessert3 = new System.Windows.Forms.TextBox();
@@ -164,12 +164,12 @@ namespace WaitStaffApplicataion
             this.desserts1 = new System.Windows.Forms.TextBox();
             this.entree3 = new System.Windows.Forms.TextBox();
             this.entree2 = new System.Windows.Forms.TextBox();
-            this.numericUpDown16 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown17 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown18 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown19 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown20 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown21 = new System.Windows.Forms.NumericUpDown();
+            this.selectDrinkKid1 = new System.Windows.Forms.NumericUpDown();
+            this.selectDesserts3 = new System.Windows.Forms.NumericUpDown();
+            this.selectDesserts2 = new System.Windows.Forms.NumericUpDown();
+            this.selectDesserts1 = new System.Windows.Forms.NumericUpDown();
+            this.selectEntree3 = new System.Windows.Forms.NumericUpDown();
+            this.selectEntree2 = new System.Windows.Forms.NumericUpDown();
             this.drinkAdultName = new System.Windows.Forms.TextBox();
             this.entreeName = new System.Windows.Forms.TextBox();
             this.drinkKidName = new System.Windows.Forms.TextBox();
@@ -220,73 +220,73 @@ namespace WaitStaffApplicataion
             this.checkBox16 = new System.Windows.Forms.CheckBox();
             this.checkBox17 = new System.Windows.Forms.CheckBox();
             this.checkBox18 = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectAppetizer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectAppetizer2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectAppetizer3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectSoupSalad1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectSoupSalad2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectSoupSalad3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectEntree1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectDrinkAdult3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectDrinkAdult2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectDrinkAdult1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectDrinkKid3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectDrinkKid2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectDrinkKid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectDesserts3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectDesserts2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectDesserts1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectEntree3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectEntree2)).BeginInit();
             this.SuspendLayout();
             // 
-            // numericUpDown1
+            // selectAppetizer1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(134, 38);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(43, 20);
-            this.numericUpDown1.TabIndex = 2;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.selectAppetizer1.Location = new System.Drawing.Point(134, 38);
+            this.selectAppetizer1.Name = "selectAppetizer1";
+            this.selectAppetizer1.Size = new System.Drawing.Size(43, 20);
+            this.selectAppetizer1.TabIndex = 2;
+            this.selectAppetizer1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
-            // numericUpDown2
+            // selectAppetizer2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(134, 65);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(42, 20);
-            this.numericUpDown2.TabIndex = 3;
-            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
+            this.selectAppetizer2.Location = new System.Drawing.Point(134, 65);
+            this.selectAppetizer2.Name = "selectAppetizer2";
+            this.selectAppetizer2.Size = new System.Drawing.Size(42, 20);
+            this.selectAppetizer2.TabIndex = 3;
+            this.selectAppetizer2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
-            // numericUpDown3
+            // selectAppetizer3
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(133, 91);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(44, 20);
-            this.numericUpDown3.TabIndex = 4;
-            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            this.selectAppetizer3.Location = new System.Drawing.Point(133, 91);
+            this.selectAppetizer3.Name = "selectAppetizer3";
+            this.selectAppetizer3.Size = new System.Drawing.Size(44, 20);
+            this.selectAppetizer3.TabIndex = 4;
+            this.selectAppetizer3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
-            // numericUpDown4
+            // selectSoupSalad1
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(132, 162);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(44, 20);
-            this.numericUpDown4.TabIndex = 5;
-            this.numericUpDown4.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
+            this.selectSoupSalad1.Location = new System.Drawing.Point(132, 162);
+            this.selectSoupSalad1.Name = "selectSoupSalad1";
+            this.selectSoupSalad1.Size = new System.Drawing.Size(44, 20);
+            this.selectSoupSalad1.TabIndex = 5;
+            this.selectSoupSalad1.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
             // 
-            // numericUpDown5
+            // selectSoupSalad2
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(131, 189);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(44, 20);
-            this.numericUpDown5.TabIndex = 6;
-            this.numericUpDown5.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
+            this.selectSoupSalad2.Location = new System.Drawing.Point(131, 188);
+            this.selectSoupSalad2.Name = "selectSoupSalad2";
+            this.selectSoupSalad2.Size = new System.Drawing.Size(44, 20);
+            this.selectSoupSalad2.TabIndex = 6;
+            this.selectSoupSalad2.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
             // 
-            // numericUpDown6
+            // selectSoupSalad3
             // 
-            this.numericUpDown6.Location = new System.Drawing.Point(131, 213);
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(44, 20);
-            this.numericUpDown6.TabIndex = 7;
-            this.numericUpDown6.ValueChanged += new System.EventHandler(this.numericUpDown6_ValueChanged);
+            this.selectSoupSalad3.Location = new System.Drawing.Point(131, 213);
+            this.selectSoupSalad3.Name = "selectSoupSalad3";
+            this.selectSoupSalad3.Size = new System.Drawing.Size(44, 20);
+            this.selectSoupSalad3.TabIndex = 7;
+            this.selectSoupSalad3.ValueChanged += new System.EventHandler(this.numericUpDown6_ValueChanged);
             // 
             // appetizer1
             // 
@@ -359,13 +359,13 @@ namespace WaitStaffApplicataion
             this.entree1.Text = "Loco Moco";
             this.entree1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown7
+            // selectEntree1
             // 
-            this.numericUpDown7.Location = new System.Drawing.Point(132, 279);
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(44, 20);
-            this.numericUpDown7.TabIndex = 15;
-            this.numericUpDown7.ValueChanged += new System.EventHandler(this.numericUpDown7_ValueChanged);
+            this.selectEntree1.Location = new System.Drawing.Point(132, 279);
+            this.selectEntree1.Name = "selectEntree1";
+            this.selectEntree1.Size = new System.Drawing.Size(44, 20);
+            this.selectEntree1.TabIndex = 15;
+            this.selectEntree1.ValueChanged += new System.EventHandler(this.numericUpDown7_ValueChanged);
             // 
             // drinkAdult3
             // 
@@ -407,45 +407,45 @@ namespace WaitStaffApplicataion
             this.drinkKid3.Text = "Bottled Water";
             this.drinkKid3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown11
+            // selectDrinkAdult3
             // 
-            this.numericUpDown11.Location = new System.Drawing.Point(565, 214);
-            this.numericUpDown11.Name = "numericUpDown11";
-            this.numericUpDown11.Size = new System.Drawing.Size(44, 20);
-            this.numericUpDown11.TabIndex = 19;
-            this.numericUpDown11.ValueChanged += new System.EventHandler(this.numericUpDown11_ValueChanged);
+            this.selectDrinkAdult3.Location = new System.Drawing.Point(565, 214);
+            this.selectDrinkAdult3.Name = "selectDrinkAdult3";
+            this.selectDrinkAdult3.Size = new System.Drawing.Size(44, 20);
+            this.selectDrinkAdult3.TabIndex = 19;
+            this.selectDrinkAdult3.ValueChanged += new System.EventHandler(this.numericUpDown11_ValueChanged);
             // 
-            // numericUpDown12
+            // selectDrinkAdult2
             // 
-            this.numericUpDown12.Location = new System.Drawing.Point(565, 187);
-            this.numericUpDown12.Name = "numericUpDown12";
-            this.numericUpDown12.Size = new System.Drawing.Size(44, 20);
-            this.numericUpDown12.TabIndex = 18;
-            this.numericUpDown12.ValueChanged += new System.EventHandler(this.numericUpDown12_ValueChanged);
+            this.selectDrinkAdult2.Location = new System.Drawing.Point(565, 187);
+            this.selectDrinkAdult2.Name = "selectDrinkAdult2";
+            this.selectDrinkAdult2.Size = new System.Drawing.Size(44, 20);
+            this.selectDrinkAdult2.TabIndex = 18;
+            this.selectDrinkAdult2.ValueChanged += new System.EventHandler(this.numericUpDown12_ValueChanged);
             // 
-            // numericUpDown13
+            // selectDrinkAdult1
             // 
-            this.numericUpDown13.Location = new System.Drawing.Point(566, 161);
-            this.numericUpDown13.Name = "numericUpDown13";
-            this.numericUpDown13.Size = new System.Drawing.Size(42, 20);
-            this.numericUpDown13.TabIndex = 17;
-            this.numericUpDown13.ValueChanged += new System.EventHandler(this.numericUpDown13_ValueChanged);
+            this.selectDrinkAdult1.Location = new System.Drawing.Point(566, 161);
+            this.selectDrinkAdult1.Name = "selectDrinkAdult1";
+            this.selectDrinkAdult1.Size = new System.Drawing.Size(42, 20);
+            this.selectDrinkAdult1.TabIndex = 17;
+            this.selectDrinkAdult1.ValueChanged += new System.EventHandler(this.numericUpDown13_ValueChanged);
             // 
-            // numericUpDown14
+            // selectDrinkKid3
             // 
-            this.numericUpDown14.Location = new System.Drawing.Point(565, 90);
-            this.numericUpDown14.Name = "numericUpDown14";
-            this.numericUpDown14.Size = new System.Drawing.Size(42, 20);
-            this.numericUpDown14.TabIndex = 16;
-            this.numericUpDown14.ValueChanged += new System.EventHandler(this.numericUpDown14_ValueChanged);
+            this.selectDrinkKid3.Location = new System.Drawing.Point(565, 90);
+            this.selectDrinkKid3.Name = "selectDrinkKid3";
+            this.selectDrinkKid3.Size = new System.Drawing.Size(42, 20);
+            this.selectDrinkKid3.TabIndex = 16;
+            this.selectDrinkKid3.ValueChanged += new System.EventHandler(this.numericUpDown14_ValueChanged);
             // 
-            // numericUpDown15
+            // selectDrinkKid2
             // 
-            this.numericUpDown15.Location = new System.Drawing.Point(564, 65);
-            this.numericUpDown15.Name = "numericUpDown15";
-            this.numericUpDown15.Size = new System.Drawing.Size(44, 20);
-            this.numericUpDown15.TabIndex = 43;
-            this.numericUpDown15.ValueChanged += new System.EventHandler(this.numericUpDown15_ValueChanged);
+            this.selectDrinkKid2.Location = new System.Drawing.Point(564, 65);
+            this.selectDrinkKid2.Name = "selectDrinkKid2";
+            this.selectDrinkKid2.Size = new System.Drawing.Size(44, 20);
+            this.selectDrinkKid2.TabIndex = 43;
+            this.selectDrinkKid2.ValueChanged += new System.EventHandler(this.numericUpDown15_ValueChanged);
             // 
             // drinkKid2
             // 
@@ -517,53 +517,53 @@ namespace WaitStaffApplicataion
             this.entree2.Text = "Garlic Chicken";
             this.entree2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown16
+            // selectDrinkKid1
             // 
-            this.numericUpDown16.Location = new System.Drawing.Point(564, 38);
-            this.numericUpDown16.Name = "numericUpDown16";
-            this.numericUpDown16.Size = new System.Drawing.Size(44, 20);
-            this.numericUpDown16.TabIndex = 35;
-            this.numericUpDown16.ValueChanged += new System.EventHandler(this.numericUpDown16_ValueChanged);
+            this.selectDrinkKid1.Location = new System.Drawing.Point(564, 38);
+            this.selectDrinkKid1.Name = "selectDrinkKid1";
+            this.selectDrinkKid1.Size = new System.Drawing.Size(44, 20);
+            this.selectDrinkKid1.TabIndex = 35;
+            this.selectDrinkKid1.ValueChanged += new System.EventHandler(this.numericUpDown16_ValueChanged);
             // 
-            // numericUpDown17
+            // selectDesserts3
             // 
-            this.numericUpDown17.Location = new System.Drawing.Point(132, 453);
-            this.numericUpDown17.Name = "numericUpDown17";
-            this.numericUpDown17.Size = new System.Drawing.Size(44, 20);
-            this.numericUpDown17.TabIndex = 34;
-            this.numericUpDown17.ValueChanged += new System.EventHandler(this.numericUpDown17_ValueChanged);
+            this.selectDesserts3.Location = new System.Drawing.Point(132, 453);
+            this.selectDesserts3.Name = "selectDesserts3";
+            this.selectDesserts3.Size = new System.Drawing.Size(44, 20);
+            this.selectDesserts3.TabIndex = 34;
+            this.selectDesserts3.ValueChanged += new System.EventHandler(this.numericUpDown17_ValueChanged);
             // 
-            // numericUpDown18
+            // selectDesserts2
             // 
-            this.numericUpDown18.Location = new System.Drawing.Point(133, 426);
-            this.numericUpDown18.Name = "numericUpDown18";
-            this.numericUpDown18.Size = new System.Drawing.Size(44, 20);
-            this.numericUpDown18.TabIndex = 33;
-            this.numericUpDown18.ValueChanged += new System.EventHandler(this.numericUpDown18_ValueChanged);
+            this.selectDesserts2.Location = new System.Drawing.Point(133, 426);
+            this.selectDesserts2.Name = "selectDesserts2";
+            this.selectDesserts2.Size = new System.Drawing.Size(44, 20);
+            this.selectDesserts2.TabIndex = 33;
+            this.selectDesserts2.ValueChanged += new System.EventHandler(this.numericUpDown18_ValueChanged);
             // 
-            // numericUpDown19
+            // selectDesserts1
             // 
-            this.numericUpDown19.Location = new System.Drawing.Point(133, 399);
-            this.numericUpDown19.Name = "numericUpDown19";
-            this.numericUpDown19.Size = new System.Drawing.Size(44, 20);
-            this.numericUpDown19.TabIndex = 32;
-            this.numericUpDown19.ValueChanged += new System.EventHandler(this.numericUpDown19_ValueChanged);
+            this.selectDesserts1.Location = new System.Drawing.Point(133, 399);
+            this.selectDesserts1.Name = "selectDesserts1";
+            this.selectDesserts1.Size = new System.Drawing.Size(44, 20);
+            this.selectDesserts1.TabIndex = 32;
+            this.selectDesserts1.ValueChanged += new System.EventHandler(this.numericUpDown19_ValueChanged);
             // 
-            // numericUpDown20
+            // selectEntree3
             // 
-            this.numericUpDown20.Location = new System.Drawing.Point(134, 331);
-            this.numericUpDown20.Name = "numericUpDown20";
-            this.numericUpDown20.Size = new System.Drawing.Size(42, 20);
-            this.numericUpDown20.TabIndex = 31;
-            this.numericUpDown20.ValueChanged += new System.EventHandler(this.numericUpDown20_ValueChanged);
+            this.selectEntree3.Location = new System.Drawing.Point(134, 331);
+            this.selectEntree3.Name = "selectEntree3";
+            this.selectEntree3.Size = new System.Drawing.Size(42, 20);
+            this.selectEntree3.TabIndex = 31;
+            this.selectEntree3.ValueChanged += new System.EventHandler(this.numericUpDown20_ValueChanged);
             // 
-            // numericUpDown21
+            // selectEntree2
             // 
-            this.numericUpDown21.Location = new System.Drawing.Point(134, 304);
-            this.numericUpDown21.Name = "numericUpDown21";
-            this.numericUpDown21.Size = new System.Drawing.Size(42, 20);
-            this.numericUpDown21.TabIndex = 30;
-            this.numericUpDown21.ValueChanged += new System.EventHandler(this.numericUpDown21_ValueChanged);
+            this.selectEntree2.Location = new System.Drawing.Point(134, 304);
+            this.selectEntree2.Name = "selectEntree2";
+            this.selectEntree2.Size = new System.Drawing.Size(42, 20);
+            this.selectEntree2.TabIndex = 30;
+            this.selectEntree2.ValueChanged += new System.EventHandler(this.numericUpDown21_ValueChanged);
             // 
             // drinkAdultName
             // 
@@ -1088,7 +1088,7 @@ namespace WaitStaffApplicataion
             this.Controls.Add(this.drinkKidName);
             this.Controls.Add(this.entreeName);
             this.Controls.Add(this.drinkAdultName);
-            this.Controls.Add(this.numericUpDown15);
+            this.Controls.Add(this.selectDrinkKid2);
             this.Controls.Add(this.drinkKid2);
             this.Controls.Add(this.drinkKid1);
             this.Controls.Add(this.dessert3);
@@ -1096,21 +1096,21 @@ namespace WaitStaffApplicataion
             this.Controls.Add(this.desserts1);
             this.Controls.Add(this.entree3);
             this.Controls.Add(this.entree2);
-            this.Controls.Add(this.numericUpDown16);
-            this.Controls.Add(this.numericUpDown17);
-            this.Controls.Add(this.numericUpDown18);
-            this.Controls.Add(this.numericUpDown19);
-            this.Controls.Add(this.numericUpDown20);
-            this.Controls.Add(this.numericUpDown21);
+            this.Controls.Add(this.selectDrinkKid1);
+            this.Controls.Add(this.selectDesserts3);
+            this.Controls.Add(this.selectDesserts2);
+            this.Controls.Add(this.selectDesserts1);
+            this.Controls.Add(this.selectEntree3);
+            this.Controls.Add(this.selectEntree2);
             this.Controls.Add(this.drinkAdult3);
             this.Controls.Add(this.drinkAdult2);
             this.Controls.Add(this.drinkAdult1);
             this.Controls.Add(this.drinkKid3);
-            this.Controls.Add(this.numericUpDown11);
-            this.Controls.Add(this.numericUpDown12);
-            this.Controls.Add(this.numericUpDown13);
-            this.Controls.Add(this.numericUpDown14);
-            this.Controls.Add(this.numericUpDown7);
+            this.Controls.Add(this.selectDrinkAdult3);
+            this.Controls.Add(this.selectDrinkAdult2);
+            this.Controls.Add(this.selectDrinkAdult1);
+            this.Controls.Add(this.selectDrinkKid3);
+            this.Controls.Add(this.selectEntree1);
             this.Controls.Add(this.entree1);
             this.Controls.Add(this.soupSalad3);
             this.Controls.Add(this.soupSalad2);
@@ -1118,32 +1118,32 @@ namespace WaitStaffApplicataion
             this.Controls.Add(this.appetizer3);
             this.Controls.Add(this.appetizer2);
             this.Controls.Add(this.appetizer1);
-            this.Controls.Add(this.numericUpDown6);
-            this.Controls.Add(this.numericUpDown5);
-            this.Controls.Add(this.numericUpDown4);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.selectSoupSalad3);
+            this.Controls.Add(this.selectSoupSalad2);
+            this.Controls.Add(this.selectSoupSalad1);
+            this.Controls.Add(this.selectAppetizer3);
+            this.Controls.Add(this.selectAppetizer2);
+            this.Controls.Add(this.selectAppetizer1);
             this.Name = "MenuForm";
             this.Load += new System.EventHandler(this.MenuForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectAppetizer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectAppetizer2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectAppetizer3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectSoupSalad1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectSoupSalad2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectSoupSalad3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectEntree1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectDrinkAdult3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectDrinkAdult2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectDrinkAdult1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectDrinkKid3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectDrinkKid2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectDrinkKid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectDesserts3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectDesserts2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectDesserts1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectEntree3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectEntree2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1209,11 +1209,11 @@ namespace WaitStaffApplicataion
            // if (item1Available == true)
            if (checkBox1.CheckState != CheckState.Checked)
             {
-                menuValues[0] = (int)numericUpDown1.Value;
+                menuValues[0] = (int)selectAppetizer1.Value;
             }
             else
             {
-                numericUpDown1.Value = 0;
+                selectAppetizer1.Value = 0;
                 menuValues[0] = 0;
 
             }
@@ -1237,11 +1237,11 @@ namespace WaitStaffApplicataion
         {
             if (checkBox2.CheckState != CheckState.Checked)
             {
-                menuValues[1] = (int)numericUpDown2.Value;
+                menuValues[1] = (int)selectAppetizer2.Value;
             }
             else
             {
-                numericUpDown2.Value = 0;
+                selectAppetizer2.Value = 0;
                 menuValues[1] = 0;
 
             }
@@ -1251,11 +1251,11 @@ namespace WaitStaffApplicataion
         {
             if (checkBox3.CheckState != CheckState.Checked)
             {
-                menuValues[2] = (int)numericUpDown3.Value;
+                menuValues[2] = (int)selectAppetizer3.Value;
             }
             else
             {
-                numericUpDown3.Value = 0;
+                selectAppetizer3.Value = 0;
                 menuValues[2] = 0;
             }
         }
@@ -1265,11 +1265,11 @@ namespace WaitStaffApplicataion
         {
             if (checkBox4.CheckState != CheckState.Checked)
             {
-                menuValues[3] = (int)numericUpDown4.Value;
+                menuValues[3] = (int)selectSoupSalad1.Value;
             }
             else
             {
-                numericUpDown4.Value = 0;
+                selectSoupSalad1.Value = 0;
                 menuValues[3] = 0;
             }
         }
@@ -1278,11 +1278,11 @@ namespace WaitStaffApplicataion
         {
             if (checkBox5.CheckState != CheckState.Checked)
             {
-                menuValues[4] = (int)numericUpDown5.Value;
+                menuValues[4] = (int)selectSoupSalad2.Value;
             }
             else
             {
-                numericUpDown5.Value = 0;
+                selectSoupSalad2.Value = 0;
                 menuValues[4] = 0;
             }
         }
@@ -1291,11 +1291,11 @@ namespace WaitStaffApplicataion
         {
             if (checkBox6.CheckState != CheckState.Checked)
             {
-                menuValues[5] = (int)numericUpDown6.Value;
+                menuValues[5] = (int)selectSoupSalad3.Value;
             }
             else
             {
-                numericUpDown6.Value = 0;
+                selectSoupSalad3.Value = 0;
                 menuValues[5] = 0;
 
             }
@@ -1305,11 +1305,11 @@ namespace WaitStaffApplicataion
         {
             if (checkBox7.CheckState != CheckState.Checked)
             {
-                menuValues[6] = (int)numericUpDown7.Value;
+                menuValues[6] = (int)selectEntree1.Value;
             }
             else
             {
-                numericUpDown7.Value = 0;
+                selectEntree1.Value = 0;
                 menuValues[6] = 0;
 
             }
@@ -1320,11 +1320,11 @@ namespace WaitStaffApplicataion
         {
             if (checkBox8.CheckState != CheckState.Checked)
             {
-                menuValues[7] = (int)numericUpDown21.Value;
+                menuValues[7] = (int)selectEntree2.Value;
             }
             else
             {
-                numericUpDown21.Value = 0;
+                selectEntree2.Value = 0;
                 menuValues[7] = 0;
             }
         }
@@ -1335,11 +1335,11 @@ namespace WaitStaffApplicataion
         {
             if (checkBox9.CheckState != CheckState.Checked)
             {
-                menuValues[8] = (int)numericUpDown20.Value;
+                menuValues[8] = (int)selectEntree3.Value;
             }
             else
             {
-                numericUpDown20.Value = 0;
+                selectEntree3.Value = 0;
                 menuValues[8] = 0;
             }
         }
@@ -1348,11 +1348,11 @@ namespace WaitStaffApplicataion
         {
             if (checkBox10.CheckState != CheckState.Checked)
             {
-                menuValues[9] = (int)numericUpDown19.Value;
+                menuValues[9] = (int)selectDesserts1.Value;
             }
             else
             {
-                numericUpDown19.Value = 0;
+                selectDesserts1.Value = 0;
                 menuValues[9] = 0;
             }
         }
@@ -1361,11 +1361,11 @@ namespace WaitStaffApplicataion
         {
             if (checkBox11.CheckState != CheckState.Checked)
             {
-                menuValues[10] = (int)numericUpDown18.Value;
+                menuValues[10] = (int)selectDesserts2.Value;
             }
             else
             {
-                numericUpDown18.Value = 0;
+                selectDesserts2.Value = 0;
                 menuValues[10] = 0;
             }
         }
@@ -1374,11 +1374,11 @@ namespace WaitStaffApplicataion
         {
             if (checkBox12.CheckState != CheckState.Checked)
             {
-                menuValues[11] = (int)numericUpDown17.Value;
+                menuValues[11] = (int)selectDesserts3.Value;
             }
             else
             {
-                numericUpDown17.Value = 0;
+                selectDesserts3.Value = 0;
                 menuValues[11] = 0;
             }
         }
@@ -1387,11 +1387,11 @@ namespace WaitStaffApplicataion
         {
             if (checkBox13.CheckState != CheckState.Checked)
             {
-                menuValues[12] = (int)numericUpDown16.Value;
+                menuValues[12] = (int)selectDrinkKid1.Value;
             }
             else
             {
-                numericUpDown16.Value = 0;
+                selectDrinkKid1.Value = 0;
                 menuValues[12] = 0;
             }
         }
@@ -1400,11 +1400,11 @@ namespace WaitStaffApplicataion
         {
             if (checkBox14.CheckState != CheckState.Checked)
             {
-                menuValues[13] = (int)numericUpDown15.Value;
+                menuValues[13] = (int)selectDrinkKid2.Value;
             }
             else
             {
-                numericUpDown15.Value = 0;
+                selectDrinkKid2.Value = 0;
                 menuValues[13] = 0;
             }
         }
@@ -1413,11 +1413,11 @@ namespace WaitStaffApplicataion
         {
             if (checkBox15.CheckState != CheckState.Checked)
             {
-                menuValues[14] = (int)numericUpDown14.Value;
+                menuValues[14] = (int)selectDrinkKid3.Value;
             }
             else
             {
-                numericUpDown14.Value = 0;
+                selectDrinkKid3.Value = 0;
                 menuValues[14] = 0;
             }
         }
@@ -1426,11 +1426,11 @@ namespace WaitStaffApplicataion
         {
             if (checkBox16.CheckState != CheckState.Checked)
             {
-                menuValues[15] = (int)numericUpDown13.Value;
+                menuValues[15] = (int)selectDrinkAdult1.Value;
             }
             else
             {
-                numericUpDown13.Value = 0;
+                selectDrinkAdult1.Value = 0;
                 menuValues[15] = 0;
             }
         }
@@ -1441,11 +1441,11 @@ namespace WaitStaffApplicataion
         {
             if (checkBox17.CheckState != CheckState.Checked)
             {
-                menuValues[16] = (int)numericUpDown12.Value;
+                menuValues[16] = (int)selectDrinkAdult2.Value;
             }
             else
             {
-                numericUpDown12.Value = 0;
+                selectDrinkAdult2.Value = 0;
                 menuValues[16] = 0;
             }
         }
@@ -1455,11 +1455,11 @@ namespace WaitStaffApplicataion
         {
             if (checkBox18.CheckState != CheckState.Checked)
             {
-                menuValues[17] = (int)numericUpDown11.Value;
+                menuValues[17] = (int)selectDrinkAdult3.Value;
             }
             else
             {
-                numericUpDown11.Value = 0;
+                selectDrinkAdult3.Value = 0;
                 menuValues[17] = 0;
             }
         }
