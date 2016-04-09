@@ -20,7 +20,8 @@ namespace WaitStaffApplicataion
         private double dTips; //amount of tips
 
         /*
-            Constructor - takes in name string and initalized the object
+            Constructor - takes in name string and initalized the object. 
+            Sets intial tips to zero for the start of the day
         */
         public Employee(String name)
         {

@@ -3,12 +3,12 @@
 
     public class FoodItem
     {
-        private string sName,
-                       sSpecial;
+        private string sName, // Food Item name
+                       sSpecial; 
         private float fPrice;
      //   private bool bAvaliability = true;
-        private int iAmountSold,
-                    iAmountStock;
+        private int iAmountSold,//keeps track of units of food sold
+                    iAmountStock;//
 
         //constructor for food items
         public FoodItem(string name, float price)
@@ -56,18 +56,22 @@
          **/
         public int updateSold(int sold)
         {
+            //checks if we still have the food items needed to make the transaction in stock and makes changes if so
             if(sold <= iAmountStock)
             {
                 iAmountSold += sold;
                 iAmountStock -= sold;
                 return 0;
             }
-            else
+            else // we do not have enough and we cannot make the sell
             {
                 return sold - iAmountStock;
             }
         }
 
+        /*
+           Getters for items sold and amount in stock
+        */
         public int getSold()
         {
             return iAmountSold;
