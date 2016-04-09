@@ -1207,12 +1207,12 @@ namespace WaitStaffApplicataion
         {
             System.IO.File.WriteAllText(@"C:\waitData\MenuItemOrdered.txt", "");
 
-            for (int i = 0; i < menuValues.Length; i++)
+            for (int i = 0; i < tbFoodNames.Length; i++)
             {
-                if ( menuValues[i] != 0 && menuValues[i] >0)
+                if ( nudSelectors[i].Value != 0 && nudSelectors[i].Value >0)
                 {  
                     //gonna decide how to get the names in there later when I do the importing of menuItems from the txt file
-                    string Orders = tbFoodNames[i].Text + nudSelectors[i].Value + "\r\n";
+                    string Orders = tbFoodNames[i].Text + " " + nudSelectors[i].Value + "\r\n";
                     System.IO.File.AppendAllText(@"C:\waitData\MenuItemOrdered.txt", Orders);
                 }
             }
