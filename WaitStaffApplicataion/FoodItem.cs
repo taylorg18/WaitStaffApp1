@@ -6,7 +6,7 @@
         private string sName,
                        sSpecial;
         private float fPrice;
-        private bool bAvaliability = true;
+     //   private bool bAvaliability = true;
         private int iAmountSold,
                     iAmountStock;
 

@@ -41,12 +41,13 @@ namespace WaitStaffApplicataion
             while ((line = file.ReadLine()) != null)
             {
                 // Console.WriteLine (line);
-                if (counter % 5 == 0)
+                if (counter % 2 == 0)
                 {
                     sName = line;
 
                     // The second line for a particular card is cardWord.
                 }
+                /*
                 else if (counter % 5 == 1)
                 {
                     sSpecial = line;
@@ -54,14 +55,16 @@ namespace WaitStaffApplicataion
                     // The third line for a particular card is
                     // cardDescription.
                 }
-                else if (counter % 5 == 2)
+                */
+                else if (counter % 2 == 1)
                 {
                     //converts the string that contains the price to a float
                     fPrice = float.Parse(line, CultureInfo.InvariantCulture.NumberFormat);
 
                     // The fourth line for a particular card is cardTag.
                 }
-                else if (counter % 5 == 3)
+                /*
+                else if (counter % 3 == 2)
                 {
                     bool tempBool;
                     if (line == "1")
@@ -83,6 +86,7 @@ namespace WaitStaffApplicataion
                     // create a item object with the information we just
                     // collected.
                 }
+                */
                 else {
                     temp = new FoodItem(sName, fPrice);
                     // add the item to the arraylist
@@ -107,10 +111,11 @@ namespace WaitStaffApplicataion
         {
             return items[id];
         }
-
+        /*
         public bool getItemAvaliablity(int id)
         {
             return items[id].getAvaliability();
         }
+        */
     }
 }
