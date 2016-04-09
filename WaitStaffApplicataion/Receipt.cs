@@ -56,13 +56,13 @@ namespace WaitStaffApplicataion
                     i++;
                 }
             }
-            return 1
+            return 1;
         }
 
         public string printReceipt()
         {
             string temp = "";
-            if (items != null && items.Length != 0)
+            if (items != null && items.Capacity != 0)
             {
                 foreach (FoodItem fi in items)
                 {

@@ -32,9 +32,9 @@ namespace WaitStaffApplicataion
         public Sections()
         {
             InitializeComponent();
-            buttons = new Button[15]{tableButton1, tableButton2, tableButton3, tableButton4, tableButton5, tableButton6,  tableButton7,
+            buttons = new Button[16]{tableButton1, tableButton2, tableButton3, tableButton4, tableButton5, tableButton6,  tableButton7,
                     tableButton8, tableButton9, tableButton10, tableButton11, tableButton12,  tableButton13, tableButton14,
-                    tableButton15};
+                    tableButton15, toGoTable};
 
             //update button names
             for(int i = 0; i < buttons.Length;i++)
@@ -42,6 +42,7 @@ namespace WaitStaffApplicataion
                 buttons[i].Text = "Table " + (i+1);
                 buttons[i].BackColor = Color.Green;
             }
+            buttons[15].Text = "TOGO";
 
             //initialize the staff members            
             for(int i = 0; i < staff.Length; i++)
