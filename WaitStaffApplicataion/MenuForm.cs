@@ -54,31 +54,31 @@ namespace WaitStaffApplicataion
         private TextBox soupSaladName;
         private TextBox dessertsName;
         private TextBox appetizersName;
-        private TextBox textBox27;
-        private TextBox textBox28;
-        private TextBox textBox29;
-        private TextBox textBox30;
-        private TextBox textBox31;
-        private TextBox textBox32;
-        private TextBox textBox33;
-        private TextBox textBox34;
-        private TextBox textBox35;
-        private TextBox textBox25;
-        private TextBox textBox26;
-        private TextBox textBox36;
-        private TextBox textBox37;
-        private TextBox textBox38;
-        private TextBox textBox39;
-        private TextBox textBox40;
-        private TextBox textBox41;
-        private TextBox textBox42;
+        private TextBox priceSoupSalad2;
+        private TextBox priceSoupSalad1;
+        private TextBox priceAppetizer3;
+        private TextBox priceAppetizer2;
+        private TextBox priceAppetizer1;
+        private TextBox priceEntree3;
+        private TextBox priceEntree2;
+        private TextBox priceEntree1;
+        private TextBox priceSoupSalad3;
+        private TextBox priceDrinkKid2;
+        private TextBox priceDrinkKid1;
+        private TextBox priceDesserts3;
+        private TextBox priceDesserts2;
+        private TextBox priceDesserts1;
+        private TextBox priceDrinkAdult3;
+        private TextBox priceDrinkAdult2;
+        private TextBox priceDrinkAdult1;
+        private TextBox priceDrinkKid3;
         private Button button1;
-        private TextBox textBox43;
-        private TextBox textBox44;
-        private TextBox textBox45;
-        private TextBox textBox46;
-        private TextBox textBox47;
-        private TextBox textBox48;
+        private TextBox priceAppetizersName;
+        private TextBox priceDrinkAdultName;
+        private TextBox priceDrinkKidName;
+        private TextBox priceDessertsName;
+        private TextBox priceEntreeName;
+        private TextBox priceSoupSaladName;
         private Button button2;
         private MenuForm tCurrentTable = null;
        
@@ -176,31 +176,31 @@ namespace WaitStaffApplicataion
             this.soupSaladName = new System.Windows.Forms.TextBox();
             this.dessertsName = new System.Windows.Forms.TextBox();
             this.appetizersName = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.textBox38 = new System.Windows.Forms.TextBox();
-            this.textBox39 = new System.Windows.Forms.TextBox();
-            this.textBox40 = new System.Windows.Forms.TextBox();
-            this.textBox41 = new System.Windows.Forms.TextBox();
-            this.textBox42 = new System.Windows.Forms.TextBox();
+            this.priceSoupSalad2 = new System.Windows.Forms.TextBox();
+            this.priceSoupSalad1 = new System.Windows.Forms.TextBox();
+            this.priceAppetizer3 = new System.Windows.Forms.TextBox();
+            this.priceAppetizer2 = new System.Windows.Forms.TextBox();
+            this.priceAppetizer1 = new System.Windows.Forms.TextBox();
+            this.priceEntree3 = new System.Windows.Forms.TextBox();
+            this.priceEntree2 = new System.Windows.Forms.TextBox();
+            this.priceEntree1 = new System.Windows.Forms.TextBox();
+            this.priceSoupSalad3 = new System.Windows.Forms.TextBox();
+            this.priceDrinkKid2 = new System.Windows.Forms.TextBox();
+            this.priceDrinkKid1 = new System.Windows.Forms.TextBox();
+            this.priceDesserts3 = new System.Windows.Forms.TextBox();
+            this.priceDesserts2 = new System.Windows.Forms.TextBox();
+            this.priceDesserts1 = new System.Windows.Forms.TextBox();
+            this.priceDrinkAdult3 = new System.Windows.Forms.TextBox();
+            this.priceDrinkAdult2 = new System.Windows.Forms.TextBox();
+            this.priceDrinkAdult1 = new System.Windows.Forms.TextBox();
+            this.priceDrinkKid3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox43 = new System.Windows.Forms.TextBox();
-            this.textBox44 = new System.Windows.Forms.TextBox();
-            this.textBox45 = new System.Windows.Forms.TextBox();
-            this.textBox46 = new System.Windows.Forms.TextBox();
-            this.textBox47 = new System.Windows.Forms.TextBox();
-            this.textBox48 = new System.Windows.Forms.TextBox();
+            this.priceAppetizersName = new System.Windows.Forms.TextBox();
+            this.priceDrinkAdultName = new System.Windows.Forms.TextBox();
+            this.priceDrinkKidName = new System.Windows.Forms.TextBox();
+            this.priceDessertsName = new System.Windows.Forms.TextBox();
+            this.priceEntreeName = new System.Windows.Forms.TextBox();
+            this.priceSoupSaladName = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -625,159 +625,159 @@ namespace WaitStaffApplicataion
             this.appetizersName.Text = "Appetizers";
             this.appetizersName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox27
+            // priceSoupSalad2
             // 
-            this.textBox27.Location = new System.Drawing.Point(182, 186);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(56, 20);
-            this.textBox27.TabIndex = 58;
-            this.textBox27.Text = "6";
-            this.textBox27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceSoupSalad2.Location = new System.Drawing.Point(182, 186);
+            this.priceSoupSalad2.Name = "priceSoupSalad2";
+            this.priceSoupSalad2.Size = new System.Drawing.Size(56, 20);
+            this.priceSoupSalad2.TabIndex = 58;
+            this.priceSoupSalad2.Text = "6";
+            this.priceSoupSalad2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox28
+            // priceSoupSalad1
             // 
-            this.textBox28.Location = new System.Drawing.Point(182, 160);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(56, 20);
-            this.textBox28.TabIndex = 57;
-            this.textBox28.Text = "8";
-            this.textBox28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceSoupSalad1.Location = new System.Drawing.Point(182, 160);
+            this.priceSoupSalad1.Name = "priceSoupSalad1";
+            this.priceSoupSalad1.Size = new System.Drawing.Size(56, 20);
+            this.priceSoupSalad1.TabIndex = 57;
+            this.priceSoupSalad1.Text = "8";
+            this.priceSoupSalad1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox29
+            // priceAppetizer3
             // 
-            this.textBox29.Location = new System.Drawing.Point(183, 89);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(56, 20);
-            this.textBox29.TabIndex = 56;
-            this.textBox29.Text = "4";
-            this.textBox29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceAppetizer3.Location = new System.Drawing.Point(183, 89);
+            this.priceAppetizer3.Name = "priceAppetizer3";
+            this.priceAppetizer3.Size = new System.Drawing.Size(56, 20);
+            this.priceAppetizer3.TabIndex = 56;
+            this.priceAppetizer3.Text = "4";
+            this.priceAppetizer3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox30
+            // priceAppetizer2
             // 
-            this.textBox30.Location = new System.Drawing.Point(183, 63);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(56, 20);
-            this.textBox30.TabIndex = 55;
-            this.textBox30.Text = "6";
-            this.textBox30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceAppetizer2.Location = new System.Drawing.Point(183, 63);
+            this.priceAppetizer2.Name = "priceAppetizer2";
+            this.priceAppetizer2.Size = new System.Drawing.Size(56, 20);
+            this.priceAppetizer2.TabIndex = 55;
+            this.priceAppetizer2.Text = "6";
+            this.priceAppetizer2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox31
+            // priceAppetizer1
             // 
-            this.textBox31.Location = new System.Drawing.Point(183, 37);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(56, 20);
-            this.textBox31.TabIndex = 54;
-            this.textBox31.Text = "5";
-            this.textBox31.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceAppetizer1.Location = new System.Drawing.Point(183, 37);
+            this.priceAppetizer1.Name = "priceAppetizer1";
+            this.priceAppetizer1.Size = new System.Drawing.Size(56, 20);
+            this.priceAppetizer1.TabIndex = 54;
+            this.priceAppetizer1.Text = "5";
+            this.priceAppetizer1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox32
+            // priceEntree3
             // 
-            this.textBox32.Location = new System.Drawing.Point(183, 329);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(56, 20);
-            this.textBox32.TabIndex = 53;
-            this.textBox32.Text = "12";
-            this.textBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceEntree3.Location = new System.Drawing.Point(183, 329);
+            this.priceEntree3.Name = "priceEntree3";
+            this.priceEntree3.Size = new System.Drawing.Size(56, 20);
+            this.priceEntree3.TabIndex = 53;
+            this.priceEntree3.Text = "12";
+            this.priceEntree3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox33
+            // priceEntree2
             // 
-            this.textBox33.Location = new System.Drawing.Point(183, 303);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(56, 20);
-            this.textBox33.TabIndex = 52;
-            this.textBox33.Text = "8";
-            this.textBox33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceEntree2.Location = new System.Drawing.Point(183, 303);
+            this.priceEntree2.Name = "priceEntree2";
+            this.priceEntree2.Size = new System.Drawing.Size(56, 20);
+            this.priceEntree2.TabIndex = 52;
+            this.priceEntree2.Text = "8";
+            this.priceEntree2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox34
+            // priceEntree1
             // 
-            this.textBox34.Location = new System.Drawing.Point(183, 277);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(56, 20);
-            this.textBox34.TabIndex = 51;
-            this.textBox34.Text = "10";
-            this.textBox34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox34.TextChanged += new System.EventHandler(this.textBox34_TextChanged);
+            this.priceEntree1.Location = new System.Drawing.Point(183, 277);
+            this.priceEntree1.Name = "priceEntree1";
+            this.priceEntree1.Size = new System.Drawing.Size(56, 20);
+            this.priceEntree1.TabIndex = 51;
+            this.priceEntree1.Text = "10";
+            this.priceEntree1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceEntree1.TextChanged += new System.EventHandler(this.textBox34_TextChanged);
             // 
-            // textBox35
+            // priceSoupSalad3
             // 
-            this.textBox35.Location = new System.Drawing.Point(182, 212);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(56, 20);
-            this.textBox35.TabIndex = 50;
-            this.textBox35.Text = "3";
-            this.textBox35.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceSoupSalad3.Location = new System.Drawing.Point(182, 212);
+            this.priceSoupSalad3.Name = "priceSoupSalad3";
+            this.priceSoupSalad3.Size = new System.Drawing.Size(56, 20);
+            this.priceSoupSalad3.TabIndex = 50;
+            this.priceSoupSalad3.Text = "3";
+            this.priceSoupSalad3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox25
+            // priceDrinkKid2
             // 
-            this.textBox25.Location = new System.Drawing.Point(615, 63);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(56, 20);
-            this.textBox25.TabIndex = 67;
-            this.textBox25.Text = "2";
+            this.priceDrinkKid2.Location = new System.Drawing.Point(615, 63);
+            this.priceDrinkKid2.Name = "priceDrinkKid2";
+            this.priceDrinkKid2.Size = new System.Drawing.Size(56, 20);
+            this.priceDrinkKid2.TabIndex = 67;
+            this.priceDrinkKid2.Text = "2";
             // 
-            // textBox26
+            // priceDrinkKid1
             // 
-            this.textBox26.Location = new System.Drawing.Point(615, 37);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(56, 20);
-            this.textBox26.TabIndex = 66;
-            this.textBox26.Text = "2";
+            this.priceDrinkKid1.Location = new System.Drawing.Point(615, 37);
+            this.priceDrinkKid1.Name = "priceDrinkKid1";
+            this.priceDrinkKid1.Size = new System.Drawing.Size(56, 20);
+            this.priceDrinkKid1.TabIndex = 66;
+            this.priceDrinkKid1.Text = "2";
             // 
-            // textBox36
+            // priceDesserts3
             // 
-            this.textBox36.Location = new System.Drawing.Point(183, 450);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(56, 20);
-            this.textBox36.TabIndex = 65;
-            this.textBox36.Text = "200";
+            this.priceDesserts3.Location = new System.Drawing.Point(183, 450);
+            this.priceDesserts3.Name = "priceDesserts3";
+            this.priceDesserts3.Size = new System.Drawing.Size(56, 20);
+            this.priceDesserts3.TabIndex = 65;
+            this.priceDesserts3.Text = "200";
             // 
-            // textBox37
+            // priceDesserts2
             // 
-            this.textBox37.Location = new System.Drawing.Point(183, 424);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(56, 20);
-            this.textBox37.TabIndex = 64;
-            this.textBox37.Text = "3";
+            this.priceDesserts2.Location = new System.Drawing.Point(183, 424);
+            this.priceDesserts2.Name = "priceDesserts2";
+            this.priceDesserts2.Size = new System.Drawing.Size(56, 20);
+            this.priceDesserts2.TabIndex = 64;
+            this.priceDesserts2.Text = "3";
             // 
-            // textBox38
+            // priceDesserts1
             // 
-            this.textBox38.Location = new System.Drawing.Point(183, 398);
-            this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(56, 20);
-            this.textBox38.TabIndex = 63;
-            this.textBox38.Text = "5";
+            this.priceDesserts1.Location = new System.Drawing.Point(183, 398);
+            this.priceDesserts1.Name = "priceDesserts1";
+            this.priceDesserts1.Size = new System.Drawing.Size(56, 20);
+            this.priceDesserts1.TabIndex = 63;
+            this.priceDesserts1.Text = "5";
             // 
-            // textBox39
+            // priceDrinkAdult3
             // 
-            this.textBox39.Location = new System.Drawing.Point(615, 212);
-            this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(56, 20);
-            this.textBox39.TabIndex = 62;
-            this.textBox39.Text = "9";
+            this.priceDrinkAdult3.Location = new System.Drawing.Point(615, 212);
+            this.priceDrinkAdult3.Name = "priceDrinkAdult3";
+            this.priceDrinkAdult3.Size = new System.Drawing.Size(56, 20);
+            this.priceDrinkAdult3.TabIndex = 62;
+            this.priceDrinkAdult3.Text = "9";
             // 
-            // textBox40
+            // priceDrinkAdult2
             // 
-            this.textBox40.Location = new System.Drawing.Point(615, 186);
-            this.textBox40.Name = "textBox40";
-            this.textBox40.Size = new System.Drawing.Size(56, 20);
-            this.textBox40.TabIndex = 61;
-            this.textBox40.Text = "10";
+            this.priceDrinkAdult2.Location = new System.Drawing.Point(615, 186);
+            this.priceDrinkAdult2.Name = "priceDrinkAdult2";
+            this.priceDrinkAdult2.Size = new System.Drawing.Size(56, 20);
+            this.priceDrinkAdult2.TabIndex = 61;
+            this.priceDrinkAdult2.Text = "10";
             // 
-            // textBox41
+            // priceDrinkAdult1
             // 
-            this.textBox41.Location = new System.Drawing.Point(615, 160);
-            this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new System.Drawing.Size(56, 20);
-            this.textBox41.TabIndex = 60;
-            this.textBox41.Text = "10";
+            this.priceDrinkAdult1.Location = new System.Drawing.Point(615, 160);
+            this.priceDrinkAdult1.Name = "priceDrinkAdult1";
+            this.priceDrinkAdult1.Size = new System.Drawing.Size(56, 20);
+            this.priceDrinkAdult1.TabIndex = 60;
+            this.priceDrinkAdult1.Text = "10";
             // 
-            // textBox42
+            // priceDrinkKid3
             // 
-            this.textBox42.Location = new System.Drawing.Point(615, 89);
-            this.textBox42.Name = "textBox42";
-            this.textBox42.Size = new System.Drawing.Size(56, 20);
-            this.textBox42.TabIndex = 59;
-            this.textBox42.Text = "1";
+            this.priceDrinkKid3.Location = new System.Drawing.Point(615, 89);
+            this.priceDrinkKid3.Name = "priceDrinkKid3";
+            this.priceDrinkKid3.Size = new System.Drawing.Size(56, 20);
+            this.priceDrinkKid3.TabIndex = 59;
+            this.priceDrinkKid3.Text = "1";
             // 
             // button1
             // 
@@ -789,60 +789,60 @@ namespace WaitStaffApplicataion
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // textBox43
+            // priceAppetizersName
             // 
-            this.textBox43.Location = new System.Drawing.Point(183, 11);
-            this.textBox43.Name = "textBox43";
-            this.textBox43.Size = new System.Drawing.Size(56, 20);
-            this.textBox43.TabIndex = 69;
-            this.textBox43.Text = "Price";
-            this.textBox43.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox43.TextChanged += new System.EventHandler(this.textBox43_TextChanged);
+            this.priceAppetizersName.Location = new System.Drawing.Point(183, 11);
+            this.priceAppetizersName.Name = "priceAppetizersName";
+            this.priceAppetizersName.Size = new System.Drawing.Size(56, 20);
+            this.priceAppetizersName.TabIndex = 69;
+            this.priceAppetizersName.Text = "Price";
+            this.priceAppetizersName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceAppetizersName.TextChanged += new System.EventHandler(this.textBox43_TextChanged);
             // 
-            // textBox44
+            // priceDrinkAdultName
             // 
-            this.textBox44.Location = new System.Drawing.Point(615, 135);
-            this.textBox44.Name = "textBox44";
-            this.textBox44.Size = new System.Drawing.Size(56, 20);
-            this.textBox44.TabIndex = 70;
-            this.textBox44.Text = "Price";
-            this.textBox44.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceDrinkAdultName.Location = new System.Drawing.Point(615, 135);
+            this.priceDrinkAdultName.Name = "priceDrinkAdultName";
+            this.priceDrinkAdultName.Size = new System.Drawing.Size(56, 20);
+            this.priceDrinkAdultName.TabIndex = 70;
+            this.priceDrinkAdultName.Text = "Price";
+            this.priceDrinkAdultName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox45
+            // priceDrinkKidName
             // 
-            this.textBox45.Location = new System.Drawing.Point(615, 12);
-            this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new System.Drawing.Size(56, 20);
-            this.textBox45.TabIndex = 71;
-            this.textBox45.Text = "Price";
-            this.textBox45.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceDrinkKidName.Location = new System.Drawing.Point(615, 12);
+            this.priceDrinkKidName.Name = "priceDrinkKidName";
+            this.priceDrinkKidName.Size = new System.Drawing.Size(56, 20);
+            this.priceDrinkKidName.TabIndex = 71;
+            this.priceDrinkKidName.Text = "Price";
+            this.priceDrinkKidName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox46
+            // priceDessertsName
             // 
-            this.textBox46.Location = new System.Drawing.Point(183, 373);
-            this.textBox46.Name = "textBox46";
-            this.textBox46.Size = new System.Drawing.Size(56, 20);
-            this.textBox46.TabIndex = 72;
-            this.textBox46.Text = "Price";
-            this.textBox46.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceDessertsName.Location = new System.Drawing.Point(183, 373);
+            this.priceDessertsName.Name = "priceDessertsName";
+            this.priceDessertsName.Size = new System.Drawing.Size(56, 20);
+            this.priceDessertsName.TabIndex = 72;
+            this.priceDessertsName.Text = "Price";
+            this.priceDessertsName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox47
+            // priceEntreeName
             // 
-            this.textBox47.Location = new System.Drawing.Point(183, 251);
-            this.textBox47.Name = "textBox47";
-            this.textBox47.Size = new System.Drawing.Size(56, 20);
-            this.textBox47.TabIndex = 73;
-            this.textBox47.Text = "Price";
-            this.textBox47.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceEntreeName.Location = new System.Drawing.Point(183, 251);
+            this.priceEntreeName.Name = "priceEntreeName";
+            this.priceEntreeName.Size = new System.Drawing.Size(56, 20);
+            this.priceEntreeName.TabIndex = 73;
+            this.priceEntreeName.Text = "Price";
+            this.priceEntreeName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox48
+            // priceSoupSaladName
             // 
-            this.textBox48.Location = new System.Drawing.Point(182, 134);
-            this.textBox48.Name = "textBox48";
-            this.textBox48.Size = new System.Drawing.Size(56, 20);
-            this.textBox48.TabIndex = 74;
-            this.textBox48.Text = "Price";
-            this.textBox48.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceSoupSaladName.Location = new System.Drawing.Point(182, 134);
+            this.priceSoupSaladName.Name = "priceSoupSaladName";
+            this.priceSoupSaladName.Size = new System.Drawing.Size(56, 20);
+            this.priceSoupSaladName.TabIndex = 74;
+            this.priceSoupSaladName.Text = "Price";
+            this.priceSoupSaladName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button2
             // 
@@ -859,7 +859,7 @@ namespace WaitStaffApplicataion
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(257, 40);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(89, 19);
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
             this.checkBox1.TabIndex = 76;
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -870,7 +870,7 @@ namespace WaitStaffApplicataion
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(257, 63);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(89, 19);
+            this.checkBox2.Size = new System.Drawing.Size(80, 17);
             this.checkBox2.TabIndex = 77;
             this.checkBox2.Text = "checkBox2";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -880,7 +880,7 @@ namespace WaitStaffApplicataion
             this.checkBox3.AutoSize = true;
             this.checkBox3.Location = new System.Drawing.Point(257, 89);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(89, 19);
+            this.checkBox3.Size = new System.Drawing.Size(80, 17);
             this.checkBox3.TabIndex = 78;
             this.checkBox3.Text = "checkBox3";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -890,7 +890,7 @@ namespace WaitStaffApplicataion
             this.checkBox4.AutoSize = true;
             this.checkBox4.Location = new System.Drawing.Point(256, 160);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(89, 19);
+            this.checkBox4.Size = new System.Drawing.Size(80, 17);
             this.checkBox4.TabIndex = 81;
             this.checkBox4.Text = "checkBox4";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -900,7 +900,7 @@ namespace WaitStaffApplicataion
             this.checkBox5.AutoSize = true;
             this.checkBox5.Location = new System.Drawing.Point(256, 184);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(89, 19);
+            this.checkBox5.Size = new System.Drawing.Size(80, 17);
             this.checkBox5.TabIndex = 80;
             this.checkBox5.Text = "checkBox5";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -910,7 +910,7 @@ namespace WaitStaffApplicataion
             this.checkBox6.AutoSize = true;
             this.checkBox6.Location = new System.Drawing.Point(256, 207);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(89, 19);
+            this.checkBox6.Size = new System.Drawing.Size(80, 17);
             this.checkBox6.TabIndex = 79;
             this.checkBox6.Text = "checkBox6";
             this.checkBox6.UseVisualStyleBackColor = true;
@@ -920,7 +920,7 @@ namespace WaitStaffApplicataion
             this.checkBox7.AutoSize = true;
             this.checkBox7.Location = new System.Drawing.Point(257, 278);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(89, 19);
+            this.checkBox7.Size = new System.Drawing.Size(80, 17);
             this.checkBox7.TabIndex = 84;
             this.checkBox7.Text = "checkBox7";
             this.checkBox7.UseVisualStyleBackColor = true;
@@ -930,7 +930,7 @@ namespace WaitStaffApplicataion
             this.checkBox8.AutoSize = true;
             this.checkBox8.Location = new System.Drawing.Point(257, 303);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(89, 19);
+            this.checkBox8.Size = new System.Drawing.Size(80, 17);
             this.checkBox8.TabIndex = 83;
             this.checkBox8.Text = "checkBox8";
             this.checkBox8.UseVisualStyleBackColor = true;
@@ -940,7 +940,7 @@ namespace WaitStaffApplicataion
             this.checkBox9.AutoSize = true;
             this.checkBox9.Location = new System.Drawing.Point(257, 326);
             this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(89, 19);
+            this.checkBox9.Size = new System.Drawing.Size(80, 17);
             this.checkBox9.TabIndex = 82;
             this.checkBox9.Text = "checkBox9";
             this.checkBox9.UseVisualStyleBackColor = true;
@@ -950,7 +950,7 @@ namespace WaitStaffApplicataion
             this.checkBox10.AutoSize = true;
             this.checkBox10.Location = new System.Drawing.Point(257, 398);
             this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(96, 19);
+            this.checkBox10.Size = new System.Drawing.Size(86, 17);
             this.checkBox10.TabIndex = 87;
             this.checkBox10.Text = "checkBox10";
             this.checkBox10.UseVisualStyleBackColor = true;
@@ -960,7 +960,7 @@ namespace WaitStaffApplicataion
             this.checkBox11.AutoSize = true;
             this.checkBox11.Location = new System.Drawing.Point(257, 421);
             this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(96, 19);
+            this.checkBox11.Size = new System.Drawing.Size(86, 17);
             this.checkBox11.TabIndex = 86;
             this.checkBox11.Text = "checkBox11";
             this.checkBox11.UseVisualStyleBackColor = true;
@@ -970,7 +970,7 @@ namespace WaitStaffApplicataion
             this.checkBox12.AutoSize = true;
             this.checkBox12.Location = new System.Drawing.Point(257, 450);
             this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(96, 19);
+            this.checkBox12.Size = new System.Drawing.Size(86, 17);
             this.checkBox12.TabIndex = 85;
             this.checkBox12.Text = "checkBox12";
             this.checkBox12.UseVisualStyleBackColor = true;
@@ -980,7 +980,7 @@ namespace WaitStaffApplicataion
             this.checkBox13.AutoSize = true;
             this.checkBox13.Location = new System.Drawing.Point(694, 37);
             this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(96, 19);
+            this.checkBox13.Size = new System.Drawing.Size(86, 17);
             this.checkBox13.TabIndex = 90;
             this.checkBox13.Text = "checkBox13";
             this.checkBox13.UseVisualStyleBackColor = true;
@@ -990,7 +990,7 @@ namespace WaitStaffApplicataion
             this.checkBox14.AutoSize = true;
             this.checkBox14.Location = new System.Drawing.Point(694, 63);
             this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(96, 19);
+            this.checkBox14.Size = new System.Drawing.Size(86, 17);
             this.checkBox14.TabIndex = 89;
             this.checkBox14.Text = "checkBox14";
             this.checkBox14.UseVisualStyleBackColor = true;
@@ -1000,7 +1000,7 @@ namespace WaitStaffApplicataion
             this.checkBox15.AutoSize = true;
             this.checkBox15.Location = new System.Drawing.Point(694, 90);
             this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(96, 19);
+            this.checkBox15.Size = new System.Drawing.Size(86, 17);
             this.checkBox15.TabIndex = 88;
             this.checkBox15.Text = "checkBox15";
             this.checkBox15.UseVisualStyleBackColor = true;
@@ -1010,7 +1010,7 @@ namespace WaitStaffApplicataion
             this.checkBox16.AutoSize = true;
             this.checkBox16.Location = new System.Drawing.Point(694, 161);
             this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(96, 19);
+            this.checkBox16.Size = new System.Drawing.Size(86, 17);
             this.checkBox16.TabIndex = 93;
             this.checkBox16.Text = "checkBox16";
             this.checkBox16.UseVisualStyleBackColor = true;
@@ -1020,7 +1020,7 @@ namespace WaitStaffApplicataion
             this.checkBox17.AutoSize = true;
             this.checkBox17.Location = new System.Drawing.Point(694, 185);
             this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(96, 19);
+            this.checkBox17.Size = new System.Drawing.Size(86, 17);
             this.checkBox17.TabIndex = 92;
             this.checkBox17.Text = "checkBox17";
             this.checkBox17.UseVisualStyleBackColor = true;
@@ -1030,7 +1030,7 @@ namespace WaitStaffApplicataion
             this.checkBox18.AutoSize = true;
             this.checkBox18.Location = new System.Drawing.Point(694, 208);
             this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(96, 19);
+            this.checkBox18.Size = new System.Drawing.Size(86, 17);
             this.checkBox18.TabIndex = 91;
             this.checkBox18.Text = "checkBox18";
             this.checkBox18.UseVisualStyleBackColor = true;
@@ -1057,31 +1057,31 @@ namespace WaitStaffApplicataion
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox48);
-            this.Controls.Add(this.textBox47);
-            this.Controls.Add(this.textBox46);
-            this.Controls.Add(this.textBox45);
-            this.Controls.Add(this.textBox44);
-            this.Controls.Add(this.textBox43);
+            this.Controls.Add(this.priceSoupSaladName);
+            this.Controls.Add(this.priceEntreeName);
+            this.Controls.Add(this.priceDessertsName);
+            this.Controls.Add(this.priceDrinkKidName);
+            this.Controls.Add(this.priceDrinkAdultName);
+            this.Controls.Add(this.priceAppetizersName);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox25);
-            this.Controls.Add(this.textBox26);
-            this.Controls.Add(this.textBox36);
-            this.Controls.Add(this.textBox37);
-            this.Controls.Add(this.textBox38);
-            this.Controls.Add(this.textBox39);
-            this.Controls.Add(this.textBox40);
-            this.Controls.Add(this.textBox41);
-            this.Controls.Add(this.textBox42);
-            this.Controls.Add(this.textBox27);
-            this.Controls.Add(this.textBox28);
-            this.Controls.Add(this.textBox29);
-            this.Controls.Add(this.textBox30);
-            this.Controls.Add(this.textBox31);
-            this.Controls.Add(this.textBox32);
-            this.Controls.Add(this.textBox33);
-            this.Controls.Add(this.textBox34);
-            this.Controls.Add(this.textBox35);
+            this.Controls.Add(this.priceDrinkKid2);
+            this.Controls.Add(this.priceDrinkKid1);
+            this.Controls.Add(this.priceDesserts3);
+            this.Controls.Add(this.priceDesserts2);
+            this.Controls.Add(this.priceDesserts1);
+            this.Controls.Add(this.priceDrinkAdult3);
+            this.Controls.Add(this.priceDrinkAdult2);
+            this.Controls.Add(this.priceDrinkAdult1);
+            this.Controls.Add(this.priceDrinkKid3);
+            this.Controls.Add(this.priceSoupSalad2);
+            this.Controls.Add(this.priceSoupSalad1);
+            this.Controls.Add(this.priceAppetizer3);
+            this.Controls.Add(this.priceAppetizer2);
+            this.Controls.Add(this.priceAppetizer1);
+            this.Controls.Add(this.priceEntree3);
+            this.Controls.Add(this.priceEntree2);
+            this.Controls.Add(this.priceEntree1);
+            this.Controls.Add(this.priceSoupSalad3);
             this.Controls.Add(this.appetizersName);
             this.Controls.Add(this.dessertsName);
             this.Controls.Add(this.soupSaladName);
