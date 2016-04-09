@@ -59,6 +59,11 @@ namespace WaitStaffApplicataion
             return 1;
         }
 
+        /**
+        * generates a text to display
+        *
+        * returns a list of food items
+        */
         public string printReceipt()
         {
             string temp = "";
@@ -73,36 +78,57 @@ namespace WaitStaffApplicataion
             return temp;
         }
 
+        /**
+        * sets the payment type of the reciept
+        */
         public void setPaymentType(bool type)
         {
             bPaymentType = type;
         }
 
+        /**
+        * sets the tips given during payment
+        */
         public void setTip(float tip)
         {
             fTip = tip;
         }
 
+        /**
+        * gets the total bill on the reciept
+        */
         public float getBill()
         {
             return fBill;
         }
 
+        /**
+        * gets the tips added to the receipt
+        */
         public double getTip()
         {
             return fTip;
         }
 
+        /**
+        * gets the payment type
+        */
         public bool getPaymentType()
         {
             return bPaymentType;
         }
 
+        /**
+        * gets the discription of the reciept
+        */
         public string getDesc()
         {
             return sDesc;
         }
 
+        /**
+        *sets the description of the reciept
+        */
         public void setDesc(string newDesc)
         {
             sDesc = newDesc;
