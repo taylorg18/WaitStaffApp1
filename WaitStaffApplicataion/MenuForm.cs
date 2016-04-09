@@ -106,10 +106,10 @@ namespace WaitStaffApplicataion
 
         TextBox[] tbFoodNames = new TextBox[18];
 
-
         public MenuForm()
         {
             InitializeComponent();
+
 
 
             //Changes all the values of the int array to 0. Used for storing the amount of orders for each item
