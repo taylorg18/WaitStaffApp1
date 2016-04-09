@@ -309,184 +309,184 @@ namespace WaitStaffApplicataion
             // 
             // appetizer1
             // 
-            this.tbFoodNames[0].Location = new System.Drawing.Point(12, 38);
-            this.tbFoodNames[0].Name = "appetizer1";
-            this.tbFoodNames[0].ReadOnly = true;
-            this.tbFoodNames[0].Size = new System.Drawing.Size(116, 20);
-            this.tbFoodNames[0].TabIndex = 8;
-            this.tbFoodNames[0].Text = "Chicken Nachos";
-            this.tbFoodNames[0].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbFoodNames[0].TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.appetizer1.Location = new System.Drawing.Point(12, 38);
+            this.appetizer1.Name = "appetizer1";
+            this.appetizer1.ReadOnly = true;
+            this.appetizer1.Size = new System.Drawing.Size(116, 20);
+            this.appetizer1.TabIndex = 8;
+            this.appetizer1.Text = "Chicken Nachos";
+            this.appetizer1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.appetizer1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // appetizer2
             // 
-            this.tbFoodNames[1].Location = new System.Drawing.Point(11, 65);
-            this.tbFoodNames[1].Name = "appetizer2";
-            this.tbFoodNames[1].ReadOnly = true;
-            this.tbFoodNames[1].Size = new System.Drawing.Size(116, 20);
-            this.tbFoodNames[1].TabIndex = 9;
-            this.tbFoodNames[1].Text = "Deep Fried Mozarella";
-            this.tbFoodNames[1].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.appetizer2.Location = new System.Drawing.Point(11, 65);
+            this.appetizer2.Name = "appetizer2";
+            this.appetizer2.ReadOnly = true;
+            this.appetizer2.Size = new System.Drawing.Size(116, 20);
+            this.appetizer2.TabIndex = 9;
+            this.appetizer2.Text = "Deep Fried Mozarella";
+            this.appetizer2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // appetizer3
             // 
-            this.tbFoodNames[2].Location = new System.Drawing.Point(11, 91);
-            this.tbFoodNames[2].Name = "appetizer3";
-            this.tbFoodNames[2].ReadOnly = true;
-            this.tbFoodNames[2].Size = new System.Drawing.Size(116, 20);
-            this.tbFoodNames[2].TabIndex = 10;
-            this.tbFoodNames[2].Text = "Spam Musubi";
-            this.tbFoodNames[2].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.appetizer3.Location = new System.Drawing.Point(11, 91);
+            this.appetizer3.Name = "appetizer3";
+            this.appetizer3.ReadOnly = true;
+            this.appetizer3.Size = new System.Drawing.Size(116, 20);
+            this.appetizer3.TabIndex = 10;
+            this.appetizer3.Text = "Spam Musubi";
+            this.appetizer3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // soupSalad1
             // 
-            this.tbFoodNames[3].Location = new System.Drawing.Point(10, 161);
-            this.tbFoodNames[3].Name = "soupSalad1";
-            this.tbFoodNames[3].ReadOnly = true;
-            this.tbFoodNames[3].Size = new System.Drawing.Size(116, 20);
-            this.tbFoodNames[3].TabIndex = 11;
-            this.tbFoodNames[3].Text = "Caesar Salad";
-            this.tbFoodNames[3].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.soupSalad1.Location = new System.Drawing.Point(10, 161);
+            this.soupSalad1.Name = "soupSalad1";
+            this.soupSalad1.ReadOnly = true;
+            this.soupSalad1.Size = new System.Drawing.Size(116, 20);
+            this.soupSalad1.TabIndex = 11;
+            this.soupSalad1.Text = "Caesar Salad";
+            this.soupSalad1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // soupSalad2
             // 
-            this.tbFoodNames[4].Location = new System.Drawing.Point(10, 187);
-            this.tbFoodNames[4].Name = "soupSalad2";
-            this.tbFoodNames[4].ReadOnly = true;
-            this.tbFoodNames[4].Size = new System.Drawing.Size(116, 20);
-            this.tbFoodNames[4].TabIndex = 12;
-            this.tbFoodNames[4].Text = "Mac Salad";
-            this.tbFoodNames[4].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.soupSalad2.Location = new System.Drawing.Point(10, 187);
+            this.soupSalad2.Name = "soupSalad2";
+            this.soupSalad2.ReadOnly = true;
+            this.soupSalad2.Size = new System.Drawing.Size(116, 20);
+            this.soupSalad2.TabIndex = 12;
+            this.soupSalad2.Text = "Mac Salad";
+            this.soupSalad2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // soupSalad3
             // 
-            this.tbFoodNames[5].Location = new System.Drawing.Point(10, 213);
-            this.tbFoodNames[5].Name = "soupSalad3";
-            this.tbFoodNames[5].ReadOnly = true;
-            this.tbFoodNames[5].Size = new System.Drawing.Size(116, 20);
-            this.tbFoodNames[5].TabIndex = 13;
-            this.tbFoodNames[5].Text = "Miso Soup";
-            this.tbFoodNames[5].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.soupSalad3.Location = new System.Drawing.Point(10, 213);
+            this.soupSalad3.Name = "soupSalad3";
+            this.soupSalad3.ReadOnly = true;
+            this.soupSalad3.Size = new System.Drawing.Size(116, 20);
+            this.soupSalad3.TabIndex = 13;
+            this.soupSalad3.Text = "Miso Soup";
+            this.soupSalad3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // entree1
             // 
-            this.tbFoodNames[6].Location = new System.Drawing.Point(11, 278);
-            this.tbFoodNames[6].Name = "entree1";
-            this.tbFoodNames[6].ReadOnly = true;
-            this.tbFoodNames[6].Size = new System.Drawing.Size(116, 20);
-            this.tbFoodNames[6].TabIndex = 14;
-            this.tbFoodNames[6].Text = "Loco Moco";
-            this.tbFoodNames[6].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.entree1.Location = new System.Drawing.Point(11, 278);
+            this.entree1.Name = "entree1";
+            this.entree1.ReadOnly = true;
+            this.entree1.Size = new System.Drawing.Size(116, 20);
+            this.entree1.TabIndex = 14;
+            this.entree1.Text = "Loco Moco";
+            this.entree1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // entree2
             // 
-            this.tbFoodNames[7].Location = new System.Drawing.Point(12, 304);
-            this.tbFoodNames[7].Name = "entree2";
-            this.tbFoodNames[7].ReadOnly = true;
-            this.tbFoodNames[7].Size = new System.Drawing.Size(116, 20);
-            this.tbFoodNames[7].TabIndex = 36;
-            this.tbFoodNames[7].Text = "Garlic Chicken";
-            this.tbFoodNames[7].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.entree2.Location = new System.Drawing.Point(12, 304);
+            this.entree2.Name = "entree2";
+            this.entree2.ReadOnly = true;
+            this.entree2.Size = new System.Drawing.Size(116, 20);
+            this.entree2.TabIndex = 36;
+            this.entree2.Text = "Garlic Chicken";
+            this.entree2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // entree3
             // 
-            this.tbFoodNames[8].Location = new System.Drawing.Point(11, 331);
-            this.tbFoodNames[8].Name = "entree3";
-            this.tbFoodNames[8].ReadOnly = true;
-            this.tbFoodNames[8].Size = new System.Drawing.Size(116, 20);
-            this.tbFoodNames[8].TabIndex = 37;
-            this.tbFoodNames[8].Text = "Cheeseburger";
-            this.tbFoodNames[8].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.entree3.Location = new System.Drawing.Point(11, 331);
+            this.entree3.Name = "entree3";
+            this.entree3.ReadOnly = true;
+            this.entree3.Size = new System.Drawing.Size(116, 20);
+            this.entree3.TabIndex = 37;
+            this.entree3.Text = "Cheeseburger";
+            this.entree3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // desserts1
             // 
-            this.tbFoodNames[9].Location = new System.Drawing.Point(11, 399);
-            this.tbFoodNames[9].Name = "desserts1";
-            this.tbFoodNames[9].ReadOnly = true;
-            this.tbFoodNames[9].Size = new System.Drawing.Size(116, 20);
-            this.tbFoodNames[9].TabIndex = 38;
-            this.tbFoodNames[9].Text = "Deep Fried Oreos";
-            this.tbFoodNames[9].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.desserts1.Location = new System.Drawing.Point(11, 399);
+            this.desserts1.Name = "desserts1";
+            this.desserts1.ReadOnly = true;
+            this.desserts1.Size = new System.Drawing.Size(116, 20);
+            this.desserts1.TabIndex = 38;
+            this.desserts1.Text = "Deep Fried Oreos";
+            this.desserts1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // desserts2
             // 
-            this.tbFoodNames[10].Location = new System.Drawing.Point(11, 425);
-            this.tbFoodNames[10].Name = "desserts2";
-            this.tbFoodNames[10].ReadOnly = true;
-            this.tbFoodNames[10].Size = new System.Drawing.Size(116, 20);
-            this.tbFoodNames[10].TabIndex = 39;
-            this.tbFoodNames[10].Text = "Mochi Ice Cream";
-            this.tbFoodNames[10].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.desserts2.Location = new System.Drawing.Point(11, 425);
+            this.desserts2.Name = "desserts2";
+            this.desserts2.ReadOnly = true;
+            this.desserts2.Size = new System.Drawing.Size(116, 20);
+            this.desserts2.TabIndex = 39;
+            this.desserts2.Text = "Mochi Ice Cream";
+            this.desserts2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dessert3
             // 
-            this.tbFoodNames[11].Location = new System.Drawing.Point(11, 451);
-            this.tbFoodNames[11].Name = "dessert3";
-            this.tbFoodNames[11].ReadOnly = true;
-            this.tbFoodNames[11].Size = new System.Drawing.Size(116, 20);
-            this.tbFoodNames[11].TabIndex = 40;
-            this.tbFoodNames[11].Text = "The Tim Special";
-            this.tbFoodNames[11].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // drinkKid1
-            // 
-            this.tbFoodNames[12].Location = new System.Drawing.Point(443, 38);
-            this.tbFoodNames[12].Name = "drinkKid1";
-            this.tbFoodNames[12].ReadOnly = true;
-            this.tbFoodNames[12].Size = new System.Drawing.Size(116, 20);
-            this.tbFoodNames[12].TabIndex = 41;
-            this.tbFoodNames[12].Text = "Coke";
-            this.tbFoodNames[12].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // drinkKid2
-            // 
-            this.tbFoodNames[13].Location = new System.Drawing.Point(443, 64);
-            this.tbFoodNames[13].Name = "drinkKid2";
-            this.tbFoodNames[13].ReadOnly = true;
-            this.tbFoodNames[13].Size = new System.Drawing.Size(116, 20);
-            this.tbFoodNames[13].TabIndex = 42;
-            this.tbFoodNames[13].Text = "Root Beer";
-            this.tbFoodNames[13].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // drinkKid3
-            // 
-            this.tbFoodNames[14].Location = new System.Drawing.Point(443, 90);
-            this.tbFoodNames[14].Name = "drinkKid3";
-            this.tbFoodNames[14].ReadOnly = true;
-            this.tbFoodNames[14].Size = new System.Drawing.Size(116, 20);
-            this.tbFoodNames[14].TabIndex = 22;
-            this.tbFoodNames[14].Text = "Bottled Water";
-            this.tbFoodNames[14].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dessert3.Location = new System.Drawing.Point(11, 451);
+            this.dessert3.Name = "dessert3";
+            this.dessert3.ReadOnly = true;
+            this.dessert3.Size = new System.Drawing.Size(116, 20);
+            this.dessert3.TabIndex = 40;
+            this.dessert3.Text = "The Tim Special";
+            this.dessert3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // drinkAdult1
             // 
-            this.tbFoodNames[15].Location = new System.Drawing.Point(443, 161);
-            this.tbFoodNames[15].Name = "drinkAdult1";
-            this.tbFoodNames[15].ReadOnly = true;
-            this.tbFoodNames[15].Size = new System.Drawing.Size(116, 20);
-            this.tbFoodNames[15].TabIndex = 23;
-            this.tbFoodNames[15].Text = "Jack and Coke";
-            this.tbFoodNames[15].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.drinkAdult1.Location = new System.Drawing.Point(443, 161);
+            this.drinkAdult1.Name = "drinkAdult1";
+            this.drinkAdult1.ReadOnly = true;
+            this.drinkAdult1.Size = new System.Drawing.Size(116, 20);
+            this.drinkAdult1.TabIndex = 23;
+            this.drinkAdult1.Text = "Jack and Coke";
+            this.drinkAdult1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // drinkAdult2
             // 
-            this.tbFoodNames[16].Location = new System.Drawing.Point(443, 187);
-            this.tbFoodNames[16].Name = "drinkAdult2";
-            this.tbFoodNames[16].ReadOnly = true;
-            this.tbFoodNames[16].Size = new System.Drawing.Size(116, 20);
-            this.tbFoodNames[16].TabIndex = 24;
-            this.tbFoodNames[16].Text = "Jaeger";
-            this.tbFoodNames[16].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.drinkAdult2.Location = new System.Drawing.Point(443, 187);
+            this.drinkAdult2.Name = "drinkAdult2";
+            this.drinkAdult2.ReadOnly = true;
+            this.drinkAdult2.Size = new System.Drawing.Size(116, 20);
+            this.drinkAdult2.TabIndex = 24;
+            this.drinkAdult2.Text = "Jaeger";
+            this.drinkAdult2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // drinkAdult3
             // 
-            this.tbFoodNames[17].Location = new System.Drawing.Point(443, 213);
-            this.tbFoodNames[17].Name = "drinkAdult3";
-            this.tbFoodNames[17].ReadOnly = true;
-            this.tbFoodNames[17].Size = new System.Drawing.Size(116, 20);
-            this.tbFoodNames[17].TabIndex = 25;
-            this.tbFoodNames[17].Text = "Vodka Tonic";
-            this.tbFoodNames[17].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.drinkAdult3.Location = new System.Drawing.Point(443, 213);
+            this.drinkAdult3.Name = "drinkAdult3";
+            this.drinkAdult3.ReadOnly = true;
+            this.drinkAdult3.Size = new System.Drawing.Size(116, 20);
+            this.drinkAdult3.TabIndex = 25;
+            this.drinkAdult3.Text = "Vodka Tonic";
+            this.drinkAdult3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // drinkKid1
+            // 
+            this.drinkKid1.Location = new System.Drawing.Point(443, 38);
+            this.drinkKid1.Name = "drinkKid1";
+            this.drinkKid1.ReadOnly = true;
+            this.drinkKid1.Size = new System.Drawing.Size(116, 20);
+            this.drinkKid1.TabIndex = 41;
+            this.drinkKid1.Text = "Coke";
+            this.drinkKid1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // drinkKid2
+            // 
+            this.drinkKid2.Location = new System.Drawing.Point(443, 64);
+            this.drinkKid2.Name = "drinkKid2";
+            this.drinkKid2.ReadOnly = true;
+            this.drinkKid2.Size = new System.Drawing.Size(116, 20);
+            this.drinkKid2.TabIndex = 42;
+            this.drinkKid2.Text = "Root Beer";
+            this.drinkKid2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // drinkKid3
+            // 
+            this.drinkKid3.Location = new System.Drawing.Point(443, 90);
+            this.drinkKid3.Name = "drinkKid3";
+            this.drinkKid3.ReadOnly = true;
+            this.drinkKid3.Size = new System.Drawing.Size(116, 20);
+            this.drinkKid3.TabIndex = 22;
+            this.drinkKid3.Text = "Bottled Water";
+            this.drinkKid3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // selectEntree1
             // 
