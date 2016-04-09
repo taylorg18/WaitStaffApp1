@@ -20,7 +20,8 @@ namespace WaitStaffApplicataion
 {
     public partial class Sections : Form
     {
-        
+
+        FoodMenu menu = new FoodMenu();
         Table[] tables = new Table[16]; //an array representing the table objects for the restaurant 
         Button[] buttons; //the buttons for the tables on the form
         Employee[] staff = new Employee[5]; //an array representing the Waitstaff of the restaurant
@@ -78,6 +79,12 @@ namespace WaitStaffApplicataion
                     tables[i].setEmployee(staff[4]);
                 }
             }
+
+            string userName = Environment.UserName;
+            Console.WriteLine(userName);
+          //  string[] menuFile = System.IO.File.ReadAllLines(@"C:\Users\" + userName + @"\Dropbox\CS 341\Waitstaff\menu.txt");
+
+
         }
 
         //N/A
