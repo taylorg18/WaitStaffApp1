@@ -4,14 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
+/*
+    Class representing an employee of the waitstaff.
+    Used to track their name and amount of tips recieved.
+    Created By: Grayson Taylor, Michael Larios, Alex Reinemann, Michael Liao
+
+    */
 namespace WaitStaffApplicataion
 {
     public class Employee
     {
-        private String sEmployee; //Name for Employee
-        private double dTips;     //Tips given to employee
+        private String sEmployee; //name of employee
+        private double dTips; //amount of tips
 
-        //Constructor
+        /*
+            Constructor - takes in name string and initalized the object. 
+            Sets intial tips to zero for the start of the day
+        */
         public Employee(String name)
         {
             sEmployee = name;
@@ -19,22 +30,25 @@ namespace WaitStaffApplicataion
         }
 
         /*
-         adds to the tip total as employee gets tipped.
+            Updatetips - adds the given amount to the total tip
         */
         public void updateTips(double addTip)
         {
             dTips += addTip;
         }
 
-
         /*
-         Methods below are getters
+            Gets the name of the Employee
         */
         public string getName()
         {
             return sEmployee;
         }
 
+
+        /*
+            Gets the total amout of tips for the employee
+        */
         public double getTips()
         {
             return dTips;
