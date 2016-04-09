@@ -112,7 +112,9 @@ namespace WaitStaffApplicataion
 
         private Receipt usingReceipt = null;
 
-        public MenuForm(Receipt curReceipt, Menu)
+        private FoodMenu curMenu;
+
+        public MenuForm(Receipt curReceipt, FoodMenu menu)
         {
             InitializeComponent();
 
@@ -130,6 +132,7 @@ namespace WaitStaffApplicataion
                 selectDrinkKid2, selectDrinkKid3, selectDrinkAdult1, selectDrinkAdult2, selectDrinkAdult3 };
 
             usingReceipt = curReceipt;
+            curMenu = menu;
             /*For initializing the prices later
             for (int i= 0; i< FoodPrices.Length; i++){
 
