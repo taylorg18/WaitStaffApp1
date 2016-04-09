@@ -86,7 +86,7 @@ namespace WaitStaffApplicataion
         //===================================================
         int[] menuValues = new int[18];
 
-        private System.Windows.Forms.TextBox[] tbFoodNames = new System.Windows.Forms.TextBox[18];
+        private System.Windows.Forms.TextBox[] tbFoodNames;
 
         TextBox[] FoodPrices = new TextBox[18];
 
@@ -99,6 +99,8 @@ namespace WaitStaffApplicataion
             TextBox[] FoodPrices = new TextBox[18]{priceAppetizer1, priceAppetizer2, priceAppetizer3,priceSoupSalad1, priceSoupSalad2, priceSoupSalad3,
             priceEntree1, priceEntree2, priceEntree3, priceDesserts1, priceDesserts2, priceDesserts3,  priceDrinkKid1, priceDrinkKid2, priceDrinkKid3,
             priceDrinkAdult1, priceDrinkAdult2, priceDrinkAdult3 };
+
+            tbFoodNames = new TextBox[18];
 
             /*For initializing the prices later
             for (int i= 0; i< FoodPrices.Length; i++){
