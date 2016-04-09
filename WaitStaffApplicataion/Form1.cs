@@ -129,6 +129,7 @@ namespace WaitStaffApplicataion
             string[] recInput = System.IO.File.ReadAllLines(@"C:\Users\" + userName + @"\Dropbox\CS 341\Waitstaff\recWait.txt");
             Table temp = null;
             int counter = 0;
+            String toGo = "";
             //parses the file from reception
             foreach (string tableInfo in recInput)
             {
@@ -137,46 +138,80 @@ namespace WaitStaffApplicataion
                
                 if (tableInfo == "" && temp != null) 
                 {
+                    //check if its a toGo order
+                    if(temp == tables[15])
+                    {
+                        temp.setSpecial(toGo);
+                    }
+                    //set to the table being occupied
                     buttons[temp.getTableNum()-1].BackColor = Color.Red;
                     buttons[temp.getTableNum() - 1].Text = "" + temp.getNumPeople();
                     counter = 0;
                     continue;
                 }
-                if(counter == 0)
+                if (counter == 0)
                 {
-                    if(tableInfo == "" || Int32.Parse(tableInfo) > 17) 
+                    //look for empty table
+                    if (tableInfo == "" || Int32.Parse(tableInfo) > 17)
                     {
                         break;
                     }
 
+                    //check for togo order
                     if(Int32.Parse(tableInfo) == 17)
                     {
                         temp = tables[15];
+
                     }
                     else
                     {
+                        //get the table
                         temp = tables[Int32.Parse(tableInfo) - 1];
                     }
                     temp.updateTableStatus();
-                    
-                }
-                else if(temp == tables[15])
-                {
 
                 }
-                else if(counter == 1)
+                else if (counter == 1)
                 {
-                    temp.setNumPeople(Int32.Parse(tableInfo));
+                    //check for a togo order
+                    if (temp == tables[15])
+                    {
+                        toGo += tableInfo + "\r\n";
+                    }
+                    else
+                    {
+                        //set the number of people at the table
+                        temp.setNumPeople(Int32.Parse(tableInfo));
+                    }
                 }
-                else if(counter == 2)
+                else if (counter == 2)
                 {
-                    temp.setSpecial(tableInfo);
+                    //check for togo order
+                    if(temp == tables[15])
+                    {
+                        toGo += tableInfo + "\r\n";
+                    }
+                    else
+                    {
+                        //set the special requests
+                        temp.setSpecial(tableInfo);
+                    }
+                    
                 }
                 else
                 {
-                    tables[Int32.Parse(tableInfo)-1].setMerged();
-                    tables[Int32.Parse(tableInfo)-1].setTableMerged(temp.getTableNum());
-                    buttons[Int32.Parse(tableInfo)-1].BackColor = Color.DarkGray;
+                    //once again check for togo order
+                    if(temp == tables[15])
+                    {
+                        toGo += tableInfo + "\r\n";
+                    }
+                    else
+                    {
+                        //check for any merged tables
+                        tables[Int32.Parse(tableInfo) - 1].setMerged();
+                        tables[Int32.Parse(tableInfo) - 1].setTableMerged(temp.getTableNum());
+                        buttons[Int32.Parse(tableInfo) - 1].BackColor = Color.DarkGray;
+                    }
                 }
                 counter++;          
             }
@@ -197,6 +232,12 @@ namespace WaitStaffApplicataion
                 if (holderTable.getTableStatus() == 0)
                 {
                     string holderAddedLine = holderTable.getTableNum() + "\r\n";
+                    if(holderTable.getTableNum() == 16)
+                    {
+                        //makes it 17 because Table 17 is togo orders
+                        holderAddedLine = "17\r\n";
+                    }
+
                     System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Reception\waitRec.txt"), holderAddedLine);
                 }
             }
@@ -218,7 +259,7 @@ namespace WaitStaffApplicataion
             dayOweek = dayOweek.ToUpper().Substring(0,3);
 
             Double totalTips = 0;
-            //
+            //get all the tips from the employees
             foreach( Employee emp in staff)
             {
                 totalTips += emp.getTips();
