@@ -19,9 +19,9 @@ namespace WaitStaffApplicataion
         {
             //default values for FoodItem Objects
             string sName = "temp";
-            string sSpecial = "temp";
+           // string sSpecial = "temp";
             float fPrice = 9001.13F;
-            bool bAvaliability = true;
+           // bool bAvaliability = true;
 
             int counter = 0;
             string line;
@@ -84,8 +84,7 @@ namespace WaitStaffApplicataion
                     // collected.
                 }
                 else {
-                    temp = new FoodItem(sName, sSpecial, fPrice,
-                            bAvaliability);
+                    temp = new FoodItem(sName, fPrice);
                     // add the item to the arraylist
                     this.Menu.Add((FoodItem)temp);
                 }

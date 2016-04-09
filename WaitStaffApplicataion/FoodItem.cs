@@ -10,12 +10,12 @@
                     iAmountStock;
 
         //constructor for food items
-        public FoodItem(string name, string special, float price, bool avaliability)
+        public FoodItem(string name, float price)
         {
             sName = name;
-            sSpecial = special;
+           // sSpecial = special;
             fPrice = price;
-            bAvaliability = avaliability;
+          //  bAvaliability = avaliability;
             iAmountSold = 0;
             iAmountStock = 20;
         }
@@ -24,22 +24,22 @@
         {
             sName = name;
         }
-
+        /*
         public void setSpecial(string special)
         {
             sSpecial = special;
         }
-
+        */
         public void setPrice(int price)
         {
             fPrice = price;
         }
-
+        /*
         public bool getAvaliability()
         {
             return bAvaliability;
         }
-
+        */
         public float getPrice()
         {
             return fPrice;
