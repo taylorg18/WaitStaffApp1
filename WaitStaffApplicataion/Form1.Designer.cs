@@ -504,6 +504,7 @@
             this.toGoTable.TabIndex = 18;
             this.toGoTable.Text = "button13";
             this.toGoTable.UseVisualStyleBackColor = true;
+            this.toGoTable.Click += new System.EventHandler(this.tableClick);
             // 
             // Sections
             // 

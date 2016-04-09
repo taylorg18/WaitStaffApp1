@@ -29,10 +29,17 @@ namespace WaitStaffApplicataion
         private ArrayList receipts = new ArrayList();
         private Employee employee;
 
+        /**
+        * changes the state of the table
+        * 0 is open
+        * 1 is occupied
+        * 2 is merged
+        */
         public void updateTableStatus()
         {
             iTableStatus++;
 
+            //check if table is being cleared
             if (iTableStatus > 1)
             {
                 iTableStatus = 0;
@@ -44,26 +51,42 @@ namespace WaitStaffApplicataion
             }
         }
 
+        /**
+        * sets the table that this table is merged with
+        */
         public void setTableMerged(int table)
         {
             iTableMerged = table;
+            iTableStatus = 3;
         }
 
+        /**
+        * sets the table as merged
+        */
         public void setMerged()
         {
             iTableStatus = 3;
         }
 
+        /**
+        * updates the status of orders
+        */
         public void updateFoodStatus(int newStatus)
         {
             iFoodStatus = newStatus;
         }
 
+        /**
+        * updates the menue of the table
+        */
         public void updateMenu()
         {
             menu.setMenu();
         }
 
+        /**
+        * adds a new reciept to the table
+        */
         public void addNewReciept()
         {
             iNumReciepts++;
@@ -72,22 +95,33 @@ namespace WaitStaffApplicataion
 
         //setter methods
 
+        /**
+        * sets the number of people seated at the table
+        */
         public void setNumPeople(int people)
         {
             iNumPeople = people;
         }
 
+        /**
+        * sets the server for the table
+        */
         public void setEmployee(Employee newEmployee)
         {
             employee = newEmployee;
         }
 
+        /**
+        * sets the tables number
+        */
         public void setTableNum(int num)
         {
             iTableNum = num;
         }
 
-
+        /**
+        * sets the special requests
+        */
         public void setSpecial(string special)
         {
             sSpecial = special;
@@ -95,38 +129,60 @@ namespace WaitStaffApplicataion
 
         //getter methods
 
+            /**
+            * gets the table's number
+            */
         public int getTableNum()
         {
             return iTableNum;
         }
 
+        /**
+        * gets the table status
+        */
         public int getTableStatus()
         {
             return iTableStatus;
         }
 
+        /**
+        * gets the server
+        */
         public Employee getEmployee()
         {
             return employee;
         }
 
+        /**
+        * gets the table that is merged 
+        */
         public int getTableMerged()
         {
             return iTableMerged;
         }
 
+        /**
+        * gets the status of the food
+        */
         public int getFoodStatus()
         {
             return iFoodStatus;
         }
 
+        /**
+        * gets the special requests
+        */
         public string getSpecial()
         {
             return sSpecial;
         }
 
+        /**
+        * gets the current reciept of the table
+        */
         public Receipt getReceipt()
         {
+            //check if a reciept exists
             if (iNumReciepts == -1)
             {
                 receipts.Add(new Receipt());
@@ -136,11 +192,17 @@ namespace WaitStaffApplicataion
             return (Receipt) receipts[iNumReciepts];
         }
 
+        /**
+        * gets the number of people seated at the table
+        */
         public int getNumPeople()
         {
             return iNumPeople;
         }
 
+        /**
+        * gets the menu
+        */
         public FoodMenu getMenu()
         {
             return menu;
