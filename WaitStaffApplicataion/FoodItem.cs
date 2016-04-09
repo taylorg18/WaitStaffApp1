@@ -1,5 +1,6 @@
 ﻿namespace WaitStaffApplicataion
 {
+
     public class FoodItem
     {
         private string sName,
