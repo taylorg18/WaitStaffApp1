@@ -18,30 +18,12 @@ namespace WaitStaffApplicataion
         private NumericUpDown numericUpDown4;
         private NumericUpDown numericUpDown5;
         private NumericUpDown numericUpDown6;
-        private TextBox appetizer1;
-        private TextBox appetizer2;
-        private TextBox appetizer3;
-        private TextBox soupSalad1;
-        private TextBox soupSalad2;
-        private TextBox soupSalad3;
-        private TextBox entree1;
         private NumericUpDown numericUpDown7;
-        private TextBox drinkAdult3;
-        private TextBox drinkAdult2;
-        private TextBox drinkAdult1;
-        private TextBox drinkKid3;
         private NumericUpDown numericUpDown11;
         private NumericUpDown numericUpDown12;
         private NumericUpDown numericUpDown13;
         private NumericUpDown numericUpDown14;
         private NumericUpDown numericUpDown15;
-        private TextBox drinkKid2;
-        private TextBox drinkKid1;
-        private TextBox dessert3;
-        private TextBox desserts2;
-        private TextBox desserts1;
-        private TextBox entree3;
-        private TextBox entree2;
         private NumericUpDown numericUpDown16;
         private NumericUpDown numericUpDown17;
         private NumericUpDown numericUpDown18;
@@ -104,7 +86,8 @@ namespace WaitStaffApplicataion
         //===================================================
         int[] menuValues = new int[18];
 
-        TextBox[] tbFoodNames = new TextBox[18];
+        private System.Windows.Forms.TextBox[] tbFoodNames = new System.Windows.Forms.TextBox[18];
+
 
 
         public MenuForm()
@@ -134,36 +117,37 @@ namespace WaitStaffApplicataion
 
         private void InitializeComponent()
         {
+
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.appetizer1 = new System.Windows.Forms.TextBox();
-            this.appetizer2 = new System.Windows.Forms.TextBox();
-            this.appetizer3 = new System.Windows.Forms.TextBox();
-            this.soupSalad1 = new System.Windows.Forms.TextBox();
-            this.soupSalad2 = new System.Windows.Forms.TextBox();
-            this.soupSalad3 = new System.Windows.Forms.TextBox();
-            this.entree1 = new System.Windows.Forms.TextBox();
+            this.tbFoodNames[0] = new System.Windows.Forms.TextBox();
+            this.tbFoodNames[1] = new System.Windows.Forms.TextBox();
+            this.tbFoodNames[2] = new System.Windows.Forms.TextBox();
+            this.tbFoodNames[3] = new System.Windows.Forms.TextBox();
+            this.tbFoodNames[4] = new System.Windows.Forms.TextBox();
+            this.tbFoodNames[5] = new System.Windows.Forms.TextBox();
+            this.tbFoodNames[6] = new System.Windows.Forms.TextBox();
+            this.tbFoodNames[7] = new System.Windows.Forms.TextBox();
+            this.tbFoodNames[8] = new System.Windows.Forms.TextBox();
+            this.tbFoodNames[9] = new System.Windows.Forms.TextBox();
+            this.tbFoodNames[10] = new System.Windows.Forms.TextBox();
+            this.tbFoodNames[11] = new System.Windows.Forms.TextBox();
+            this.tbFoodNames[12] = new System.Windows.Forms.TextBox();
+            this.tbFoodNames[13] = new System.Windows.Forms.TextBox();
+            this.tbFoodNames[14] = new System.Windows.Forms.TextBox();
+            this.tbFoodNames[15] = new System.Windows.Forms.TextBox();
+            this.tbFoodNames[16] = new System.Windows.Forms.TextBox();
+            this.tbFoodNames[17] = new System.Windows.Forms.TextBox();
             this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
-            this.drinkAdult3 = new System.Windows.Forms.TextBox();
-            this.drinkAdult2 = new System.Windows.Forms.TextBox();
-            this.drinkAdult1 = new System.Windows.Forms.TextBox();
-            this.drinkKid3 = new System.Windows.Forms.TextBox();
             this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown13 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown14 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown15 = new System.Windows.Forms.NumericUpDown();
-            this.drinkKid2 = new System.Windows.Forms.TextBox();
-            this.drinkKid1 = new System.Windows.Forms.TextBox();
-            this.dessert3 = new System.Windows.Forms.TextBox();
-            this.desserts2 = new System.Windows.Forms.TextBox();
-            this.desserts1 = new System.Windows.Forms.TextBox();
-            this.entree3 = new System.Windows.Forms.TextBox();
-            this.entree2 = new System.Windows.Forms.TextBox();
             this.numericUpDown16 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown17 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown18 = new System.Windows.Forms.NumericUpDown();
@@ -290,74 +274,184 @@ namespace WaitStaffApplicataion
             // 
             // appetizer1
             // 
-            this.appetizer1.Location = new System.Drawing.Point(12, 38);
-            this.appetizer1.Name = "appetizer1";
-            this.appetizer1.ReadOnly = true;
-            this.appetizer1.Size = new System.Drawing.Size(116, 20);
-            this.appetizer1.TabIndex = 8;
-            this.appetizer1.Text = "Chicken Nachos";
-            this.appetizer1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.appetizer1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbFoodNames[0].Location = new System.Drawing.Point(12, 38);
+            this.tbFoodNames[0].Name = "appetizer1";
+            this.tbFoodNames[0].ReadOnly = true;
+            this.tbFoodNames[0].Size = new System.Drawing.Size(116, 20);
+            this.tbFoodNames[0].TabIndex = 8;
+            this.tbFoodNames[0].Text = "Chicken Nachos";
+            this.tbFoodNames[0].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbFoodNames[0].TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // appetizer2
             // 
-            this.appetizer2.Location = new System.Drawing.Point(11, 65);
-            this.appetizer2.Name = "appetizer2";
-            this.appetizer2.ReadOnly = true;
-            this.appetizer2.Size = new System.Drawing.Size(116, 20);
-            this.appetizer2.TabIndex = 9;
-            this.appetizer2.Text = "Deep Fried Mozarella";
-            this.appetizer2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbFoodNames[1].Location = new System.Drawing.Point(11, 65);
+            this.tbFoodNames[1].Name = "appetizer2";
+            this.tbFoodNames[1].ReadOnly = true;
+            this.tbFoodNames[1].Size = new System.Drawing.Size(116, 20);
+            this.tbFoodNames[1].TabIndex = 9;
+            this.tbFoodNames[1].Text = "Deep Fried Mozarella";
+            this.tbFoodNames[1].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // appetizer3
             // 
-            this.appetizer3.Location = new System.Drawing.Point(11, 91);
-            this.appetizer3.Name = "appetizer3";
-            this.appetizer3.ReadOnly = true;
-            this.appetizer3.Size = new System.Drawing.Size(116, 20);
-            this.appetizer3.TabIndex = 10;
-            this.appetizer3.Text = "Spam Musubi";
-            this.appetizer3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbFoodNames[2].Location = new System.Drawing.Point(11, 91);
+            this.tbFoodNames[2].Name = "appetizer3";
+            this.tbFoodNames[2].ReadOnly = true;
+            this.tbFoodNames[2].Size = new System.Drawing.Size(116, 20);
+            this.tbFoodNames[2].TabIndex = 10;
+            this.tbFoodNames[2].Text = "Spam Musubi";
+            this.tbFoodNames[2].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // soupSalad1
             // 
-            this.soupSalad1.Location = new System.Drawing.Point(10, 161);
-            this.soupSalad1.Name = "soupSalad1";
-            this.soupSalad1.ReadOnly = true;
-            this.soupSalad1.Size = new System.Drawing.Size(116, 20);
-            this.soupSalad1.TabIndex = 11;
-            this.soupSalad1.Text = "Caesar Salad";
-            this.soupSalad1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbFoodNames[3].Location = new System.Drawing.Point(10, 161);
+            this.tbFoodNames[3].Name = "soupSalad1";
+            this.tbFoodNames[3].ReadOnly = true;
+            this.tbFoodNames[3].Size = new System.Drawing.Size(116, 20);
+            this.tbFoodNames[3].TabIndex = 11;
+            this.tbFoodNames[3].Text = "Caesar Salad";
+            this.tbFoodNames[3].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // soupSalad2
             // 
-            this.soupSalad2.Location = new System.Drawing.Point(10, 187);
-            this.soupSalad2.Name = "soupSalad2";
-            this.soupSalad2.ReadOnly = true;
-            this.soupSalad2.Size = new System.Drawing.Size(116, 20);
-            this.soupSalad2.TabIndex = 12;
-            this.soupSalad2.Text = "Mac Salad";
-            this.soupSalad2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbFoodNames[4].Location = new System.Drawing.Point(10, 187);
+            this.tbFoodNames[4].Name = "soupSalad2";
+            this.tbFoodNames[4].ReadOnly = true;
+            this.tbFoodNames[4].Size = new System.Drawing.Size(116, 20);
+            this.tbFoodNames[4].TabIndex = 12;
+            this.tbFoodNames[4].Text = "Mac Salad";
+            this.tbFoodNames[4].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // soupSalad3
             // 
-            this.soupSalad3.Location = new System.Drawing.Point(10, 213);
-            this.soupSalad3.Name = "soupSalad3";
-            this.soupSalad3.ReadOnly = true;
-            this.soupSalad3.Size = new System.Drawing.Size(116, 20);
-            this.soupSalad3.TabIndex = 13;
-            this.soupSalad3.Text = "Miso Soup";
-            this.soupSalad3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbFoodNames[5].Location = new System.Drawing.Point(10, 213);
+            this.tbFoodNames[5].Name = "soupSalad3";
+            this.tbFoodNames[5].ReadOnly = true;
+            this.tbFoodNames[5].Size = new System.Drawing.Size(116, 20);
+            this.tbFoodNames[5].TabIndex = 13;
+            this.tbFoodNames[5].Text = "Miso Soup";
+            this.tbFoodNames[5].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // entree1
             // 
-            this.entree1.Location = new System.Drawing.Point(11, 278);
-            this.entree1.Name = "entree1";
-            this.entree1.ReadOnly = true;
-            this.entree1.Size = new System.Drawing.Size(116, 20);
-            this.entree1.TabIndex = 14;
-            this.entree1.Text = "Loco Moco";
-            this.entree1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbFoodNames[6].Location = new System.Drawing.Point(11, 278);
+            this.tbFoodNames[6].Name = "entree1";
+            this.tbFoodNames[6].ReadOnly = true;
+            this.tbFoodNames[6].Size = new System.Drawing.Size(116, 20);
+            this.tbFoodNames[6].TabIndex = 14;
+            this.tbFoodNames[6].Text = "Loco Moco";
+            this.tbFoodNames[6].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // entree2
+            // 
+            this.tbFoodNames[7].Location = new System.Drawing.Point(12, 304);
+            this.tbFoodNames[7].Name = "entree2";
+            this.tbFoodNames[7].ReadOnly = true;
+            this.tbFoodNames[7].Size = new System.Drawing.Size(116, 20);
+            this.tbFoodNames[7].TabIndex = 36;
+            this.tbFoodNames[7].Text = "Garlic Chicken";
+            this.tbFoodNames[7].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // entree3
+            // 
+            this.tbFoodNames[8].Location = new System.Drawing.Point(11, 331);
+            this.tbFoodNames[8].Name = "entree3";
+            this.tbFoodNames[8].ReadOnly = true;
+            this.tbFoodNames[8].Size = new System.Drawing.Size(116, 20);
+            this.tbFoodNames[8].TabIndex = 37;
+            this.tbFoodNames[8].Text = "Cheeseburger";
+            this.tbFoodNames[8].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // desserts1
+            // 
+            this.tbFoodNames[9].Location = new System.Drawing.Point(11, 399);
+            this.tbFoodNames[9].Name = "desserts1";
+            this.tbFoodNames[9].ReadOnly = true;
+            this.tbFoodNames[9].Size = new System.Drawing.Size(116, 20);
+            this.tbFoodNames[9].TabIndex = 38;
+            this.tbFoodNames[9].Text = "Deep Fried Oreos";
+            this.tbFoodNames[9].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // desserts2
+            // 
+            this.tbFoodNames[10].Location = new System.Drawing.Point(11, 425);
+            this.tbFoodNames[10].Name = "desserts2";
+            this.tbFoodNames[10].ReadOnly = true;
+            this.tbFoodNames[10].Size = new System.Drawing.Size(116, 20);
+            this.tbFoodNames[10].TabIndex = 39;
+            this.tbFoodNames[10].Text = "Mochi Ice Cream";
+            this.tbFoodNames[10].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // dessert3
+            // 
+            this.tbFoodNames[11].Location = new System.Drawing.Point(11, 451);
+            this.tbFoodNames[11].Name = "dessert3";
+            this.tbFoodNames[11].ReadOnly = true;
+            this.tbFoodNames[11].Size = new System.Drawing.Size(116, 20);
+            this.tbFoodNames[11].TabIndex = 40;
+            this.tbFoodNames[11].Text = "The Tim Special";
+            this.tbFoodNames[11].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // drinkKid1
+            // 
+            this.tbFoodNames[12].Location = new System.Drawing.Point(443, 38);
+            this.tbFoodNames[12].Name = "drinkKid1";
+            this.tbFoodNames[12].ReadOnly = true;
+            this.tbFoodNames[12].Size = new System.Drawing.Size(116, 20);
+            this.tbFoodNames[12].TabIndex = 41;
+            this.tbFoodNames[12].Text = "Coke";
+            this.tbFoodNames[12].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // drinkKid2
+            // 
+            this.tbFoodNames[13].Location = new System.Drawing.Point(443, 64);
+            this.tbFoodNames[13].Name = "drinkKid2";
+            this.tbFoodNames[13].ReadOnly = true;
+            this.tbFoodNames[13].Size = new System.Drawing.Size(116, 20);
+            this.tbFoodNames[13].TabIndex = 42;
+            this.tbFoodNames[13].Text = "Root Beer";
+            this.tbFoodNames[13].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // drinkKid3
+            // 
+            this.tbFoodNames[14].Location = new System.Drawing.Point(443, 90);
+            this.tbFoodNames[14].Name = "drinkKid3";
+            this.tbFoodNames[14].ReadOnly = true;
+            this.tbFoodNames[14].Size = new System.Drawing.Size(116, 20);
+            this.tbFoodNames[14].TabIndex = 22;
+            this.tbFoodNames[14].Text = "Bottled Water";
+            this.tbFoodNames[14].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // drinkAdult1
+            // 
+            this.tbFoodNames[15].Location = new System.Drawing.Point(443, 161);
+            this.tbFoodNames[15].Name = "drinkAdult1";
+            this.tbFoodNames[15].ReadOnly = true;
+            this.tbFoodNames[15].Size = new System.Drawing.Size(116, 20);
+            this.tbFoodNames[15].TabIndex = 23;
+            this.tbFoodNames[15].Text = "Jack and Coke";
+            this.tbFoodNames[15].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // drinkAdult2
+            // 
+            this.tbFoodNames[16].Location = new System.Drawing.Point(443, 187);
+            this.tbFoodNames[16].Name = "drinkAdult2";
+            this.tbFoodNames[16].ReadOnly = true;
+            this.tbFoodNames[16].Size = new System.Drawing.Size(116, 20);
+            this.tbFoodNames[16].TabIndex = 24;
+            this.tbFoodNames[16].Text = "Jaeger";
+            this.tbFoodNames[16].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // drinkAdult3
+            // 
+            this.tbFoodNames[17].Location = new System.Drawing.Point(443, 213);
+            this.tbFoodNames[17].Name = "drinkAdult3";
+            this.tbFoodNames[17].ReadOnly = true;
+            this.tbFoodNames[17].Size = new System.Drawing.Size(116, 20);
+            this.tbFoodNames[17].TabIndex = 25;
+            this.tbFoodNames[17].Text = "Vodka Tonic";
+            this.tbFoodNames[17].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // numericUpDown7
             // 
@@ -366,46 +460,6 @@ namespace WaitStaffApplicataion
             this.numericUpDown7.Size = new System.Drawing.Size(44, 20);
             this.numericUpDown7.TabIndex = 15;
             this.numericUpDown7.ValueChanged += new System.EventHandler(this.numericUpDown7_ValueChanged);
-            // 
-            // drinkAdult3
-            // 
-            this.drinkAdult3.Location = new System.Drawing.Point(443, 213);
-            this.drinkAdult3.Name = "drinkAdult3";
-            this.drinkAdult3.ReadOnly = true;
-            this.drinkAdult3.Size = new System.Drawing.Size(116, 20);
-            this.drinkAdult3.TabIndex = 25;
-            this.drinkAdult3.Text = "Vodka Tonic";
-            this.drinkAdult3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // drinkAdult2
-            // 
-            this.drinkAdult2.Location = new System.Drawing.Point(443, 187);
-            this.drinkAdult2.Name = "drinkAdult2";
-            this.drinkAdult2.ReadOnly = true;
-            this.drinkAdult2.Size = new System.Drawing.Size(116, 20);
-            this.drinkAdult2.TabIndex = 24;
-            this.drinkAdult2.Text = "Jaeger";
-            this.drinkAdult2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // drinkAdult1
-            // 
-            this.drinkAdult1.Location = new System.Drawing.Point(443, 161);
-            this.drinkAdult1.Name = "drinkAdult1";
-            this.drinkAdult1.ReadOnly = true;
-            this.drinkAdult1.Size = new System.Drawing.Size(116, 20);
-            this.drinkAdult1.TabIndex = 23;
-            this.drinkAdult1.Text = "Jack and Coke";
-            this.drinkAdult1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // drinkKid3
-            // 
-            this.drinkKid3.Location = new System.Drawing.Point(443, 90);
-            this.drinkKid3.Name = "drinkKid3";
-            this.drinkKid3.ReadOnly = true;
-            this.drinkKid3.Size = new System.Drawing.Size(116, 20);
-            this.drinkKid3.TabIndex = 22;
-            this.drinkKid3.Text = "Bottled Water";
-            this.drinkKid3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // numericUpDown11
             // 
@@ -446,76 +500,6 @@ namespace WaitStaffApplicataion
             this.numericUpDown15.Size = new System.Drawing.Size(44, 20);
             this.numericUpDown15.TabIndex = 43;
             this.numericUpDown15.ValueChanged += new System.EventHandler(this.numericUpDown15_ValueChanged);
-            // 
-            // drinkKid2
-            // 
-            this.drinkKid2.Location = new System.Drawing.Point(443, 64);
-            this.drinkKid2.Name = "drinkKid2";
-            this.drinkKid2.ReadOnly = true;
-            this.drinkKid2.Size = new System.Drawing.Size(116, 20);
-            this.drinkKid2.TabIndex = 42;
-            this.drinkKid2.Text = "Root Beer";
-            this.drinkKid2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // drinkKid1
-            // 
-            this.drinkKid1.Location = new System.Drawing.Point(443, 38);
-            this.drinkKid1.Name = "drinkKid1";
-            this.drinkKid1.ReadOnly = true;
-            this.drinkKid1.Size = new System.Drawing.Size(116, 20);
-            this.drinkKid1.TabIndex = 41;
-            this.drinkKid1.Text = "Coke";
-            this.drinkKid1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // dessert3
-            // 
-            this.dessert3.Location = new System.Drawing.Point(11, 451);
-            this.dessert3.Name = "dessert3";
-            this.dessert3.ReadOnly = true;
-            this.dessert3.Size = new System.Drawing.Size(116, 20);
-            this.dessert3.TabIndex = 40;
-            this.dessert3.Text = "The Tim Special";
-            this.dessert3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // desserts2
-            // 
-            this.desserts2.Location = new System.Drawing.Point(11, 425);
-            this.desserts2.Name = "desserts2";
-            this.desserts2.ReadOnly = true;
-            this.desserts2.Size = new System.Drawing.Size(116, 20);
-            this.desserts2.TabIndex = 39;
-            this.desserts2.Text = "Mochi Ice Cream";
-            this.desserts2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // desserts1
-            // 
-            this.desserts1.Location = new System.Drawing.Point(11, 399);
-            this.desserts1.Name = "desserts1";
-            this.desserts1.ReadOnly = true;
-            this.desserts1.Size = new System.Drawing.Size(116, 20);
-            this.desserts1.TabIndex = 38;
-            this.desserts1.Text = "Deep Fried Oreos";
-            this.desserts1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // entree3
-            // 
-            this.entree3.Location = new System.Drawing.Point(11, 331);
-            this.entree3.Name = "entree3";
-            this.entree3.ReadOnly = true;
-            this.entree3.Size = new System.Drawing.Size(116, 20);
-            this.entree3.TabIndex = 37;
-            this.entree3.Text = "Cheeseburger";
-            this.entree3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // entree2
-            // 
-            this.entree2.Location = new System.Drawing.Point(12, 304);
-            this.entree2.Name = "entree2";
-            this.entree2.ReadOnly = true;
-            this.entree2.Size = new System.Drawing.Size(116, 20);
-            this.entree2.TabIndex = 36;
-            this.entree2.Text = "Garlic Chicken";
-            this.entree2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // numericUpDown16
             // 
@@ -1089,35 +1073,35 @@ namespace WaitStaffApplicataion
             this.Controls.Add(this.entreeName);
             this.Controls.Add(this.drinkAdultName);
             this.Controls.Add(this.numericUpDown15);
-            this.Controls.Add(this.drinkKid2);
-            this.Controls.Add(this.drinkKid1);
-            this.Controls.Add(this.dessert3);
-            this.Controls.Add(this.desserts2);
-            this.Controls.Add(this.desserts1);
-            this.Controls.Add(this.entree3);
-            this.Controls.Add(this.entree2);
+            this.Controls.Add(this.tbFoodNames[13]);
+            this.Controls.Add(this.tbFoodNames[12]);
+            this.Controls.Add(this.tbFoodNames[11]);
+            this.Controls.Add(this.tbFoodNames[10]);
+            this.Controls.Add(this.tbFoodNames[9]);
+            this.Controls.Add(this.tbFoodNames[8]);
+            this.Controls.Add(this.tbFoodNames[7]);
             this.Controls.Add(this.numericUpDown16);
             this.Controls.Add(this.numericUpDown17);
             this.Controls.Add(this.numericUpDown18);
             this.Controls.Add(this.numericUpDown19);
             this.Controls.Add(this.numericUpDown20);
             this.Controls.Add(this.numericUpDown21);
-            this.Controls.Add(this.drinkAdult3);
-            this.Controls.Add(this.drinkAdult2);
-            this.Controls.Add(this.drinkAdult1);
-            this.Controls.Add(this.drinkKid3);
+            this.Controls.Add(this.tbFoodNames[17]);
+            this.Controls.Add(this.tbFoodNames[16]);
+            this.Controls.Add(this.tbFoodNames[15]);
+            this.Controls.Add(this.tbFoodNames[14]);
             this.Controls.Add(this.numericUpDown11);
             this.Controls.Add(this.numericUpDown12);
             this.Controls.Add(this.numericUpDown13);
             this.Controls.Add(this.numericUpDown14);
             this.Controls.Add(this.numericUpDown7);
-            this.Controls.Add(this.entree1);
-            this.Controls.Add(this.soupSalad3);
-            this.Controls.Add(this.soupSalad2);
-            this.Controls.Add(this.soupSalad1);
-            this.Controls.Add(this.appetizer3);
-            this.Controls.Add(this.appetizer2);
-            this.Controls.Add(this.appetizer1);
+            this.Controls.Add(this.tbFoodNames[6]);
+            this.Controls.Add(this.tbFoodNames[5]);
+            this.Controls.Add(this.tbFoodNames[4]);
+            this.Controls.Add(this.tbFoodNames[3]);
+            this.Controls.Add(this.tbFoodNames[2]);
+            this.Controls.Add(this.tbFoodNames[1]);
+            this.Controls.Add(this.tbFoodNames[0]);
             this.Controls.Add(this.numericUpDown6);
             this.Controls.Add(this.numericUpDown5);
             this.Controls.Add(this.numericUpDown4);
@@ -1151,7 +1135,7 @@ namespace WaitStaffApplicataion
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            appetizer1.Text = "Schmittyz Chicken";
+            tbFoodNames[0].Text = "Schmittyz Chicken";
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
