@@ -6,19 +6,21 @@
         private string sName, // Food Item name
                        sSpecial; 
         private float fPrice;
-     //   private bool bAvaliability = true;
+        //   private bool bAvaliability = true;
         private int iAmountSold,//keeps track of units of food sold
-                    iAmountStock;//
+                    iTimeToPrepare;
+        private bool inStock;//
 
         //constructor for food items
-        public FoodItem(string name, float price)
+        public FoodItem(string name, float price, int prepTime)
         {
             sName = name;
            // sSpecial = special;
             fPrice = price;
           //  bAvaliability = avaliability;
             iAmountSold = 0;
-            iAmountStock = 20;
+            inStock = true;
+            iTimeToPrepare = prepTime;
         }
 
         public void setName(string name)
@@ -54,19 +56,9 @@
         /**
          * determines if item can be sold and returns amount of order not filled without selling any if order cannot be filled
          **/
-        public int updateSold(int sold)
+        public void updateSold(int sold)
         {
-            //checks if we still have the food items needed to make the transaction in stock and makes changes if so
-            if(sold <= iAmountStock)
-            {
-                iAmountSold += sold;
-                iAmountStock -= sold;
-                return 0;
-            }
-            else // we do not have enough and we cannot make the sell
-            {
-                return sold - iAmountStock;
-            }
+            iAmountSold += sold;
         }
 
         /*
@@ -77,9 +69,14 @@
             return iAmountSold;
         }
 
-        public int getStock()
+        public bool getStock()
         {
-            return iAmountStock;
+            return inStock;
+        }
+
+        public void setStock(bool stock)
+        {
+            inStock = stock;
         }
 
     }

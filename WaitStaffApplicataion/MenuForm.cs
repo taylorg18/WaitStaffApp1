@@ -112,7 +112,7 @@ namespace WaitStaffApplicataion
 
         private Receipt usingReceipt = null;
 
-        public MenuForm(Receipt curReceipt)
+        public MenuForm(Receipt curReceipt, Menu)
         {
             InitializeComponent();
 
