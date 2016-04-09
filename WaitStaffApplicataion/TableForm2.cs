@@ -14,6 +14,7 @@ namespace WaitStaffApplicataion
     {
         private Table tCurrentTable = null;
         private Button tCurrentButton = null;
+        private FoodMenu curMenu = null;
 
         public TableForm2()
         {
@@ -21,13 +22,14 @@ namespace WaitStaffApplicataion
            
         }
 
-        public TableForm2(Table newTable, Button inButton)
+        public TableForm2(Table newTable, Button inButton, FoodMenu menu)
         {
 
 
             InitializeComponent();
             tCurrentTable = newTable;
-            tCurrentButton = inButton; 
+            tCurrentButton = inButton;
+            curMenu = menu;
 
             if (tCurrentTable.getTableMerged() > 0)
             {
@@ -44,7 +46,7 @@ namespace WaitStaffApplicataion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MenuForm MenuForm = new MenuForm();
+            MenuForm MenuForm = new MenuForm(tCurrentTable.getReceipt(), curMenu);
             MenuForm.Visible = true;
         }
 

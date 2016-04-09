@@ -122,7 +122,7 @@ namespace WaitStaffApplicataion
                 return;
             }
             //creates form based on which table was clicked
-            TableForm2 tableForm = new TableForm2(tables[indexSelected], buttons[indexSelected]);
+            TableForm2 tableForm = new TableForm2(tables[indexSelected], buttons[indexSelected], menu);
             tableForm.Visible = true;
         }
 
