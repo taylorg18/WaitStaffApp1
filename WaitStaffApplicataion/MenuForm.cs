@@ -108,7 +108,7 @@ namespace WaitStaffApplicataion
 
         private TextBox[] FoodPrices = new TextBox[18];
 
-        private NumericUpDown[] nupSelectors = new NumericUpDown[18];
+        private NumericUpDown[] nudSelectors = new NumericUpDown[18];
 
 
         public MenuForm()
@@ -124,7 +124,7 @@ namespace WaitStaffApplicataion
                                             entree1,entree2,entree3,desserts1,desserts2,dessert3,
                                             drinkKid1, drinkKid2, drinkKid3, drinkAdult1, drinkAdult2,drinkAdult3 };
 
-            this.nupSelectors = new NumericUpDown[18] {selectAppetizer1, selectAppetizer2, selectAppetizer3, selectSoupSalad1, selectSoupSalad2,
+            this.nudSelectors = new NumericUpDown[18] {selectAppetizer1, selectAppetizer2, selectAppetizer3, selectSoupSalad1, selectSoupSalad2,
                 selectSoupSalad3, selectEntree1, selectEntree2, selectEntree3, selectDesserts1, selectDesserts2, selectDesserts3, selectDrinkKid1,
                 selectDrinkKid2, selectDrinkKid3, selectDrinkAdult1, selectDrinkAdult2, selectDrinkAdult3 };
 
@@ -1214,7 +1214,7 @@ namespace WaitStaffApplicataion
 
                     {
                         //gonna decide how to get the names in there later when I do the importing of menuItems from the txt file
-                        string Orders = "chickenFingers," + menuValues[i] + "\r\n";
+                        string Orders = tbFoodNames[i].Text + nudSelectors[i].Value + "\r\n";
                         System.IO.File.AppendAllText(@"C:\waitData\MenuItemOrdered.txt", Orders);
                     }
 
