@@ -106,7 +106,9 @@ namespace WaitStaffApplicataion
 
         private System.Windows.Forms.TextBox[] tbFoodNames;
 
-        TextBox[] FoodPrices = new TextBox[18];
+        private TextBox[] FoodPrices = new TextBox[18];
+
+        private NumericUpDown[] nupSelectors = new NumericUpDown[18];
 
 
         public MenuForm()
@@ -121,6 +123,10 @@ namespace WaitStaffApplicataion
             this.tbFoodNames = new TextBox[18] {appetizer1, appetizer2, appetizer3, soupSalad1,soupSalad2, soupSalad3,
                                             entree1,entree2,entree3,desserts1,desserts2,dessert3,
                                             drinkKid1, drinkKid2, drinkKid3, drinkAdult1, drinkAdult2,drinkAdult3 };
+
+            this.nupSelectors = new NumericUpDown[18] {selectAppetizer1, selectAppetizer2, selectAppetizer3, selectSoupSalad1, selectSoupSalad2,
+                selectSoupSalad3, selectEntree1, selectEntree2, selectEntree3, selectDesserts1, selectDesserts2, selectDesserts3, selectDrinkKid1,
+                selectDrinkKid2, selectDrinkKid3, selectDrinkAdult1, selectDrinkAdult2, selectDrinkAdult3 };
 
             /*For initializing the prices later
             for (int i= 0; i< FoodPrices.Length; i++){
@@ -260,54 +266,6 @@ namespace WaitStaffApplicataion
             ((System.ComponentModel.ISupportInitialize)(this.selectEntree3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectEntree2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // selectAppetizer1
-            // 
-            this.selectAppetizer1.Location = new System.Drawing.Point(134, 38);
-            this.selectAppetizer1.Name = "selectAppetizer1";
-            this.selectAppetizer1.Size = new System.Drawing.Size(43, 20);
-            this.selectAppetizer1.TabIndex = 2;
-            this.selectAppetizer1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
-            // 
-            // selectAppetizer2
-            // 
-            this.selectAppetizer2.Location = new System.Drawing.Point(134, 65);
-            this.selectAppetizer2.Name = "selectAppetizer2";
-            this.selectAppetizer2.Size = new System.Drawing.Size(42, 20);
-            this.selectAppetizer2.TabIndex = 3;
-            this.selectAppetizer2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
-            // 
-            // selectAppetizer3
-            // 
-            this.selectAppetizer3.Location = new System.Drawing.Point(133, 91);
-            this.selectAppetizer3.Name = "selectAppetizer3";
-            this.selectAppetizer3.Size = new System.Drawing.Size(44, 20);
-            this.selectAppetizer3.TabIndex = 4;
-            this.selectAppetizer3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
-            // 
-            // selectSoupSalad1
-            // 
-            this.selectSoupSalad1.Location = new System.Drawing.Point(132, 162);
-            this.selectSoupSalad1.Name = "selectSoupSalad1";
-            this.selectSoupSalad1.Size = new System.Drawing.Size(44, 20);
-            this.selectSoupSalad1.TabIndex = 5;
-            this.selectSoupSalad1.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
-            // 
-            // selectSoupSalad2
-            // 
-            this.selectSoupSalad2.Location = new System.Drawing.Point(131, 188);
-            this.selectSoupSalad2.Name = "selectSoupSalad2";
-            this.selectSoupSalad2.Size = new System.Drawing.Size(44, 20);
-            this.selectSoupSalad2.TabIndex = 6;
-            this.selectSoupSalad2.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
-            // 
-            // selectSoupSalad3
-            // 
-            this.selectSoupSalad3.Location = new System.Drawing.Point(131, 213);
-            this.selectSoupSalad3.Name = "selectSoupSalad3";
-            this.selectSoupSalad3.Size = new System.Drawing.Size(44, 20);
-            this.selectSoupSalad3.TabIndex = 7;
-            this.selectSoupSalad3.ValueChanged += new System.EventHandler(this.numericUpDown6_ValueChanged);
             // 
             // appetizer1
             // 
@@ -490,6 +448,54 @@ namespace WaitStaffApplicataion
             this.drinkKid3.Text = "Bottled Water";
             this.drinkKid3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // selectAppetizer1
+            // 
+            this.selectAppetizer1.Location = new System.Drawing.Point(134, 38);
+            this.selectAppetizer1.Name = "selectAppetizer1";
+            this.selectAppetizer1.Size = new System.Drawing.Size(43, 20);
+            this.selectAppetizer1.TabIndex = 2;
+            this.selectAppetizer1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // selectAppetizer2
+            // 
+            this.selectAppetizer2.Location = new System.Drawing.Point(134, 65);
+            this.selectAppetizer2.Name = "selectAppetizer2";
+            this.selectAppetizer2.Size = new System.Drawing.Size(42, 20);
+            this.selectAppetizer2.TabIndex = 3;
+            this.selectAppetizer2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
+            // 
+            // selectAppetizer3
+            // 
+            this.selectAppetizer3.Location = new System.Drawing.Point(133, 91);
+            this.selectAppetizer3.Name = "selectAppetizer3";
+            this.selectAppetizer3.Size = new System.Drawing.Size(44, 20);
+            this.selectAppetizer3.TabIndex = 4;
+            this.selectAppetizer3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            // 
+            // selectSoupSalad1
+            // 
+            this.selectSoupSalad1.Location = new System.Drawing.Point(132, 162);
+            this.selectSoupSalad1.Name = "selectSoupSalad1";
+            this.selectSoupSalad1.Size = new System.Drawing.Size(44, 20);
+            this.selectSoupSalad1.TabIndex = 5;
+            this.selectSoupSalad1.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
+            // 
+            // selectSoupSalad2
+            // 
+            this.selectSoupSalad2.Location = new System.Drawing.Point(131, 188);
+            this.selectSoupSalad2.Name = "selectSoupSalad2";
+            this.selectSoupSalad2.Size = new System.Drawing.Size(44, 20);
+            this.selectSoupSalad2.TabIndex = 6;
+            this.selectSoupSalad2.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
+            // 
+            // selectSoupSalad3
+            // 
+            this.selectSoupSalad3.Location = new System.Drawing.Point(131, 213);
+            this.selectSoupSalad3.Name = "selectSoupSalad3";
+            this.selectSoupSalad3.Size = new System.Drawing.Size(44, 20);
+            this.selectSoupSalad3.TabIndex = 7;
+            this.selectSoupSalad3.ValueChanged += new System.EventHandler(this.numericUpDown6_ValueChanged);
+            // 
             // selectEntree1
             // 
             this.selectEntree1.Location = new System.Drawing.Point(132, 279);
@@ -498,77 +504,13 @@ namespace WaitStaffApplicataion
             this.selectEntree1.TabIndex = 15;
             this.selectEntree1.ValueChanged += new System.EventHandler(this.numericUpDown7_ValueChanged);
             // 
-            // selectDrinkAdult3
+            // selectEntree2
             // 
-            this.selectDrinkAdult3.Location = new System.Drawing.Point(565, 214);
-            this.selectDrinkAdult3.Name = "selectDrinkAdult3";
-            this.selectDrinkAdult3.Size = new System.Drawing.Size(44, 20);
-            this.selectDrinkAdult3.TabIndex = 19;
-            this.selectDrinkAdult3.ValueChanged += new System.EventHandler(this.numericUpDown11_ValueChanged);
-            // 
-            // selectDrinkAdult2
-            // 
-            this.selectDrinkAdult2.Location = new System.Drawing.Point(565, 187);
-            this.selectDrinkAdult2.Name = "selectDrinkAdult2";
-            this.selectDrinkAdult2.Size = new System.Drawing.Size(44, 20);
-            this.selectDrinkAdult2.TabIndex = 18;
-            this.selectDrinkAdult2.ValueChanged += new System.EventHandler(this.numericUpDown12_ValueChanged);
-            // 
-            // selectDrinkAdult1
-            // 
-            this.selectDrinkAdult1.Location = new System.Drawing.Point(566, 161);
-            this.selectDrinkAdult1.Name = "selectDrinkAdult1";
-            this.selectDrinkAdult1.Size = new System.Drawing.Size(42, 20);
-            this.selectDrinkAdult1.TabIndex = 17;
-            this.selectDrinkAdult1.ValueChanged += new System.EventHandler(this.numericUpDown13_ValueChanged);
-            // 
-            // selectDrinkKid3
-            // 
-            this.selectDrinkKid3.Location = new System.Drawing.Point(565, 90);
-            this.selectDrinkKid3.Name = "selectDrinkKid3";
-            this.selectDrinkKid3.Size = new System.Drawing.Size(42, 20);
-            this.selectDrinkKid3.TabIndex = 16;
-            this.selectDrinkKid3.ValueChanged += new System.EventHandler(this.numericUpDown14_ValueChanged);
-            // 
-            // selectDrinkKid2
-            // 
-            this.selectDrinkKid2.Location = new System.Drawing.Point(564, 65);
-            this.selectDrinkKid2.Name = "selectDrinkKid2";
-            this.selectDrinkKid2.Size = new System.Drawing.Size(44, 20);
-            this.selectDrinkKid2.TabIndex = 43;
-            this.selectDrinkKid2.ValueChanged += new System.EventHandler(this.numericUpDown15_ValueChanged);
-            // 
-            // selectDrinkKid1
-            // 
-            this.selectDrinkKid1.Location = new System.Drawing.Point(564, 38);
-            this.selectDrinkKid1.Name = "selectDrinkKid1";
-            this.selectDrinkKid1.Size = new System.Drawing.Size(44, 20);
-            this.selectDrinkKid1.TabIndex = 35;
-            this.selectDrinkKid1.ValueChanged += new System.EventHandler(this.numericUpDown16_ValueChanged);
-            // 
-            // selectDesserts3
-            // 
-            this.selectDesserts3.Location = new System.Drawing.Point(132, 453);
-            this.selectDesserts3.Name = "selectDesserts3";
-            this.selectDesserts3.Size = new System.Drawing.Size(44, 20);
-            this.selectDesserts3.TabIndex = 34;
-            this.selectDesserts3.ValueChanged += new System.EventHandler(this.numericUpDown17_ValueChanged);
-            // 
-            // selectDesserts2
-            // 
-            this.selectDesserts2.Location = new System.Drawing.Point(133, 426);
-            this.selectDesserts2.Name = "selectDesserts2";
-            this.selectDesserts2.Size = new System.Drawing.Size(44, 20);
-            this.selectDesserts2.TabIndex = 33;
-            this.selectDesserts2.ValueChanged += new System.EventHandler(this.numericUpDown18_ValueChanged);
-            // 
-            // selectDesserts1
-            // 
-            this.selectDesserts1.Location = new System.Drawing.Point(133, 399);
-            this.selectDesserts1.Name = "selectDesserts1";
-            this.selectDesserts1.Size = new System.Drawing.Size(44, 20);
-            this.selectDesserts1.TabIndex = 32;
-            this.selectDesserts1.ValueChanged += new System.EventHandler(this.numericUpDown19_ValueChanged);
+            this.selectEntree2.Location = new System.Drawing.Point(134, 304);
+            this.selectEntree2.Name = "selectEntree2";
+            this.selectEntree2.Size = new System.Drawing.Size(42, 20);
+            this.selectEntree2.TabIndex = 30;
+            this.selectEntree2.ValueChanged += new System.EventHandler(this.numericUpDown21_ValueChanged);
             // 
             // selectEntree3
             // 
@@ -578,13 +520,77 @@ namespace WaitStaffApplicataion
             this.selectEntree3.TabIndex = 31;
             this.selectEntree3.ValueChanged += new System.EventHandler(this.numericUpDown20_ValueChanged);
             // 
-            // selectEntree2
+            // selectDesserts1
             // 
-            this.selectEntree2.Location = new System.Drawing.Point(134, 304);
-            this.selectEntree2.Name = "selectEntree2";
-            this.selectEntree2.Size = new System.Drawing.Size(42, 20);
-            this.selectEntree2.TabIndex = 30;
-            this.selectEntree2.ValueChanged += new System.EventHandler(this.numericUpDown21_ValueChanged);
+            this.selectDesserts1.Location = new System.Drawing.Point(133, 399);
+            this.selectDesserts1.Name = "selectDesserts1";
+            this.selectDesserts1.Size = new System.Drawing.Size(44, 20);
+            this.selectDesserts1.TabIndex = 32;
+            this.selectDesserts1.ValueChanged += new System.EventHandler(this.numericUpDown19_ValueChanged);
+            // 
+            // selectDesserts2
+            // 
+            this.selectDesserts2.Location = new System.Drawing.Point(133, 426);
+            this.selectDesserts2.Name = "selectDesserts2";
+            this.selectDesserts2.Size = new System.Drawing.Size(44, 20);
+            this.selectDesserts2.TabIndex = 33;
+            this.selectDesserts2.ValueChanged += new System.EventHandler(this.numericUpDown18_ValueChanged);
+            // 
+            // selectDesserts3
+            // 
+            this.selectDesserts3.Location = new System.Drawing.Point(132, 453);
+            this.selectDesserts3.Name = "selectDesserts3";
+            this.selectDesserts3.Size = new System.Drawing.Size(44, 20);
+            this.selectDesserts3.TabIndex = 34;
+            this.selectDesserts3.ValueChanged += new System.EventHandler(this.numericUpDown17_ValueChanged);
+            // 
+            // selectDrinkAdult1
+            // 
+            this.selectDrinkAdult1.Location = new System.Drawing.Point(566, 161);
+            this.selectDrinkAdult1.Name = "selectDrinkAdult1";
+            this.selectDrinkAdult1.Size = new System.Drawing.Size(42, 20);
+            this.selectDrinkAdult1.TabIndex = 17;
+            this.selectDrinkAdult1.ValueChanged += new System.EventHandler(this.numericUpDown13_ValueChanged);
+            // 
+            // selectDrinkAdult2
+            // 
+            this.selectDrinkAdult2.Location = new System.Drawing.Point(565, 187);
+            this.selectDrinkAdult2.Name = "selectDrinkAdult2";
+            this.selectDrinkAdult2.Size = new System.Drawing.Size(44, 20);
+            this.selectDrinkAdult2.TabIndex = 18;
+            this.selectDrinkAdult2.ValueChanged += new System.EventHandler(this.numericUpDown12_ValueChanged);
+            // 
+            // selectDrinkAdult3
+            // 
+            this.selectDrinkAdult3.Location = new System.Drawing.Point(565, 214);
+            this.selectDrinkAdult3.Name = "selectDrinkAdult3";
+            this.selectDrinkAdult3.Size = new System.Drawing.Size(44, 20);
+            this.selectDrinkAdult3.TabIndex = 19;
+            this.selectDrinkAdult3.ValueChanged += new System.EventHandler(this.numericUpDown11_ValueChanged);
+            // 
+            // selectDrinkKid1
+            // 
+            this.selectDrinkKid1.Location = new System.Drawing.Point(564, 38);
+            this.selectDrinkKid1.Name = "selectDrinkKid1";
+            this.selectDrinkKid1.Size = new System.Drawing.Size(44, 20);
+            this.selectDrinkKid1.TabIndex = 35;
+            this.selectDrinkKid1.ValueChanged += new System.EventHandler(this.numericUpDown16_ValueChanged);
+            // 
+            // selectDrinkKid2
+            // 
+            this.selectDrinkKid2.Location = new System.Drawing.Point(564, 65);
+            this.selectDrinkKid2.Name = "selectDrinkKid2";
+            this.selectDrinkKid2.Size = new System.Drawing.Size(44, 20);
+            this.selectDrinkKid2.TabIndex = 43;
+            this.selectDrinkKid2.ValueChanged += new System.EventHandler(this.numericUpDown15_ValueChanged);
+            // 
+            // selectDrinkKid3
+            // 
+            this.selectDrinkKid3.Location = new System.Drawing.Point(565, 90);
+            this.selectDrinkKid3.Name = "selectDrinkKid3";
+            this.selectDrinkKid3.Size = new System.Drawing.Size(42, 20);
+            this.selectDrinkKid3.TabIndex = 16;
+            this.selectDrinkKid3.ValueChanged += new System.EventHandler(this.numericUpDown14_ValueChanged);
             // 
             // drinkAdultName
             // 
@@ -646,32 +652,14 @@ namespace WaitStaffApplicataion
             this.appetizersName.Text = "Appetizers";
             this.appetizersName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // priceSoupSalad2
+            // priceAppetizer1
             // 
-            this.priceSoupSalad2.Location = new System.Drawing.Point(182, 186);
-            this.priceSoupSalad2.Name = "priceSoupSalad2";
-            this.priceSoupSalad2.Size = new System.Drawing.Size(56, 20);
-            this.priceSoupSalad2.TabIndex = 58;
-            this.priceSoupSalad2.Text = "6";
-            this.priceSoupSalad2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // priceSoupSalad1
-            // 
-            this.priceSoupSalad1.Location = new System.Drawing.Point(182, 160);
-            this.priceSoupSalad1.Name = "priceSoupSalad1";
-            this.priceSoupSalad1.Size = new System.Drawing.Size(56, 20);
-            this.priceSoupSalad1.TabIndex = 57;
-            this.priceSoupSalad1.Text = "8";
-            this.priceSoupSalad1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // priceAppetizer3
-            // 
-            this.priceAppetizer3.Location = new System.Drawing.Point(183, 89);
-            this.priceAppetizer3.Name = "priceAppetizer3";
-            this.priceAppetizer3.Size = new System.Drawing.Size(56, 20);
-            this.priceAppetizer3.TabIndex = 56;
-            this.priceAppetizer3.Text = "4";
-            this.priceAppetizer3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceAppetizer1.Location = new System.Drawing.Point(183, 37);
+            this.priceAppetizer1.Name = "priceAppetizer1";
+            this.priceAppetizer1.Size = new System.Drawing.Size(56, 20);
+            this.priceAppetizer1.TabIndex = 54;
+            this.priceAppetizer1.Text = "5";
+            this.priceAppetizer1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // priceAppetizer2
             // 
@@ -682,32 +670,41 @@ namespace WaitStaffApplicataion
             this.priceAppetizer2.Text = "6";
             this.priceAppetizer2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // priceAppetizer1
+            // priceAppetizer3
             // 
-            this.priceAppetizer1.Location = new System.Drawing.Point(183, 37);
-            this.priceAppetizer1.Name = "priceAppetizer1";
-            this.priceAppetizer1.Size = new System.Drawing.Size(56, 20);
-            this.priceAppetizer1.TabIndex = 54;
-            this.priceAppetizer1.Text = "5";
-            this.priceAppetizer1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceAppetizer3.Location = new System.Drawing.Point(183, 89);
+            this.priceAppetizer3.Name = "priceAppetizer3";
+            this.priceAppetizer3.Size = new System.Drawing.Size(56, 20);
+            this.priceAppetizer3.TabIndex = 56;
+            this.priceAppetizer3.Text = "4";
+            this.priceAppetizer3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // priceEntree3
+            // priceSoupSalad1
             // 
-            this.priceEntree3.Location = new System.Drawing.Point(183, 329);
-            this.priceEntree3.Name = "priceEntree3";
-            this.priceEntree3.Size = new System.Drawing.Size(56, 20);
-            this.priceEntree3.TabIndex = 53;
-            this.priceEntree3.Text = "12";
-            this.priceEntree3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceSoupSalad1.Location = new System.Drawing.Point(182, 160);
+            this.priceSoupSalad1.Name = "priceSoupSalad1";
+            this.priceSoupSalad1.Size = new System.Drawing.Size(56, 20);
+            this.priceSoupSalad1.TabIndex = 57;
+            this.priceSoupSalad1.Text = "8";
+            this.priceSoupSalad1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // priceEntree2
+            // priceSoupSalad2
             // 
-            this.priceEntree2.Location = new System.Drawing.Point(183, 303);
-            this.priceEntree2.Name = "priceEntree2";
-            this.priceEntree2.Size = new System.Drawing.Size(56, 20);
-            this.priceEntree2.TabIndex = 52;
-            this.priceEntree2.Text = "8";
-            this.priceEntree2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceSoupSalad2.Location = new System.Drawing.Point(182, 186);
+            this.priceSoupSalad2.Name = "priceSoupSalad2";
+            this.priceSoupSalad2.Size = new System.Drawing.Size(56, 20);
+            this.priceSoupSalad2.TabIndex = 58;
+            this.priceSoupSalad2.Text = "6";
+            this.priceSoupSalad2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // priceSoupSalad3
+            // 
+            this.priceSoupSalad3.Location = new System.Drawing.Point(182, 212);
+            this.priceSoupSalad3.Name = "priceSoupSalad3";
+            this.priceSoupSalad3.Size = new System.Drawing.Size(56, 20);
+            this.priceSoupSalad3.TabIndex = 50;
+            this.priceSoupSalad3.Text = "3";
+            this.priceSoupSalad3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // priceEntree1
             // 
@@ -719,46 +716,23 @@ namespace WaitStaffApplicataion
             this.priceEntree1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.priceEntree1.TextChanged += new System.EventHandler(this.textBox34_TextChanged);
             // 
-            // priceSoupSalad3
+            // priceEntree2
             // 
-            this.priceSoupSalad3.Location = new System.Drawing.Point(182, 212);
-            this.priceSoupSalad3.Name = "priceSoupSalad3";
-            this.priceSoupSalad3.Size = new System.Drawing.Size(56, 20);
-            this.priceSoupSalad3.TabIndex = 50;
-            this.priceSoupSalad3.Text = "3";
-            this.priceSoupSalad3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.priceEntree2.Location = new System.Drawing.Point(183, 303);
+            this.priceEntree2.Name = "priceEntree2";
+            this.priceEntree2.Size = new System.Drawing.Size(56, 20);
+            this.priceEntree2.TabIndex = 52;
+            this.priceEntree2.Text = "8";
+            this.priceEntree2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // priceDrinkKid2
+            // priceEntree3
             // 
-            this.priceDrinkKid2.Location = new System.Drawing.Point(615, 63);
-            this.priceDrinkKid2.Name = "priceDrinkKid2";
-            this.priceDrinkKid2.Size = new System.Drawing.Size(56, 20);
-            this.priceDrinkKid2.TabIndex = 67;
-            this.priceDrinkKid2.Text = "2";
-            // 
-            // priceDrinkKid1
-            // 
-            this.priceDrinkKid1.Location = new System.Drawing.Point(615, 37);
-            this.priceDrinkKid1.Name = "priceDrinkKid1";
-            this.priceDrinkKid1.Size = new System.Drawing.Size(56, 20);
-            this.priceDrinkKid1.TabIndex = 66;
-            this.priceDrinkKid1.Text = "2";
-            // 
-            // priceDesserts3
-            // 
-            this.priceDesserts3.Location = new System.Drawing.Point(183, 450);
-            this.priceDesserts3.Name = "priceDesserts3";
-            this.priceDesserts3.Size = new System.Drawing.Size(56, 20);
-            this.priceDesserts3.TabIndex = 65;
-            this.priceDesserts3.Text = "200";
-            // 
-            // priceDesserts2
-            // 
-            this.priceDesserts2.Location = new System.Drawing.Point(183, 424);
-            this.priceDesserts2.Name = "priceDesserts2";
-            this.priceDesserts2.Size = new System.Drawing.Size(56, 20);
-            this.priceDesserts2.TabIndex = 64;
-            this.priceDesserts2.Text = "3";
+            this.priceEntree3.Location = new System.Drawing.Point(183, 329);
+            this.priceEntree3.Name = "priceEntree3";
+            this.priceEntree3.Size = new System.Drawing.Size(56, 20);
+            this.priceEntree3.TabIndex = 53;
+            this.priceEntree3.Text = "12";
+            this.priceEntree3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // priceDesserts1
             // 
@@ -768,21 +742,45 @@ namespace WaitStaffApplicataion
             this.priceDesserts1.TabIndex = 63;
             this.priceDesserts1.Text = "5";
             // 
-            // priceDrinkAdult3
+            // priceDesserts2
             // 
-            this.priceDrinkAdult3.Location = new System.Drawing.Point(615, 212);
-            this.priceDrinkAdult3.Name = "priceDrinkAdult3";
-            this.priceDrinkAdult3.Size = new System.Drawing.Size(56, 20);
-            this.priceDrinkAdult3.TabIndex = 62;
-            this.priceDrinkAdult3.Text = "9";
+            this.priceDesserts2.Location = new System.Drawing.Point(183, 424);
+            this.priceDesserts2.Name = "priceDesserts2";
+            this.priceDesserts2.Size = new System.Drawing.Size(56, 20);
+            this.priceDesserts2.TabIndex = 64;
+            this.priceDesserts2.Text = "3";
             // 
-            // priceDrinkAdult2
+            // priceDesserts3
             // 
-            this.priceDrinkAdult2.Location = new System.Drawing.Point(615, 186);
-            this.priceDrinkAdult2.Name = "priceDrinkAdult2";
-            this.priceDrinkAdult2.Size = new System.Drawing.Size(56, 20);
-            this.priceDrinkAdult2.TabIndex = 61;
-            this.priceDrinkAdult2.Text = "10";
+            this.priceDesserts3.Location = new System.Drawing.Point(183, 450);
+            this.priceDesserts3.Name = "priceDesserts3";
+            this.priceDesserts3.Size = new System.Drawing.Size(56, 20);
+            this.priceDesserts3.TabIndex = 65;
+            this.priceDesserts3.Text = "200";
+            // 
+            // priceDrinkKid1
+            // 
+            this.priceDrinkKid1.Location = new System.Drawing.Point(615, 37);
+            this.priceDrinkKid1.Name = "priceDrinkKid1";
+            this.priceDrinkKid1.Size = new System.Drawing.Size(56, 20);
+            this.priceDrinkKid1.TabIndex = 66;
+            this.priceDrinkKid1.Text = "2";
+            // 
+            // priceDrinkKid2
+            // 
+            this.priceDrinkKid2.Location = new System.Drawing.Point(615, 63);
+            this.priceDrinkKid2.Name = "priceDrinkKid2";
+            this.priceDrinkKid2.Size = new System.Drawing.Size(56, 20);
+            this.priceDrinkKid2.TabIndex = 67;
+            this.priceDrinkKid2.Text = "2";
+            // 
+            // priceDrinkKid3
+            // 
+            this.priceDrinkKid3.Location = new System.Drawing.Point(615, 89);
+            this.priceDrinkKid3.Name = "priceDrinkKid3";
+            this.priceDrinkKid3.Size = new System.Drawing.Size(56, 20);
+            this.priceDrinkKid3.TabIndex = 59;
+            this.priceDrinkKid3.Text = "1";
             // 
             // priceDrinkAdult1
             // 
@@ -792,13 +790,21 @@ namespace WaitStaffApplicataion
             this.priceDrinkAdult1.TabIndex = 60;
             this.priceDrinkAdult1.Text = "10";
             // 
-            // priceDrinkKid3
+            // priceDrinkAdult2
             // 
-            this.priceDrinkKid3.Location = new System.Drawing.Point(615, 89);
-            this.priceDrinkKid3.Name = "priceDrinkKid3";
-            this.priceDrinkKid3.Size = new System.Drawing.Size(56, 20);
-            this.priceDrinkKid3.TabIndex = 59;
-            this.priceDrinkKid3.Text = "1";
+            this.priceDrinkAdult2.Location = new System.Drawing.Point(615, 186);
+            this.priceDrinkAdult2.Name = "priceDrinkAdult2";
+            this.priceDrinkAdult2.Size = new System.Drawing.Size(56, 20);
+            this.priceDrinkAdult2.TabIndex = 61;
+            this.priceDrinkAdult2.Text = "10";
+            // 
+            // priceDrinkAdult3
+            // 
+            this.priceDrinkAdult3.Location = new System.Drawing.Point(615, 212);
+            this.priceDrinkAdult3.Name = "priceDrinkAdult3";
+            this.priceDrinkAdult3.Size = new System.Drawing.Size(56, 20);
+            this.priceDrinkAdult3.TabIndex = 62;
+            this.priceDrinkAdult3.Text = "9";
             // 
             // button1
             // 
