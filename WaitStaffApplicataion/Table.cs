@@ -25,7 +25,6 @@ namespace WaitStaffApplicataion
                     iNumReciepts = -1,
                     iTableMerged = -1; //tableMergedTo
         private string sSpecial;
-        private FoodMenu menu;
         private ArrayList receipts = new ArrayList();
         private Employee employee;
 
@@ -74,14 +73,6 @@ namespace WaitStaffApplicataion
         public void updateFoodStatus(int newStatus)
         {
             iFoodStatus = newStatus;
-        }
-
-        /**
-        * updates the menue of the table
-        */
-        public void updateMenu()
-        {
-            menu.setMenu();
         }
 
         /**
@@ -198,14 +189,6 @@ namespace WaitStaffApplicataion
         public int getNumPeople()
         {
             return iNumPeople;
-        }
-
-        /**
-        * gets the menu
-        */
-        public FoodMenu getMenu()
-        {
-            return menu;
         }
     }
 }
