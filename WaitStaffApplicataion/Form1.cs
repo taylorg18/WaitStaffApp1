@@ -21,7 +21,7 @@ namespace WaitStaffApplicataion
     public partial class Sections : Form
     {
 
-        FoodMenu menu = new FoodMenu();
+        FoodMenu menu;
         Table[] tables = new Table[16]; //an array representing the table objects for the restaurant 
         Button[] buttons; //the buttons for the tables on the form
         Employee[] staff = new Employee[5]; //an array representing the Waitstaff of the restaurant
@@ -82,8 +82,21 @@ namespace WaitStaffApplicataion
 
             string userName = Environment.UserName;
             Console.WriteLine(userName);
-          //  string[] menuFile = System.IO.File.ReadAllLines(@"C:\Users\" + userName + @"\Dropbox\CS 341\Waitstaff\menu.txt");
-
+            string[] menuFile = System.IO.File.ReadAllLines(@"C:\Users\" + userName + @"\Dropbox\CS 341\Waitstaff\menu.txt");
+            menu = new FoodMenu(19);
+            FoodItem temp;
+            for(int i = 0; i < menuFile.Length; i+=4)
+            {
+                try
+                {
+                    temp = new FoodItem(menuFile[i], Int32.Parse(menuFile[i + 1]), Int32.Parse(menuFile[i + 2]));
+                    menu.addItem(temp);
+                }
+                catch(Exception e)
+                {
+                    break;
+                }
+            }
 
         }
 
@@ -274,7 +287,9 @@ namespace WaitStaffApplicataion
 
 
             string empLine = dayOweek + "," + "," + "totaltips" + "\r\n";
-           // System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Management\waitMan.txt"), empLine);
+            //System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Management\waitMan.txt"), "Day,Meal,Number_Times_Ordered,Price,Tips\r\n");
+
+            //System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Management\waitMan.txt"), empLine);
 
 
 
