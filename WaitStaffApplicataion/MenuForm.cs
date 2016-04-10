@@ -72,15 +72,14 @@ namespace WaitStaffApplicataion
         private TextBox priceDrinkAdult2;
         private TextBox priceDrinkAdult1;
         private TextBox priceDrinkKid3;
-        private Button button1;
+        private Button back;
         private TextBox priceAppetizersName;
         private TextBox priceDrinkAdultName;
         private TextBox priceDrinkKidName;
         private TextBox priceDessertsName;
         private TextBox priceEntreeName;
         private TextBox priceSoupSaladName;
-        private Button button2;
-        private MenuForm tCurrentTable = null;
+        private Button send;
        
         private CheckBox appetizer1avail;
         private CheckBox appetizer2avail;
@@ -173,13 +172,6 @@ namespace WaitStaffApplicataion
         }
 
       
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-      
         private void TableForm2_Load(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
@@ -247,14 +239,14 @@ namespace WaitStaffApplicataion
             this.priceDrinkAdult2 = new System.Windows.Forms.TextBox();
             this.priceDrinkAdult1 = new System.Windows.Forms.TextBox();
             this.priceDrinkKid3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.back = new System.Windows.Forms.Button();
             this.priceAppetizersName = new System.Windows.Forms.TextBox();
             this.priceDrinkAdultName = new System.Windows.Forms.TextBox();
             this.priceDrinkKidName = new System.Windows.Forms.TextBox();
             this.priceDessertsName = new System.Windows.Forms.TextBox();
             this.priceEntreeName = new System.Windows.Forms.TextBox();
             this.priceSoupSaladName = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.send = new System.Windows.Forms.Button();
             this.appetizer1avail = new System.Windows.Forms.CheckBox();
             this.appetizer2avail = new System.Windows.Forms.CheckBox();
             this.appetizer3avail = new System.Windows.Forms.CheckBox();
@@ -845,15 +837,14 @@ namespace WaitStaffApplicataion
             this.priceDrinkKid3.TabIndex = 59;
             this.priceDrinkKid3.Text = "1";
             // 
-            // button1
+            // back
             // 
-            this.button1.Location = new System.Drawing.Point(755, 459);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 68;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.back.Location = new System.Drawing.Point(755, 459);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(75, 23);
+            this.back.TabIndex = 68;
+            this.back.Text = "Back";
+            this.back.UseVisualStyleBackColor = true;
             // 
             // priceAppetizersName
             // 
@@ -914,15 +905,15 @@ namespace WaitStaffApplicataion
             this.priceSoupSaladName.Text = "Price";
             this.priceSoupSaladName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button2
+            // send
             // 
-            this.button2.Location = new System.Drawing.Point(755, 426);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 75;
-            this.button2.Text = "Send Order";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.send.Location = new System.Drawing.Point(755, 426);
+            this.send.Name = "send";
+            this.send.Size = new System.Drawing.Size(75, 23);
+            this.send.TabIndex = 75;
+            this.send.Text = "Send Order";
+            this.send.UseVisualStyleBackColor = true;
+            this.send.Click += new System.EventHandler(this.button2_Click);
             // 
             // appetizer1avail
             // 
@@ -1125,14 +1116,14 @@ namespace WaitStaffApplicataion
             this.Controls.Add(this.appetizer3avail);
             this.Controls.Add(this.appetizer2avail);
             this.Controls.Add(this.appetizer1avail);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.send);
             this.Controls.Add(this.priceSoupSaladName);
             this.Controls.Add(this.priceEntreeName);
             this.Controls.Add(this.priceDessertsName);
             this.Controls.Add(this.priceDrinkKidName);
             this.Controls.Add(this.priceDrinkAdultName);
             this.Controls.Add(this.priceAppetizersName);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.priceDrinkKid2);
             this.Controls.Add(this.priceDrinkKid1);
             this.Controls.Add(this.priceDesserts3);
@@ -1245,9 +1236,9 @@ namespace WaitStaffApplicataion
                     
                     for(int j=0; j< nudSelectors[i].Value; j++)
                     {
-
+                        usingReceipt.addItem(curMenu.getFoodItem(i));
                     }
-                    //usingReceipt.addItem
+                    //
                 }
             }
 

@@ -6,7 +6,6 @@
         private string sName; // Food Item name
                        //sSpecial; 
         private float fPrice;
-        //   private bool bAvaliability = true;
         private int iAmountSold,//keeps track of units of food sold
                     iTimeToPrepare;
         private bool inStock;//
@@ -17,7 +16,6 @@
             sName = name;
            // sSpecial = special;
             fPrice = price;
-          //  bAvaliability = avaliability;
             iAmountSold = 0;
             inStock = true;
             iTimeToPrepare = prepTime;
@@ -37,12 +35,7 @@
         {
             fPrice = price;
         }
-        /*
-        public bool getAvaliability()
-        {
-            return bAvaliability;
-        }
-        */
+
         public float getPrice()
         {
             return fPrice;

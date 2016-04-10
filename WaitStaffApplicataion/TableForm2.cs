@@ -16,16 +16,8 @@ namespace WaitStaffApplicataion
         private Button tCurrentButton = null;
         private FoodMenu curMenu = null;
 
-        public TableForm2()
-        {
-            InitializeComponent();
-           
-        }
-
         public TableForm2(Table newTable, Button inButton, FoodMenu menu)
         {
-
-
             InitializeComponent();
             tCurrentTable = newTable;
             tCurrentButton = inButton;
