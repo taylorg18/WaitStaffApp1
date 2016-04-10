@@ -289,19 +289,29 @@ namespace WaitStaffApplicataion
             string dayOweek = DateTime.Now.DayOfWeek.ToString();
             dayOweek = dayOweek.ToUpper().Substring(0,3);
 
-            Double totalTips = 0;
+            int totalTips = 0;
             //get all the tips from the employees
             foreach( Employee emp in staff)
             {
-                totalTips += emp.getTips();
+                totalTips += (int)emp.getTips();
             }
 
+          //  System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Management\waitMan.txt"), "Day,Meal,Number_Times_Ordered,Price,Tips\r\n");
 
-            string empLine = dayOweek + "," + "," + "totaltips" + "\r\n";
-            //System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Management\waitMan.txt"), "Day,Meal,Number_Times_Ordered,Price,Tips\r\n");
+            string empLine;
+            for (int i = 0; i < menu.getNumItems(); i++)
+            {
+                if(menu.getFoodItem(i).getName() == "0")
+                {
+                    continue;
+                }
+                empLine = dayOweek + "," + menu.getFoodItem(i).getName() +","+ menu.getFoodItem(i).getPrice() +","+menu.getFoodItem(i).getSold() + "," + totalTips + "\r\n";
+                totalTips = 0;
+                System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Management\waitMan.txt"), empLine);
 
-            //System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Management\waitMan.txt"), empLine);
+            }
 
+            
 
 
         }
