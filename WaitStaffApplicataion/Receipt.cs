@@ -71,7 +71,7 @@ namespace WaitStaffApplicataion
             {
                 foreach (FoodItem fi in items)
                 {
-                    temp += fi.getName() + " " + fi.getPrice() + "/n";
+                    temp += fi.getName() + " " + fi.getPrice() + "\r\n";
                 }
             }
                 temp += "\r\n\r\n\r\n" + sDesc;
