@@ -1242,10 +1242,7 @@ namespace WaitStaffApplicataion
                     string Orders = tbFoodNames[i].Text + " " + nudSelectors[i].Value + "\r\n";
                     System.IO.File.AppendAllText(@"C:\waitData\MenuItemOrdered.txt", Orders);
 
-                    for(int j=0; i< nudSelectors[i].Value; j++)
-                    {
-                        //TODO: add items to receipt and adjust items sold
-                    }
+                    curMenu.buyItem(i, (int)nudSelectors[i].Value);
                 }
             }
 
