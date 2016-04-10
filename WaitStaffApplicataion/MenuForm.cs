@@ -781,6 +781,7 @@ namespace WaitStaffApplicataion
             // 
             this.priceDesserts3.Location = new System.Drawing.Point(183, 450);
             this.priceDesserts3.Name = "priceDesserts3";
+            this.priceDesserts3.ReadOnly = true;
             this.priceDesserts3.Size = new System.Drawing.Size(56, 20);
             this.priceDesserts3.TabIndex = 65;
             this.priceDesserts3.Text = "200";
@@ -789,6 +790,7 @@ namespace WaitStaffApplicataion
             // 
             this.priceDesserts2.Location = new System.Drawing.Point(183, 424);
             this.priceDesserts2.Name = "priceDesserts2";
+            this.priceDesserts2.ReadOnly = true;
             this.priceDesserts2.Size = new System.Drawing.Size(56, 20);
             this.priceDesserts2.TabIndex = 64;
             this.priceDesserts2.Text = "3";
@@ -797,6 +799,7 @@ namespace WaitStaffApplicataion
             // 
             this.priceDesserts1.Location = new System.Drawing.Point(183, 398);
             this.priceDesserts1.Name = "priceDesserts1";
+            this.priceDesserts1.ReadOnly = true;
             this.priceDesserts1.Size = new System.Drawing.Size(56, 20);
             this.priceDesserts1.TabIndex = 63;
             this.priceDesserts1.Text = "5";
@@ -880,6 +883,7 @@ namespace WaitStaffApplicataion
             // 
             this.priceDessertsName.Location = new System.Drawing.Point(183, 373);
             this.priceDessertsName.Name = "priceDessertsName";
+            this.priceDessertsName.ReadOnly = true;
             this.priceDessertsName.Size = new System.Drawing.Size(56, 20);
             this.priceDessertsName.TabIndex = 72;
             this.priceDessertsName.Text = "Price";
