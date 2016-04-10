@@ -190,13 +190,5 @@ namespace WaitStaffApplicataion
         {
             return iNumPeople;
         }
-
-        /**
-        * gets the menu
-        */
-        public FoodMenu getMenu()
-        {
-            return menu;
-        }
     }
 }

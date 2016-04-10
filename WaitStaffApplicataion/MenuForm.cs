@@ -82,24 +82,24 @@ namespace WaitStaffApplicataion
         private Button button2;
         private MenuForm tCurrentTable = null;
        
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
-        private CheckBox checkBox3;
-        private CheckBox checkBox4;
-        private CheckBox checkBox5;
-        private CheckBox checkBox6;
-        private CheckBox checkBox7;
-        private CheckBox checkBox8;
-        private CheckBox checkBox9;
-        private CheckBox checkBox10;
-        private CheckBox checkBox11;
-        private CheckBox checkBox12;
-        private CheckBox checkBox13;
-        private CheckBox checkBox14;
-        private CheckBox checkBox15;
-        private CheckBox checkBox16;
-        private CheckBox checkBox17;
-        private CheckBox checkBox18;
+        private CheckBox appetizer1avail;
+        private CheckBox appetizer2avail;
+        private CheckBox appetizer3avail;
+        private CheckBox soupSalad1Avail;
+        private CheckBox soupSalad2Avail;
+        private CheckBox soupSalad3Avail;
+        private CheckBox entree1Avail;
+        private CheckBox entree2Avail;
+        private CheckBox entree3Avail;
+        private CheckBox dessert1Avail;
+        private CheckBox dessert2Avail;
+        private CheckBox dessert3Avail;
+        private CheckBox drinkKid1Avail;
+        private CheckBox drinkKid2Avail;
+        private CheckBox drinkKid3Avail;
+        private CheckBox drinkAdult1Avail;
+        private CheckBox drinkAdult2Avail;
+        private CheckBox drinkAdult3Avail;
 
         //===================================================
         int[] menuValues = new int[18];
@@ -133,8 +133,8 @@ namespace WaitStaffApplicataion
                 selectSoupSalad3, selectEntree1, selectEntree2, selectEntree3, selectDesserts1, selectDesserts2, selectDesserts3, selectDrinkKid1,
                 selectDrinkKid2, selectDrinkKid3, selectDrinkAdult1, selectDrinkAdult2, selectDrinkAdult3 };
 
-            this.checkBoxes = new CheckBox[18] {checkBox1, checkBox2, checkBox3, checkBox4, checkBox5, checkBox6, checkBox7, checkBox8, checkBox9, checkBox10,
-                                                checkBox11, checkBox12,checkBox13,checkBox14,checkBox15,checkBox16,checkBox17,checkBox18 };
+            this.checkBoxes = new CheckBox[18] {appetizer1avail, appetizer2avail, appetizer3avail, soupSalad1Avail, soupSalad2Avail, soupSalad3Avail, entree1Avail, entree2Avail, entree3Avail, dessert1Avail,
+                                                dessert2Avail, dessert3Avail,drinkKid1Avail,drinkKid2Avail,drinkKid3Avail,drinkAdult1Avail,drinkAdult2Avail,drinkAdult3Avail };
 
             usingReceipt = curReceipt;
             curMenu = menu;
@@ -255,24 +255,24 @@ namespace WaitStaffApplicataion
             this.priceEntreeName = new System.Windows.Forms.TextBox();
             this.priceSoupSaladName = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
+            this.appetizer1avail = new System.Windows.Forms.CheckBox();
+            this.appetizer2avail = new System.Windows.Forms.CheckBox();
+            this.appetizer3avail = new System.Windows.Forms.CheckBox();
+            this.soupSalad1Avail = new System.Windows.Forms.CheckBox();
+            this.soupSalad2Avail = new System.Windows.Forms.CheckBox();
+            this.soupSalad3Avail = new System.Windows.Forms.CheckBox();
+            this.entree1Avail = new System.Windows.Forms.CheckBox();
+            this.entree2Avail = new System.Windows.Forms.CheckBox();
+            this.entree3Avail = new System.Windows.Forms.CheckBox();
+            this.dessert1Avail = new System.Windows.Forms.CheckBox();
+            this.dessert2Avail = new System.Windows.Forms.CheckBox();
+            this.dessert3Avail = new System.Windows.Forms.CheckBox();
+            this.drinkKid1Avail = new System.Windows.Forms.CheckBox();
+            this.drinkKid2Avail = new System.Windows.Forms.CheckBox();
+            this.drinkKid3Avail = new System.Windows.Forms.CheckBox();
+            this.drinkAdult1Avail = new System.Windows.Forms.CheckBox();
+            this.drinkAdult2Avail = new System.Windows.Forms.CheckBox();
+            this.drinkAdult3Avail = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.selectAppetizer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectAppetizer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectAppetizer3)).BeginInit();
@@ -924,208 +924,207 @@ namespace WaitStaffApplicataion
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // checkBox1
+            // appetizer1avail
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(257, 40);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(89, 19);
-            this.checkBox1.TabIndex = 76;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.appetizer1avail.AutoSize = true;
+            this.appetizer1avail.Location = new System.Drawing.Point(257, 40);
+            this.appetizer1avail.Name = "appetizer1avail";
+            this.appetizer1avail.Size = new System.Drawing.Size(103, 19);
+            this.appetizer1avail.TabIndex = 76;
+            this.appetizer1avail.Text = "Not Availiable";
+            this.appetizer1avail.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // appetizer2avail
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(257, 63);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(89, 19);
-            this.checkBox2.TabIndex = 77;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.appetizer2avail.AutoSize = true;
+            this.appetizer2avail.Location = new System.Drawing.Point(257, 63);
+            this.appetizer2avail.Name = "appetizer2avail";
+            this.appetizer2avail.Size = new System.Drawing.Size(103, 19);
+            this.appetizer2avail.TabIndex = 77;
+            this.appetizer2avail.Text = "Not Availiable";
+            this.appetizer2avail.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // appetizer3avail
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(257, 89);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(89, 19);
-            this.checkBox3.TabIndex = 78;
-            this.checkBox3.Text = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.appetizer3avail.AutoSize = true;
+            this.appetizer3avail.Location = new System.Drawing.Point(257, 89);
+            this.appetizer3avail.Name = "appetizer3avail";
+            this.appetizer3avail.Size = new System.Drawing.Size(103, 19);
+            this.appetizer3avail.TabIndex = 78;
+            this.appetizer3avail.Text = "Not Availiable";
+            this.appetizer3avail.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // soupSalad1Avail
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(256, 160);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(89, 19);
-            this.checkBox4.TabIndex = 81;
-            this.checkBox4.Text = "checkBox4";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.soupSalad1Avail.AutoSize = true;
+            this.soupSalad1Avail.Location = new System.Drawing.Point(256, 160);
+            this.soupSalad1Avail.Name = "soupSalad1Avail";
+            this.soupSalad1Avail.Size = new System.Drawing.Size(103, 19);
+            this.soupSalad1Avail.TabIndex = 81;
+            this.soupSalad1Avail.Text = "Not Availiable";
+            this.soupSalad1Avail.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // soupSalad2Avail
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(256, 184);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(89, 19);
-            this.checkBox5.TabIndex = 80;
-            this.checkBox5.Text = "checkBox5";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.soupSalad2Avail.AutoSize = true;
+            this.soupSalad2Avail.Location = new System.Drawing.Point(256, 184);
+            this.soupSalad2Avail.Name = "soupSalad2Avail";
+            this.soupSalad2Avail.Size = new System.Drawing.Size(103, 19);
+            this.soupSalad2Avail.TabIndex = 80;
+            this.soupSalad2Avail.Text = "Not Availiable";
+            this.soupSalad2Avail.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // soupSalad3Avail
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(256, 207);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(89, 19);
-            this.checkBox6.TabIndex = 79;
-            this.checkBox6.Text = "checkBox6";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.soupSalad3Avail.AutoSize = true;
+            this.soupSalad3Avail.Location = new System.Drawing.Point(256, 207);
+            this.soupSalad3Avail.Name = "soupSalad3Avail";
+            this.soupSalad3Avail.Size = new System.Drawing.Size(103, 19);
+            this.soupSalad3Avail.TabIndex = 79;
+            this.soupSalad3Avail.Text = "Not Availiable";
+            this.soupSalad3Avail.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // entree1Avail
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(257, 278);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(89, 19);
-            this.checkBox7.TabIndex = 84;
-            this.checkBox7.Text = "checkBox7";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.entree1Avail.AutoSize = true;
+            this.entree1Avail.Location = new System.Drawing.Point(257, 278);
+            this.entree1Avail.Name = "entree1Avail";
+            this.entree1Avail.Size = new System.Drawing.Size(103, 19);
+            this.entree1Avail.TabIndex = 84;
+            this.entree1Avail.Text = "Not Availiable";
+            this.entree1Avail.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // entree2Avail
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(257, 303);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(89, 19);
-            this.checkBox8.TabIndex = 83;
-            this.checkBox8.Text = "checkBox8";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.entree2Avail.AutoSize = true;
+            this.entree2Avail.Location = new System.Drawing.Point(257, 303);
+            this.entree2Avail.Name = "entree2Avail";
+            this.entree2Avail.Size = new System.Drawing.Size(103, 19);
+            this.entree2Avail.TabIndex = 83;
+            this.entree2Avail.Text = "Not Availiable";
+            this.entree2Avail.UseVisualStyleBackColor = true;
             // 
-            // checkBox9
+            // entree3Avail
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(257, 326);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(89, 19);
-            this.checkBox9.TabIndex = 82;
-            this.checkBox9.Text = "checkBox9";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.entree3Avail.AutoSize = true;
+            this.entree3Avail.Location = new System.Drawing.Point(257, 326);
+            this.entree3Avail.Name = "entree3Avail";
+            this.entree3Avail.Size = new System.Drawing.Size(103, 19);
+            this.entree3Avail.TabIndex = 82;
+            this.entree3Avail.Text = "Not Availiable";
+            this.entree3Avail.UseVisualStyleBackColor = true;
             // 
-            // checkBox10
+            // dessert1Avail
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(257, 398);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(96, 19);
-            this.checkBox10.TabIndex = 87;
-            this.checkBox10.Text = "checkBox10";
-            this.checkBox10.UseVisualStyleBackColor = true;
+            this.dessert1Avail.AutoSize = true;
+            this.dessert1Avail.Location = new System.Drawing.Point(257, 398);
+            this.dessert1Avail.Name = "dessert1Avail";
+            this.dessert1Avail.Size = new System.Drawing.Size(103, 19);
+            this.dessert1Avail.TabIndex = 87;
+            this.dessert1Avail.Text = "Not Availiable";
+            this.dessert1Avail.UseVisualStyleBackColor = true;
             // 
-            // checkBox11
+            // dessert2Avail
             // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(257, 421);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(96, 19);
-            this.checkBox11.TabIndex = 86;
-            this.checkBox11.Text = "checkBox11";
-            this.checkBox11.UseVisualStyleBackColor = true;
+            this.dessert2Avail.AutoSize = true;
+            this.dessert2Avail.Location = new System.Drawing.Point(257, 421);
+            this.dessert2Avail.Name = "dessert2Avail";
+            this.dessert2Avail.Size = new System.Drawing.Size(103, 19);
+            this.dessert2Avail.TabIndex = 86;
+            this.dessert2Avail.Text = "Not Availiable";
+            this.dessert2Avail.UseVisualStyleBackColor = true;
             // 
-            // checkBox12
+            // dessert3Avail
             // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(257, 450);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(96, 19);
-            this.checkBox12.TabIndex = 85;
-            this.checkBox12.Text = "checkBox12";
-            this.checkBox12.UseVisualStyleBackColor = true;
+            this.dessert3Avail.AutoSize = true;
+            this.dessert3Avail.Location = new System.Drawing.Point(257, 450);
+            this.dessert3Avail.Name = "dessert3Avail";
+            this.dessert3Avail.Size = new System.Drawing.Size(103, 19);
+            this.dessert3Avail.TabIndex = 85;
+            this.dessert3Avail.Text = "Not Availiable";
+            this.dessert3Avail.UseVisualStyleBackColor = true;
             // 
-            // checkBox13
+            // drinkKid1Avail
             // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(694, 37);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(96, 19);
-            this.checkBox13.TabIndex = 90;
-            this.checkBox13.Text = "checkBox13";
-            this.checkBox13.UseVisualStyleBackColor = true;
+            this.drinkKid1Avail.AutoSize = true;
+            this.drinkKid1Avail.Location = new System.Drawing.Point(694, 37);
+            this.drinkKid1Avail.Name = "drinkKid1Avail";
+            this.drinkKid1Avail.Size = new System.Drawing.Size(103, 19);
+            this.drinkKid1Avail.TabIndex = 90;
+            this.drinkKid1Avail.Text = "Not Availiable";
+            this.drinkKid1Avail.UseVisualStyleBackColor = true;
             // 
-            // checkBox14
+            // drinkKid2Avail
             // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(694, 63);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(96, 19);
-            this.checkBox14.TabIndex = 89;
-            this.checkBox14.Text = "checkBox14";
-            this.checkBox14.UseVisualStyleBackColor = true;
+            this.drinkKid2Avail.AutoSize = true;
+            this.drinkKid2Avail.Location = new System.Drawing.Point(694, 63);
+            this.drinkKid2Avail.Name = "drinkKid2Avail";
+            this.drinkKid2Avail.Size = new System.Drawing.Size(103, 19);
+            this.drinkKid2Avail.TabIndex = 89;
+            this.drinkKid2Avail.Text = "Not Availiable";
+            this.drinkKid2Avail.UseVisualStyleBackColor = true;
             // 
-            // checkBox15
+            // drinkKid3Avail
             // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(694, 90);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(96, 19);
-            this.checkBox15.TabIndex = 88;
-            this.checkBox15.Text = "checkBox15";
-            this.checkBox15.UseVisualStyleBackColor = true;
+            this.drinkKid3Avail.AutoSize = true;
+            this.drinkKid3Avail.Location = new System.Drawing.Point(694, 90);
+            this.drinkKid3Avail.Name = "drinkKid3Avail";
+            this.drinkKid3Avail.Size = new System.Drawing.Size(103, 19);
+            this.drinkKid3Avail.TabIndex = 88;
+            this.drinkKid3Avail.Text = "Not Availiable";
+            this.drinkKid3Avail.UseVisualStyleBackColor = true;
             // 
-            // checkBox16
+            // drinkAdult1Avail
             // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(694, 161);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(96, 19);
-            this.checkBox16.TabIndex = 93;
-            this.checkBox16.Text = "checkBox16";
-            this.checkBox16.UseVisualStyleBackColor = true;
+            this.drinkAdult1Avail.AutoSize = true;
+            this.drinkAdult1Avail.Location = new System.Drawing.Point(694, 161);
+            this.drinkAdult1Avail.Name = "drinkAdult1Avail";
+            this.drinkAdult1Avail.Size = new System.Drawing.Size(103, 19);
+            this.drinkAdult1Avail.TabIndex = 93;
+            this.drinkAdult1Avail.Text = "Not Availiable";
+            this.drinkAdult1Avail.UseVisualStyleBackColor = true;
             // 
-            // checkBox17
+            // drinkAdult2Avail
             // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(694, 185);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(96, 19);
-            this.checkBox17.TabIndex = 92;
-            this.checkBox17.Text = "checkBox17";
-            this.checkBox17.UseVisualStyleBackColor = true;
+            this.drinkAdult2Avail.AutoSize = true;
+            this.drinkAdult2Avail.Location = new System.Drawing.Point(694, 185);
+            this.drinkAdult2Avail.Name = "drinkAdult2Avail";
+            this.drinkAdult2Avail.Size = new System.Drawing.Size(103, 19);
+            this.drinkAdult2Avail.TabIndex = 92;
+            this.drinkAdult2Avail.Text = "Not Availiable";
+            this.drinkAdult2Avail.UseVisualStyleBackColor = true;
             // 
-            // checkBox18
+            // drinkAdult3Avail
             // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Location = new System.Drawing.Point(694, 208);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(96, 19);
-            this.checkBox18.TabIndex = 91;
-            this.checkBox18.Text = "checkBox18";
-            this.checkBox18.UseVisualStyleBackColor = true;
+            this.drinkAdult3Avail.AutoSize = true;
+            this.drinkAdult3Avail.Location = new System.Drawing.Point(694, 208);
+            this.drinkAdult3Avail.Name = "drinkAdult3Avail";
+            this.drinkAdult3Avail.Size = new System.Drawing.Size(103, 19);
+            this.drinkAdult3Avail.TabIndex = 91;
+            this.drinkAdult3Avail.Text = "Not Availiable";
+            this.drinkAdult3Avail.UseVisualStyleBackColor = true;
             // 
             // MenuForm
             // 
             this.ClientSize = new System.Drawing.Size(873, 510);
-            this.Controls.Add(this.checkBox16);
-            this.Controls.Add(this.checkBox17);
-            this.Controls.Add(this.checkBox18);
-            this.Controls.Add(this.checkBox13);
-            this.Controls.Add(this.checkBox14);
-            this.Controls.Add(this.checkBox15);
-            this.Controls.Add(this.checkBox10);
-            this.Controls.Add(this.checkBox11);
-            this.Controls.Add(this.checkBox12);
-            this.Controls.Add(this.checkBox7);
-            this.Controls.Add(this.checkBox8);
-            this.Controls.Add(this.checkBox9);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.drinkAdult1Avail);
+            this.Controls.Add(this.drinkAdult2Avail);
+            this.Controls.Add(this.drinkAdult3Avail);
+            this.Controls.Add(this.drinkKid1Avail);
+            this.Controls.Add(this.drinkKid2Avail);
+            this.Controls.Add(this.drinkKid3Avail);
+            this.Controls.Add(this.dessert1Avail);
+            this.Controls.Add(this.dessert2Avail);
+            this.Controls.Add(this.dessert3Avail);
+            this.Controls.Add(this.entree1Avail);
+            this.Controls.Add(this.entree2Avail);
+            this.Controls.Add(this.entree3Avail);
+            this.Controls.Add(this.soupSalad1Avail);
+            this.Controls.Add(this.soupSalad2Avail);
+            this.Controls.Add(this.soupSalad3Avail);
+            this.Controls.Add(this.appetizer3avail);
+            this.Controls.Add(this.appetizer2avail);
+            this.Controls.Add(this.appetizer1avail);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.priceSoupSaladName);
             this.Controls.Add(this.priceEntreeName);
@@ -1229,22 +1228,6 @@ namespace WaitStaffApplicataion
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox43_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox34_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
         //send order button
         private void button2_Click(object sender, EventArgs e)
         {
@@ -1259,6 +1242,12 @@ namespace WaitStaffApplicataion
                     System.IO.File.AppendAllText(@"C:\waitData\MenuItemOrdered.txt", Orders);
 
                     curMenu.buyItem(i, (int)nudSelectors[i].Value);
+                    
+                    for(int j=0; j< nudSelectors[i].Value; j++)
+                    {
+
+                    }
+                    //usingReceipt.addItem
                 }
             }
 
@@ -1276,7 +1265,7 @@ namespace WaitStaffApplicataion
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
            // if (item1Available == true)
-           if (checkBox1.CheckState != CheckState.Checked)
+           if (appetizer1avail.CheckState != CheckState.Checked)
             {
                 menuValues[0] = (int)selectAppetizer1.Value;
             }
@@ -1295,16 +1284,12 @@ namespace WaitStaffApplicataion
 
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
         //=================================================
 
         //Numeric up/down for the second menu item
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
-            if (checkBox2.CheckState != CheckState.Checked)
+            if (appetizer2avail.CheckState != CheckState.Checked)
             {
                 menuValues[1] = (int)selectAppetizer2.Value;
             }
@@ -1318,7 +1303,7 @@ namespace WaitStaffApplicataion
 
         private void numericUpDown3_ValueChanged(object sender, EventArgs e)
         {
-            if (checkBox3.CheckState != CheckState.Checked)
+            if (appetizer3avail.CheckState != CheckState.Checked)
             {
                 menuValues[2] = (int)selectAppetizer3.Value;
             }
@@ -1332,7 +1317,7 @@ namespace WaitStaffApplicataion
 
         private void numericUpDown4_ValueChanged(object sender, EventArgs e)
         {
-            if (checkBox4.CheckState != CheckState.Checked)
+            if (soupSalad1Avail.CheckState != CheckState.Checked)
             {
                 menuValues[3] = (int)selectSoupSalad1.Value;
             }
@@ -1345,7 +1330,7 @@ namespace WaitStaffApplicataion
 
         private void numericUpDown5_ValueChanged(object sender, EventArgs e)
         {
-            if (checkBox5.CheckState != CheckState.Checked)
+            if (soupSalad2Avail.CheckState != CheckState.Checked)
             {
                 menuValues[4] = (int)selectSoupSalad2.Value;
             }
@@ -1358,7 +1343,7 @@ namespace WaitStaffApplicataion
 
         private void numericUpDown6_ValueChanged(object sender, EventArgs e)
         {
-            if (checkBox6.CheckState != CheckState.Checked)
+            if (soupSalad3Avail.CheckState != CheckState.Checked)
             {
                 menuValues[5] = (int)selectSoupSalad3.Value;
             }
@@ -1372,7 +1357,7 @@ namespace WaitStaffApplicataion
 
         private void numericUpDown7_ValueChanged(object sender, EventArgs e)
         {
-            if (checkBox7.CheckState != CheckState.Checked)
+            if (entree1Avail.CheckState != CheckState.Checked)
             {
                 menuValues[6] = (int)selectEntree1.Value;
             }
@@ -1387,7 +1372,7 @@ namespace WaitStaffApplicataion
         //The eighth one... Not sure how it became 21
         private void numericUpDown21_ValueChanged(object sender, EventArgs e)
         {
-            if (checkBox8.CheckState != CheckState.Checked)
+            if (entree2Avail.CheckState != CheckState.Checked)
             {
                 menuValues[7] = (int)selectEntree2.Value;
             }
@@ -1402,7 +1387,7 @@ namespace WaitStaffApplicataion
         //The ninth one
         private void numericUpDown20_ValueChanged(object sender, EventArgs e)
         {
-            if (checkBox9.CheckState != CheckState.Checked)
+            if (entree3Avail.CheckState != CheckState.Checked)
             {
                 menuValues[8] = (int)selectEntree3.Value;
             }
@@ -1415,7 +1400,7 @@ namespace WaitStaffApplicataion
         //The tenth one
         private void numericUpDown19_ValueChanged(object sender, EventArgs e)
         {
-            if (checkBox10.CheckState != CheckState.Checked)
+            if (dessert1Avail.CheckState != CheckState.Checked)
             {
                 menuValues[9] = (int)selectDesserts1.Value;
             }
@@ -1428,7 +1413,7 @@ namespace WaitStaffApplicataion
         //11
         private void numericUpDown18_ValueChanged(object sender, EventArgs e)
         {
-            if (checkBox11.CheckState != CheckState.Checked)
+            if (dessert2Avail.CheckState != CheckState.Checked)
             {
                 menuValues[10] = (int)selectDesserts2.Value;
             }
@@ -1441,7 +1426,7 @@ namespace WaitStaffApplicataion
         //12
         private void numericUpDown17_ValueChanged(object sender, EventArgs e)
         {
-            if (checkBox12.CheckState != CheckState.Checked)
+            if (dessert3Avail.CheckState != CheckState.Checked)
             {
                 menuValues[11] = (int)selectDesserts3.Value;
             }
@@ -1454,7 +1439,7 @@ namespace WaitStaffApplicataion
         //13
         private void numericUpDown16_ValueChanged(object sender, EventArgs e)
         {
-            if (checkBox13.CheckState != CheckState.Checked)
+            if (drinkKid1Avail.CheckState != CheckState.Checked)
             {
                 menuValues[12] = (int)selectDrinkKid1.Value;
             }
@@ -1467,7 +1452,7 @@ namespace WaitStaffApplicataion
         //14
         private void numericUpDown15_ValueChanged(object sender, EventArgs e)
         {
-            if (checkBox14.CheckState != CheckState.Checked)
+            if (drinkKid2Avail.CheckState != CheckState.Checked)
             {
                 menuValues[13] = (int)selectDrinkKid2.Value;
             }
@@ -1480,7 +1465,7 @@ namespace WaitStaffApplicataion
         //15
         private void numericUpDown14_ValueChanged(object sender, EventArgs e)
         {
-            if (checkBox15.CheckState != CheckState.Checked)
+            if (drinkKid3Avail.CheckState != CheckState.Checked)
             {
                 menuValues[14] = (int)selectDrinkKid3.Value;
             }
@@ -1493,7 +1478,7 @@ namespace WaitStaffApplicataion
         //16
         private void numericUpDown13_ValueChanged(object sender, EventArgs e)
         {
-            if (checkBox16.CheckState != CheckState.Checked)
+            if (drinkAdult1Avail.CheckState != CheckState.Checked)
             {
                 menuValues[15] = (int)selectDrinkAdult1.Value;
             }
@@ -1508,7 +1493,7 @@ namespace WaitStaffApplicataion
         //17
         private void numericUpDown12_ValueChanged(object sender, EventArgs e)
         {
-            if (checkBox17.CheckState != CheckState.Checked)
+            if (drinkAdult2Avail.CheckState != CheckState.Checked)
             {
                 menuValues[16] = (int)selectDrinkAdult2.Value;
             }
@@ -1522,7 +1507,7 @@ namespace WaitStaffApplicataion
         //18
         private void numericUpDown11_ValueChanged(object sender, EventArgs e)
         {
-            if (checkBox18.CheckState != CheckState.Checked)
+            if (drinkAdult3Avail.CheckState != CheckState.Checked)
             {
                 menuValues[17] = (int)selectDrinkAdult3.Value;
             }

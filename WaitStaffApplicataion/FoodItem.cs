@@ -3,8 +3,8 @@
 
     public class FoodItem
     {
-        private string sName, // Food Item name
-                       sSpecial; 
+        private string sName; // Food Item name
+                       //sSpecial; 
         private float fPrice;
         //   private bool bAvaliability = true;
         private int iAmountSold,//keeps track of units of food sold
