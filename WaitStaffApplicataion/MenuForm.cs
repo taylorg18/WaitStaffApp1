@@ -110,6 +110,8 @@ namespace WaitStaffApplicataion
 
         private NumericUpDown[] nudSelectors = new NumericUpDown[18];
 
+        private CheckBox[] checkBoxes = new CheckBox[18];
+
         private Receipt usingReceipt = null;
 
         private FoodMenu curMenu;
@@ -131,23 +133,43 @@ namespace WaitStaffApplicataion
                 selectSoupSalad3, selectEntree1, selectEntree2, selectEntree3, selectDesserts1, selectDesserts2, selectDesserts3, selectDrinkKid1,
                 selectDrinkKid2, selectDrinkKid3, selectDrinkAdult1, selectDrinkAdult2, selectDrinkAdult3 };
 
+            this.checkBoxes = new CheckBox[18] {checkBox1, checkBox2, checkBox3, checkBox4, checkBox5, checkBox6, checkBox7, checkBox8, checkBox9, checkBox10,
+                                                checkBox11, checkBox12,checkBox13,checkBox14,checkBox15,checkBox16,checkBox17,checkBox18 };
+
             usingReceipt = curReceipt;
             curMenu = menu;
-            /*For initializing the prices later
+
+            //For setting the prices in the GUI
             for (int i= 0; i< FoodPrices.Length; i++){
-
-
-
-
+                FoodPrices[i].Text = "" + curMenu.getFoodItem(i).getPrice();
             }
-            */
+
+            //For setting the names in the GUI
+            for (int j = 0; j < tbFoodNames.Length; j++)
+            {
+                tbFoodNames[j].Text = "" + curMenu.getFoodItem(j).getName();
+            }
+
+            //For setting if the food is available. if checked, the item is not available and value set to 0.
+            for (int k = 0; k < nudSelectors.Length; k++)
+            {
+                if(checkBoxes[k].CheckState == CheckState.Checked){
+
+                    nudSelectors[k].Value = 0;
+
+                }
+              
+            }
 
 
+            /*
             //Changes all the values of the int array to 0. Used for storing the amount of orders for each item
             for (int i = 0; i < menuValues.Length; i++)
             {
                 menuValues[i] = 0;
-        }
+            }
+            */
+
         }
 
       
@@ -165,7 +187,7 @@ namespace WaitStaffApplicataion
 
         private void InitializeComponent()
         {
-
+           //Designer code to make the GUI
             this.selectAppetizer1 = new System.Windows.Forms.NumericUpDown();
             this.selectAppetizer2 = new System.Windows.Forms.NumericUpDown();
             this.selectAppetizer3 = new System.Windows.Forms.NumericUpDown();
@@ -1235,6 +1257,7 @@ namespace WaitStaffApplicataion
             Close();
         }
 
+//The numeric up/down void functions. Not necessary since the for loop above does it, but I'd rather not mess with it right now
         //==================================================================================Numeric up/downs===========================
         //Numeric up/down for the first menu item
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -1496,14 +1519,6 @@ namespace WaitStaffApplicataion
                 menuValues[17] = 0;
             }
         }
-
-
-
-
-
-
-
-
 
 
     }
