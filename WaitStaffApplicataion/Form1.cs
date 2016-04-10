@@ -89,12 +89,23 @@ namespace WaitStaffApplicataion
             {
                 try
                 {
+                    Console.WriteLine("" + menuFile[i] + " "+ Int32.Parse(menuFile[i + 1]) + " " +Int32.Parse(menuFile[i + 2]));
                     temp = new FoodItem(menuFile[i], Int32.Parse(menuFile[i + 1]), Int32.Parse(menuFile[i + 2]));
                     menu.addItem(temp);
                 }
                 catch(Exception e)
                 {
                     break;
+                }
+            }
+
+            for(int i = 0; i < 19; i++)
+            {
+                if(menu.getFoodItem(i) == null)
+                {
+                    temp = new FoodItem("0", 0, 0);
+                    menu.addItem(temp);
+                    
                 }
             }
 
