@@ -21,7 +21,7 @@ namespace WaitStaffApplicataion
     public partial class Sections : Form
     {
 
-        FoodMenu menu = new FoodMenu();
+        FoodMenu menu = new FoodMenu(18);
         Table[] tables = new Table[16]; //an array representing the table objects for the restaurant 
         Button[] buttons; //the buttons for the tables on the form
         Employee[] staff = new Employee[5]; //an array representing the Waitstaff of the restaurant
