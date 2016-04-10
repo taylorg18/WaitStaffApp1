@@ -80,25 +80,6 @@ namespace WaitStaffApplicataion
         private TextBox priceEntreeName;
         private TextBox priceSoupSaladName;
         private Button send;
-       
-        private CheckBox appetizer1avail;
-        private CheckBox appetizer2avail;
-        private CheckBox appetizer3avail;
-        private CheckBox soupSalad1Avail;
-        private CheckBox soupSalad2Avail;
-        private CheckBox soupSalad3Avail;
-        private CheckBox entree1Avail;
-        private CheckBox entree2Avail;
-        private CheckBox entree3Avail;
-        private CheckBox dessert1Avail;
-        private CheckBox dessert2Avail;
-        private CheckBox dessert3Avail;
-        private CheckBox drinkKid1Avail;
-        private CheckBox drinkKid2Avail;
-        private CheckBox drinkKid3Avail;
-        private CheckBox drinkAdult1Avail;
-        private CheckBox drinkAdult2Avail;
-        private CheckBox drinkAdult3Avail;
 
         //===================================================
         int[] menuValues = new int[18];
@@ -112,7 +93,24 @@ namespace WaitStaffApplicataion
         private CheckBox[] checkBoxes = new CheckBox[18];
 
         private Receipt usingReceipt = null;
-
+        private TextBox appetizer1avail;
+        private TextBox appetizer2avail;
+        private TextBox appetizer3avail;
+        private TextBox soupSalad1Avail;
+        private TextBox soupSalad2Avail;
+        private TextBox soupSalad3Avail;
+        private TextBox entree1Avail;
+        private TextBox entree2Avail;
+        private TextBox entree3Avail;
+        private TextBox dessert1Avail;
+        private TextBox dessert2Avail;
+        private TextBox dessert3Avail;
+        private TextBox drinkKid1Avail;
+        private TextBox drinkKid2Avail;
+        private TextBox drinkKid3Avail;
+        private TextBox drinkAdult1Avail;
+        private TextBox drinkAdult2Avail;
+        private TextBox drinkAdult3Avail;
         private FoodMenu curMenu;
 
         public MenuForm(Receipt curReceipt, FoodMenu menu)
@@ -132,8 +130,27 @@ namespace WaitStaffApplicataion
                 selectSoupSalad3, selectEntree1, selectEntree2, selectEntree3, selectDesserts1, selectDesserts2, selectDesserts3, selectDrinkKid1,
                 selectDrinkKid2, selectDrinkKid3, selectDrinkAdult1, selectDrinkAdult2, selectDrinkAdult3 };
 
-            this.checkBoxes = new CheckBox[18] {appetizer1avail, appetizer2avail, appetizer3avail, soupSalad1Avail, soupSalad2Avail, soupSalad3Avail, entree1Avail, entree2Avail, entree3Avail, dessert1Avail,
-                                                dessert2Avail, dessert3Avail,drinkKid1Avail,drinkKid2Avail,drinkKid3Avail,drinkAdult1Avail,drinkAdult2Avail,drinkAdult3Avail };
+
+            this.appetizer1avail.Visible = !(curMenu.getAvaliable(0));
+            this.appetizer2avail.Visible = !(curMenu.getAvaliable(1));
+            this.appetizer3avail.Visible = !(curMenu.getAvaliable(2));
+            this.soupSalad1Avail.Visible = !(curMenu.getAvaliable(3));
+            this.soupSalad2Avail.Visible = !(curMenu.getAvaliable(4));
+            this.soupSalad3Avail.Visible = !(curMenu.getAvaliable(5));
+            this.entree1Avail.Visible = !(curMenu.getAvaliable(6));
+            this.entree2Avail.Visible = !(curMenu.getAvaliable(7));
+            this.entree3Avail.Visible = !(curMenu.getAvaliable(8));
+            this.dessert1Avail.Visible = !(curMenu.getAvaliable(9));
+            this.dessert2Avail.Visible = !(curMenu.getAvaliable(10));
+            this.dessert3Avail.Visible = !(curMenu.getAvaliable(11));
+            this.drinkKid1Avail.Visible = !(curMenu.getAvaliable(12));
+            this.drinkKid2Avail.Visible = !(curMenu.getAvaliable(13));
+            this.drinkKid3Avail.Visible = !(curMenu.getAvaliable(14));
+            this.drinkAdult1Avail.Visible = !(curMenu.getAvaliable(15));
+            this.drinkAdult2Avail.Visible = !(curMenu.getAvaliable(16));
+            this.drinkAdult3Avail.Visible = !(curMenu.getAvaliable(17));
+
+
 
             usingReceipt = curReceipt;
             curMenu = menu;
@@ -247,24 +264,24 @@ namespace WaitStaffApplicataion
             this.priceEntreeName = new System.Windows.Forms.TextBox();
             this.priceSoupSaladName = new System.Windows.Forms.TextBox();
             this.send = new System.Windows.Forms.Button();
-            this.appetizer1avail = new System.Windows.Forms.CheckBox();
-            this.appetizer2avail = new System.Windows.Forms.CheckBox();
-            this.appetizer3avail = new System.Windows.Forms.CheckBox();
-            this.soupSalad1Avail = new System.Windows.Forms.CheckBox();
-            this.soupSalad2Avail = new System.Windows.Forms.CheckBox();
-            this.soupSalad3Avail = new System.Windows.Forms.CheckBox();
-            this.entree1Avail = new System.Windows.Forms.CheckBox();
-            this.entree2Avail = new System.Windows.Forms.CheckBox();
-            this.entree3Avail = new System.Windows.Forms.CheckBox();
-            this.dessert1Avail = new System.Windows.Forms.CheckBox();
-            this.dessert2Avail = new System.Windows.Forms.CheckBox();
-            this.dessert3Avail = new System.Windows.Forms.CheckBox();
-            this.drinkKid1Avail = new System.Windows.Forms.CheckBox();
-            this.drinkKid2Avail = new System.Windows.Forms.CheckBox();
-            this.drinkKid3Avail = new System.Windows.Forms.CheckBox();
-            this.drinkAdult1Avail = new System.Windows.Forms.CheckBox();
-            this.drinkAdult2Avail = new System.Windows.Forms.CheckBox();
-            this.drinkAdult3Avail = new System.Windows.Forms.CheckBox();
+            this.appetizer1avail = new System.Windows.Forms.TextBox();
+            this.appetizer2avail = new System.Windows.Forms.TextBox();
+            this.appetizer3avail = new System.Windows.Forms.TextBox();
+            this.soupSalad1Avail = new System.Windows.Forms.TextBox();
+            this.soupSalad2Avail = new System.Windows.Forms.TextBox();
+            this.soupSalad3Avail = new System.Windows.Forms.TextBox();
+            this.entree1Avail = new System.Windows.Forms.TextBox();
+            this.entree2Avail = new System.Windows.Forms.TextBox();
+            this.entree3Avail = new System.Windows.Forms.TextBox();
+            this.dessert1Avail = new System.Windows.Forms.TextBox();
+            this.dessert2Avail = new System.Windows.Forms.TextBox();
+            this.dessert3Avail = new System.Windows.Forms.TextBox();
+            this.drinkKid1Avail = new System.Windows.Forms.TextBox();
+            this.drinkKid2Avail = new System.Windows.Forms.TextBox();
+            this.drinkKid3Avail = new System.Windows.Forms.TextBox();
+            this.drinkAdult1Avail = new System.Windows.Forms.TextBox();
+            this.drinkAdult2Avail = new System.Windows.Forms.TextBox();
+            this.drinkAdult3Avail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.selectAppetizer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectAppetizer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectAppetizer3)).BeginInit();
@@ -921,202 +938,202 @@ namespace WaitStaffApplicataion
             // 
             // appetizer1avail
             // 
-            this.appetizer1avail.AutoSize = true;
-            this.appetizer1avail.Location = new System.Drawing.Point(257, 40);
+            this.appetizer1avail.Location = new System.Drawing.Point(256, 38);
             this.appetizer1avail.Name = "appetizer1avail";
-            this.appetizer1avail.Size = new System.Drawing.Size(103, 19);
-            this.appetizer1avail.TabIndex = 76;
+            this.appetizer1avail.ReadOnly = true;
+            this.appetizer1avail.Size = new System.Drawing.Size(116, 20);
+            this.appetizer1avail.TabIndex = 94;
             this.appetizer1avail.Text = "Not Availiable";
-            this.appetizer1avail.UseVisualStyleBackColor = true;
+            this.appetizer1avail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // appetizer2avail
             // 
-            this.appetizer2avail.AutoSize = true;
-            this.appetizer2avail.Location = new System.Drawing.Point(257, 63);
+            this.appetizer2avail.Location = new System.Drawing.Point(256, 65);
             this.appetizer2avail.Name = "appetizer2avail";
-            this.appetizer2avail.Size = new System.Drawing.Size(103, 19);
-            this.appetizer2avail.TabIndex = 77;
+            this.appetizer2avail.ReadOnly = true;
+            this.appetizer2avail.Size = new System.Drawing.Size(116, 20);
+            this.appetizer2avail.TabIndex = 95;
             this.appetizer2avail.Text = "Not Availiable";
-            this.appetizer2avail.UseVisualStyleBackColor = true;
+            this.appetizer2avail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // appetizer3avail
             // 
-            this.appetizer3avail.AutoSize = true;
-            this.appetizer3avail.Location = new System.Drawing.Point(257, 89);
+            this.appetizer3avail.Location = new System.Drawing.Point(257, 91);
             this.appetizer3avail.Name = "appetizer3avail";
-            this.appetizer3avail.Size = new System.Drawing.Size(103, 19);
-            this.appetizer3avail.TabIndex = 78;
+            this.appetizer3avail.ReadOnly = true;
+            this.appetizer3avail.Size = new System.Drawing.Size(116, 20);
+            this.appetizer3avail.TabIndex = 96;
             this.appetizer3avail.Text = "Not Availiable";
-            this.appetizer3avail.UseVisualStyleBackColor = true;
+            this.appetizer3avail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // soupSalad1Avail
             // 
-            this.soupSalad1Avail.AutoSize = true;
-            this.soupSalad1Avail.Location = new System.Drawing.Point(256, 160);
+            this.soupSalad1Avail.Location = new System.Drawing.Point(256, 162);
             this.soupSalad1Avail.Name = "soupSalad1Avail";
-            this.soupSalad1Avail.Size = new System.Drawing.Size(103, 19);
-            this.soupSalad1Avail.TabIndex = 81;
+            this.soupSalad1Avail.ReadOnly = true;
+            this.soupSalad1Avail.Size = new System.Drawing.Size(116, 20);
+            this.soupSalad1Avail.TabIndex = 97;
             this.soupSalad1Avail.Text = "Not Availiable";
-            this.soupSalad1Avail.UseVisualStyleBackColor = true;
+            this.soupSalad1Avail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // soupSalad2Avail
             // 
-            this.soupSalad2Avail.AutoSize = true;
-            this.soupSalad2Avail.Location = new System.Drawing.Point(256, 184);
+            this.soupSalad2Avail.Location = new System.Drawing.Point(257, 188);
             this.soupSalad2Avail.Name = "soupSalad2Avail";
-            this.soupSalad2Avail.Size = new System.Drawing.Size(103, 19);
-            this.soupSalad2Avail.TabIndex = 80;
+            this.soupSalad2Avail.ReadOnly = true;
+            this.soupSalad2Avail.Size = new System.Drawing.Size(116, 20);
+            this.soupSalad2Avail.TabIndex = 98;
             this.soupSalad2Avail.Text = "Not Availiable";
-            this.soupSalad2Avail.UseVisualStyleBackColor = true;
+            this.soupSalad2Avail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // soupSalad3Avail
             // 
-            this.soupSalad3Avail.AutoSize = true;
-            this.soupSalad3Avail.Location = new System.Drawing.Point(256, 207);
+            this.soupSalad3Avail.Location = new System.Drawing.Point(256, 212);
             this.soupSalad3Avail.Name = "soupSalad3Avail";
-            this.soupSalad3Avail.Size = new System.Drawing.Size(103, 19);
-            this.soupSalad3Avail.TabIndex = 79;
+            this.soupSalad3Avail.ReadOnly = true;
+            this.soupSalad3Avail.Size = new System.Drawing.Size(116, 20);
+            this.soupSalad3Avail.TabIndex = 99;
             this.soupSalad3Avail.Text = "Not Availiable";
-            this.soupSalad3Avail.UseVisualStyleBackColor = true;
+            this.soupSalad3Avail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // entree1Avail
             // 
-            this.entree1Avail.AutoSize = true;
-            this.entree1Avail.Location = new System.Drawing.Point(257, 278);
+            this.entree1Avail.Location = new System.Drawing.Point(257, 277);
             this.entree1Avail.Name = "entree1Avail";
-            this.entree1Avail.Size = new System.Drawing.Size(103, 19);
-            this.entree1Avail.TabIndex = 84;
+            this.entree1Avail.ReadOnly = true;
+            this.entree1Avail.Size = new System.Drawing.Size(116, 20);
+            this.entree1Avail.TabIndex = 100;
             this.entree1Avail.Text = "Not Availiable";
-            this.entree1Avail.UseVisualStyleBackColor = true;
+            this.entree1Avail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // entree2Avail
             // 
-            this.entree2Avail.AutoSize = true;
-            this.entree2Avail.Location = new System.Drawing.Point(257, 303);
+            this.entree2Avail.Location = new System.Drawing.Point(256, 304);
             this.entree2Avail.Name = "entree2Avail";
-            this.entree2Avail.Size = new System.Drawing.Size(103, 19);
-            this.entree2Avail.TabIndex = 83;
+            this.entree2Avail.ReadOnly = true;
+            this.entree2Avail.Size = new System.Drawing.Size(116, 20);
+            this.entree2Avail.TabIndex = 101;
             this.entree2Avail.Text = "Not Availiable";
-            this.entree2Avail.UseVisualStyleBackColor = true;
+            this.entree2Avail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // entree3Avail
             // 
-            this.entree3Avail.AutoSize = true;
-            this.entree3Avail.Location = new System.Drawing.Point(257, 326);
+            this.entree3Avail.Location = new System.Drawing.Point(257, 331);
             this.entree3Avail.Name = "entree3Avail";
-            this.entree3Avail.Size = new System.Drawing.Size(103, 19);
-            this.entree3Avail.TabIndex = 82;
+            this.entree3Avail.ReadOnly = true;
+            this.entree3Avail.Size = new System.Drawing.Size(116, 20);
+            this.entree3Avail.TabIndex = 102;
             this.entree3Avail.Text = "Not Availiable";
-            this.entree3Avail.UseVisualStyleBackColor = true;
+            this.entree3Avail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dessert1Avail
             // 
-            this.dessert1Avail.AutoSize = true;
-            this.dessert1Avail.Location = new System.Drawing.Point(257, 398);
+            this.dessert1Avail.Location = new System.Drawing.Point(256, 399);
             this.dessert1Avail.Name = "dessert1Avail";
-            this.dessert1Avail.Size = new System.Drawing.Size(103, 19);
-            this.dessert1Avail.TabIndex = 87;
+            this.dessert1Avail.ReadOnly = true;
+            this.dessert1Avail.Size = new System.Drawing.Size(116, 20);
+            this.dessert1Avail.TabIndex = 103;
             this.dessert1Avail.Text = "Not Availiable";
-            this.dessert1Avail.UseVisualStyleBackColor = true;
+            this.dessert1Avail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dessert2Avail
             // 
-            this.dessert2Avail.AutoSize = true;
-            this.dessert2Avail.Location = new System.Drawing.Point(257, 421);
+            this.dessert2Avail.Location = new System.Drawing.Point(256, 426);
             this.dessert2Avail.Name = "dessert2Avail";
-            this.dessert2Avail.Size = new System.Drawing.Size(103, 19);
-            this.dessert2Avail.TabIndex = 86;
+            this.dessert2Avail.ReadOnly = true;
+            this.dessert2Avail.Size = new System.Drawing.Size(116, 20);
+            this.dessert2Avail.TabIndex = 104;
             this.dessert2Avail.Text = "Not Availiable";
-            this.dessert2Avail.UseVisualStyleBackColor = true;
+            this.dessert2Avail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dessert3Avail
             // 
-            this.dessert3Avail.AutoSize = true;
-            this.dessert3Avail.Location = new System.Drawing.Point(257, 450);
+            this.dessert3Avail.Location = new System.Drawing.Point(256, 453);
             this.dessert3Avail.Name = "dessert3Avail";
-            this.dessert3Avail.Size = new System.Drawing.Size(103, 19);
-            this.dessert3Avail.TabIndex = 85;
+            this.dessert3Avail.ReadOnly = true;
+            this.dessert3Avail.Size = new System.Drawing.Size(116, 20);
+            this.dessert3Avail.TabIndex = 105;
             this.dessert3Avail.Text = "Not Availiable";
-            this.dessert3Avail.UseVisualStyleBackColor = true;
+            this.dessert3Avail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // drinkKid1Avail
             // 
-            this.drinkKid1Avail.AutoSize = true;
-            this.drinkKid1Avail.Location = new System.Drawing.Point(694, 37);
+            this.drinkKid1Avail.Location = new System.Drawing.Point(694, 38);
             this.drinkKid1Avail.Name = "drinkKid1Avail";
-            this.drinkKid1Avail.Size = new System.Drawing.Size(103, 19);
-            this.drinkKid1Avail.TabIndex = 90;
+            this.drinkKid1Avail.ReadOnly = true;
+            this.drinkKid1Avail.Size = new System.Drawing.Size(116, 20);
+            this.drinkKid1Avail.TabIndex = 106;
             this.drinkKid1Avail.Text = "Not Availiable";
-            this.drinkKid1Avail.UseVisualStyleBackColor = true;
+            this.drinkKid1Avail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // drinkKid2Avail
             // 
-            this.drinkKid2Avail.AutoSize = true;
-            this.drinkKid2Avail.Location = new System.Drawing.Point(694, 63);
+            this.drinkKid2Avail.Location = new System.Drawing.Point(694, 65);
             this.drinkKid2Avail.Name = "drinkKid2Avail";
-            this.drinkKid2Avail.Size = new System.Drawing.Size(103, 19);
-            this.drinkKid2Avail.TabIndex = 89;
+            this.drinkKid2Avail.ReadOnly = true;
+            this.drinkKid2Avail.Size = new System.Drawing.Size(116, 20);
+            this.drinkKid2Avail.TabIndex = 107;
             this.drinkKid2Avail.Text = "Not Availiable";
-            this.drinkKid2Avail.UseVisualStyleBackColor = true;
+            this.drinkKid2Avail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // drinkKid3Avail
             // 
-            this.drinkKid3Avail.AutoSize = true;
             this.drinkKid3Avail.Location = new System.Drawing.Point(694, 90);
             this.drinkKid3Avail.Name = "drinkKid3Avail";
-            this.drinkKid3Avail.Size = new System.Drawing.Size(103, 19);
-            this.drinkKid3Avail.TabIndex = 88;
+            this.drinkKid3Avail.ReadOnly = true;
+            this.drinkKid3Avail.Size = new System.Drawing.Size(116, 20);
+            this.drinkKid3Avail.TabIndex = 108;
             this.drinkKid3Avail.Text = "Not Availiable";
-            this.drinkKid3Avail.UseVisualStyleBackColor = true;
+            this.drinkKid3Avail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // drinkAdult1Avail
             // 
-            this.drinkAdult1Avail.AutoSize = true;
-            this.drinkAdult1Avail.Location = new System.Drawing.Point(694, 161);
+            this.drinkAdult1Avail.Location = new System.Drawing.Point(694, 159);
             this.drinkAdult1Avail.Name = "drinkAdult1Avail";
-            this.drinkAdult1Avail.Size = new System.Drawing.Size(103, 19);
-            this.drinkAdult1Avail.TabIndex = 93;
+            this.drinkAdult1Avail.ReadOnly = true;
+            this.drinkAdult1Avail.Size = new System.Drawing.Size(116, 20);
+            this.drinkAdult1Avail.TabIndex = 109;
             this.drinkAdult1Avail.Text = "Not Availiable";
-            this.drinkAdult1Avail.UseVisualStyleBackColor = true;
+            this.drinkAdult1Avail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // drinkAdult2Avail
             // 
-            this.drinkAdult2Avail.AutoSize = true;
-            this.drinkAdult2Avail.Location = new System.Drawing.Point(694, 185);
+            this.drinkAdult2Avail.Location = new System.Drawing.Point(694, 187);
             this.drinkAdult2Avail.Name = "drinkAdult2Avail";
-            this.drinkAdult2Avail.Size = new System.Drawing.Size(103, 19);
-            this.drinkAdult2Avail.TabIndex = 92;
+            this.drinkAdult2Avail.ReadOnly = true;
+            this.drinkAdult2Avail.Size = new System.Drawing.Size(116, 20);
+            this.drinkAdult2Avail.TabIndex = 110;
             this.drinkAdult2Avail.Text = "Not Availiable";
-            this.drinkAdult2Avail.UseVisualStyleBackColor = true;
+            this.drinkAdult2Avail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // drinkAdult3Avail
             // 
-            this.drinkAdult3Avail.AutoSize = true;
-            this.drinkAdult3Avail.Location = new System.Drawing.Point(694, 208);
+            this.drinkAdult3Avail.Location = new System.Drawing.Point(694, 214);
             this.drinkAdult3Avail.Name = "drinkAdult3Avail";
-            this.drinkAdult3Avail.Size = new System.Drawing.Size(103, 19);
-            this.drinkAdult3Avail.TabIndex = 91;
+            this.drinkAdult3Avail.ReadOnly = true;
+            this.drinkAdult3Avail.Size = new System.Drawing.Size(116, 20);
+            this.drinkAdult3Avail.TabIndex = 111;
             this.drinkAdult3Avail.Text = "Not Availiable";
-            this.drinkAdult3Avail.UseVisualStyleBackColor = true;
+            this.drinkAdult3Avail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // MenuForm
             // 
             this.ClientSize = new System.Drawing.Size(873, 510);
-            this.Controls.Add(this.drinkAdult1Avail);
-            this.Controls.Add(this.drinkAdult2Avail);
             this.Controls.Add(this.drinkAdult3Avail);
-            this.Controls.Add(this.drinkKid1Avail);
-            this.Controls.Add(this.drinkKid2Avail);
+            this.Controls.Add(this.drinkAdult2Avail);
+            this.Controls.Add(this.drinkAdult1Avail);
             this.Controls.Add(this.drinkKid3Avail);
-            this.Controls.Add(this.dessert1Avail);
-            this.Controls.Add(this.dessert2Avail);
+            this.Controls.Add(this.drinkKid2Avail);
+            this.Controls.Add(this.drinkKid1Avail);
             this.Controls.Add(this.dessert3Avail);
-            this.Controls.Add(this.entree1Avail);
-            this.Controls.Add(this.entree2Avail);
+            this.Controls.Add(this.dessert2Avail);
+            this.Controls.Add(this.dessert1Avail);
             this.Controls.Add(this.entree3Avail);
-            this.Controls.Add(this.soupSalad1Avail);
-            this.Controls.Add(this.soupSalad2Avail);
+            this.Controls.Add(this.entree2Avail);
+            this.Controls.Add(this.entree1Avail);
             this.Controls.Add(this.soupSalad3Avail);
+            this.Controls.Add(this.soupSalad2Avail);
+            this.Controls.Add(this.soupSalad1Avail);
             this.Controls.Add(this.appetizer3avail);
             this.Controls.Add(this.appetizer2avail);
             this.Controls.Add(this.appetizer1avail);
@@ -1260,7 +1277,7 @@ namespace WaitStaffApplicataion
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
            // if (item1Available == true)
-           if (appetizer1avail.CheckState != CheckState.Checked)
+           if (curMenu.getAvaliable(0) == true)
             {
                 menuValues[0] = (int)selectAppetizer1.Value;
             }
@@ -1284,7 +1301,7 @@ namespace WaitStaffApplicataion
         //Numeric up/down for the second menu item
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
-            if (appetizer2avail.CheckState != CheckState.Checked)
+            if (curMenu.getAvaliable(0) == true)
             {
                 menuValues[1] = (int)selectAppetizer2.Value;
             }
@@ -1298,7 +1315,7 @@ namespace WaitStaffApplicataion
 
         private void numericUpDown3_ValueChanged(object sender, EventArgs e)
         {
-            if (appetizer3avail.CheckState != CheckState.Checked)
+            if (curMenu.getAvaliable(2) == true)
             {
                 menuValues[2] = (int)selectAppetizer3.Value;
             }
@@ -1312,7 +1329,7 @@ namespace WaitStaffApplicataion
 
         private void numericUpDown4_ValueChanged(object sender, EventArgs e)
         {
-            if (soupSalad1Avail.CheckState != CheckState.Checked)
+            if (curMenu.getAvaliable(3) == true)
             {
                 menuValues[3] = (int)selectSoupSalad1.Value;
             }
@@ -1325,7 +1342,7 @@ namespace WaitStaffApplicataion
 
         private void numericUpDown5_ValueChanged(object sender, EventArgs e)
         {
-            if (soupSalad2Avail.CheckState != CheckState.Checked)
+            if (curMenu.getAvaliable(4) == true)
             {
                 menuValues[4] = (int)selectSoupSalad2.Value;
             }
@@ -1338,7 +1355,7 @@ namespace WaitStaffApplicataion
 
         private void numericUpDown6_ValueChanged(object sender, EventArgs e)
         {
-            if (soupSalad3Avail.CheckState != CheckState.Checked)
+            if (curMenu.getAvaliable(5) == true)
             {
                 menuValues[5] = (int)selectSoupSalad3.Value;
             }
@@ -1352,7 +1369,7 @@ namespace WaitStaffApplicataion
 
         private void numericUpDown7_ValueChanged(object sender, EventArgs e)
         {
-            if (entree1Avail.CheckState != CheckState.Checked)
+            if (curMenu.getAvaliable(6) == true)
             {
                 menuValues[6] = (int)selectEntree1.Value;
             }
@@ -1367,7 +1384,7 @@ namespace WaitStaffApplicataion
         //The eighth one... Not sure how it became 21
         private void numericUpDown21_ValueChanged(object sender, EventArgs e)
         {
-            if (entree2Avail.CheckState != CheckState.Checked)
+            if (curMenu.getAvaliable(7) == true)
             {
                 menuValues[7] = (int)selectEntree2.Value;
             }
@@ -1382,7 +1399,7 @@ namespace WaitStaffApplicataion
         //The ninth one
         private void numericUpDown20_ValueChanged(object sender, EventArgs e)
         {
-            if (entree3Avail.CheckState != CheckState.Checked)
+            if (curMenu.getAvaliable(8) == true)
             {
                 menuValues[8] = (int)selectEntree3.Value;
             }
@@ -1395,7 +1412,7 @@ namespace WaitStaffApplicataion
         //The tenth one
         private void numericUpDown19_ValueChanged(object sender, EventArgs e)
         {
-            if (dessert1Avail.CheckState != CheckState.Checked)
+            if (curMenu.getAvaliable(9) == true)
             {
                 menuValues[9] = (int)selectDesserts1.Value;
             }
@@ -1408,7 +1425,7 @@ namespace WaitStaffApplicataion
         //11
         private void numericUpDown18_ValueChanged(object sender, EventArgs e)
         {
-            if (dessert2Avail.CheckState != CheckState.Checked)
+            if (curMenu.getAvaliable(10) == true)
             {
                 menuValues[10] = (int)selectDesserts2.Value;
             }
@@ -1421,7 +1438,7 @@ namespace WaitStaffApplicataion
         //12
         private void numericUpDown17_ValueChanged(object sender, EventArgs e)
         {
-            if (dessert3Avail.CheckState != CheckState.Checked)
+            if (curMenu.getAvaliable(11) == true)
             {
                 menuValues[11] = (int)selectDesserts3.Value;
             }
@@ -1434,7 +1451,7 @@ namespace WaitStaffApplicataion
         //13
         private void numericUpDown16_ValueChanged(object sender, EventArgs e)
         {
-            if (drinkKid1Avail.CheckState != CheckState.Checked)
+            if (curMenu.getAvaliable(12) == true)
             {
                 menuValues[12] = (int)selectDrinkKid1.Value;
             }
@@ -1447,7 +1464,7 @@ namespace WaitStaffApplicataion
         //14
         private void numericUpDown15_ValueChanged(object sender, EventArgs e)
         {
-            if (drinkKid2Avail.CheckState != CheckState.Checked)
+            if (curMenu.getAvaliable(13) == true)
             {
                 menuValues[13] = (int)selectDrinkKid2.Value;
             }
@@ -1460,7 +1477,7 @@ namespace WaitStaffApplicataion
         //15
         private void numericUpDown14_ValueChanged(object sender, EventArgs e)
         {
-            if (drinkKid3Avail.CheckState != CheckState.Checked)
+            if (curMenu.getAvaliable(14) == true)
             {
                 menuValues[14] = (int)selectDrinkKid3.Value;
             }
@@ -1473,7 +1490,7 @@ namespace WaitStaffApplicataion
         //16
         private void numericUpDown13_ValueChanged(object sender, EventArgs e)
         {
-            if (drinkAdult1Avail.CheckState != CheckState.Checked)
+            if (curMenu.getAvaliable(15) == true)
             {
                 menuValues[15] = (int)selectDrinkAdult1.Value;
             }
@@ -1488,7 +1505,7 @@ namespace WaitStaffApplicataion
         //17
         private void numericUpDown12_ValueChanged(object sender, EventArgs e)
         {
-            if (drinkAdult2Avail.CheckState != CheckState.Checked)
+            if (curMenu.getAvaliable(16) == true)
             {
                 menuValues[16] = (int)selectDrinkAdult2.Value;
             }
@@ -1502,7 +1519,7 @@ namespace WaitStaffApplicataion
         //18
         private void numericUpDown11_ValueChanged(object sender, EventArgs e)
         {
-            if (drinkAdult3Avail.CheckState != CheckState.Checked)
+            if (curMenu.getAvaliable(17) == true)
             {
                 menuValues[17] = (int)selectDrinkAdult3.Value;
             }
