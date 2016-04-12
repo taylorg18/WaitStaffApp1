@@ -92,6 +92,7 @@ namespace WaitStaffApplicataion
                     Console.WriteLine("" + menuFile[i] + " "+ Int32.Parse(menuFile[i + 1]) + " " +Int32.Parse(menuFile[i + 2]));
                     temp = new FoodItem(menuFile[i], Int32.Parse(menuFile[i + 1]), Int32.Parse(menuFile[i + 2]));
                     menu.addItem(temp);
+                   
                 }
                 catch(Exception e)
                 {

@@ -130,6 +130,7 @@ namespace WaitStaffApplicataion
                 selectSoupSalad3, selectEntree1, selectEntree2, selectEntree3, selectDesserts1, selectDesserts2, selectDesserts3, selectDrinkKid1,
                 selectDrinkKid2, selectDrinkKid3, selectDrinkAdult1, selectDrinkAdult2, selectDrinkAdult3 };
 
+            curMenu = menu;
 
             this.appetizer1avail.Visible = !(curMenu.getAvaliable(0));
             this.appetizer2avail.Visible = !(curMenu.getAvaliable(1));
@@ -153,7 +154,7 @@ namespace WaitStaffApplicataion
 
 
             usingReceipt = curReceipt;
-            curMenu = menu;
+         
 
             //For setting the prices in the GUI
             for (int i= 0; i< FoodPrices.Length; i++){
@@ -169,11 +170,11 @@ namespace WaitStaffApplicataion
             //For setting if the food is available. if checked, the item is not available and value set to 0.
             for (int k = 0; k < nudSelectors.Length; k++)
             {
-                if(checkBoxes[k].CheckState == CheckState.Checked){
+                /*if(checkBoxes[k].CheckState == CheckState.Checked){
 
                     nudSelectors[k].Value = 0;
 
-                }
+                }*/
               
             }
 
@@ -1243,7 +1244,8 @@ namespace WaitStaffApplicataion
         //send order button
         private void button2_Click(object sender, EventArgs e)
         {
-            System.IO.File.WriteAllText(@"C:\waitData\MenuItemOrdered.txt", "");
+            // System.IO.File.WriteAllText(@"C:\waitData\MenuItemOrdered.txt", "");
+            string userName = Environment.UserName;
 
             for (int i = 0; i < tbFoodNames.Length; i++)
             {
@@ -1251,7 +1253,7 @@ namespace WaitStaffApplicataion
                 {  
                     //gonna decide how to get the names in there later when I do the importing of menuItems from the txt file
                     string Orders = tbFoodNames[i].Text + " " + nudSelectors[i].Value + "\r\n";
-                    System.IO.File.AppendAllText(@"C:\waitData\MenuItemOrdered.txt", Orders);
+                    System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Cooks\WaitStaffCooking.txt"), Orders);
 
                     curMenu.buyItem(i, (int)nudSelectors[i].Value);
                     
