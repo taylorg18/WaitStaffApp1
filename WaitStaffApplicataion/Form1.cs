@@ -307,7 +307,7 @@ namespace WaitStaffApplicataion
                 }
                 empLine = dayOweek + "," + menu.getFoodItem(i).getName() +","+ menu.getFoodItem(i).getPrice() +","+menu.getFoodItem(i).getSold() + "," + totalTips + "\r\n";
                 totalTips = 0;
-                System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Management\waitMan.txt"), empLine);
+                System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Management\WaitStaffManagement.txt"), empLine);
 
             }
 
