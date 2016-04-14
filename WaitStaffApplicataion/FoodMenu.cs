@@ -48,5 +48,16 @@ namespace WaitStaffApplicataion
         {
             items[index].setStock(false);
         }
+
+        public void outOfStock(string itemName)
+        {
+            for(int i = 0; i < items.Length; i++)
+            {
+                if(items[i].getName() == itemName)
+                {
+                    items[i].setStock(false);
+                }
+            }
+        }
     }
 }

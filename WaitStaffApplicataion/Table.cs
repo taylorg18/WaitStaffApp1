@@ -11,7 +11,7 @@ using System.Windows.Forms;
 * Description:
 *   The Table class is used to track one tables status and receipts.
 * 
-* Authors: Alex Reinemann
+* Authors: Alex Reinemann, Grayson Taylor, Michael Larios, Michael Liao
 * Date created: 2/20/2016
 */
 namespace WaitStaffApplicataion

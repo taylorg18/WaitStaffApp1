@@ -256,6 +256,46 @@ namespace WaitStaffApplicataion
         */
         private void updateRec_Click(object sender, EventArgs e)
         {
+            string userName = Environment.UserName;
+            string[] cookInput = System.IO.File.ReadAllLines(@"C:\Users\" + userName + @"\Dropbox\CS 341\Cooks\CookWait.txt");
+            Table temp = null;
+            int tableNum = -1;
+            string itemOrdered;
+            string canMake;
+            int commaIndex;
+            foreach(string input in cookInput)
+            {
+                try
+                {
+                    tableNum = Int32.Parse(input);
+                    continue;
+                }
+                catch(Exception error)
+                {
+                    
+                }
+                commaIndex = input.IndexOf(",");
+                itemOrdered = input.Substring(0, commaIndex);
+                Console.WriteLine(itemOrdered);
+                canMake = input.Substring(commaIndex + 1);
+
+                if(canMake == "y")
+                {
+                    //do nothing
+                }
+                else
+                {
+                    menu.outOfStock(itemOrdered);
+                    
+                       
+                }
+
+
+
+            }
+
+
+
             /*
             string userName = Environment.UserName;
             System.IO.File.WriteAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Reception\waitRec.txt"), "");
