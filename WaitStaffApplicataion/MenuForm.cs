@@ -866,6 +866,7 @@ namespace WaitStaffApplicataion
             this.back.TabIndex = 68;
             this.back.Text = "Back";
             this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // priceAppetizersName
             // 
@@ -1532,6 +1533,9 @@ namespace WaitStaffApplicataion
             }
         }
 
-
+        private void back_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

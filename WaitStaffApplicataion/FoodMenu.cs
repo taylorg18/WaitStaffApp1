@@ -29,6 +29,19 @@ namespace WaitStaffApplicataion
             return items[index];
         }
 
+        public FoodItem getFoodItem(string itemName)
+        {
+            for (int i = 0; i < items.Length; i++)
+            {
+                if (items[i].getName().Equals(itemName))
+                {
+                    return items[i];
+                }
+            }
+
+            return null;
+        }
+
         public int getNumItems()
         {
             return numFoods;
@@ -53,7 +66,7 @@ namespace WaitStaffApplicataion
         {
             for(int i = 0; i < items.Length; i++)
             {
-                if(items[i].getName() == itemName)
+                if(items[i].getName().Equals(itemName))
                 {
                     items[i].setStock(false);
                 }

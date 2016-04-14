@@ -60,6 +60,33 @@ namespace WaitStaffApplicataion
         }
 
         /**
+     * searches and removes one instance of a food item with the name of the given item
+     *
+     * returns 0 if successful
+     * returns 1 in nothing removed
+     */
+        public int removeAllItem(FoodItem item)
+        {
+            fBill -= item.getPrice();
+
+            int i = 0;
+            foreach (FoodItem list in items)
+            {
+                if (list.getName().Equals(item.getName()))
+                {
+                    items.RemoveAt(i);
+                    iNumItems--;
+                   
+                }
+                else
+                {
+                    i++;
+                }
+            }
+            return 1;
+        }
+
+        /**
         * generates a text to display
         *
         * returns a list of food items

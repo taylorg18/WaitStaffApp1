@@ -25,7 +25,7 @@ namespace WaitStaffApplicataion
         Table[] tables = new Table[16]; //an array representing the table objects for the restaurant 
         Button[] buttons; //the buttons for the tables on the form
         Employee[] staff = new Employee[5]; //an array representing the Waitstaff of the restaurant
-
+        PictureBox[] tableBoxes;
         /*
             Constructor
             Initializes the buttons and creates all objects necessary for the program
@@ -37,6 +37,8 @@ namespace WaitStaffApplicataion
                     tableButton8, tableButton9, tableButton10, tableButton11, tableButton12,  tableButton13, tableButton14,
                     tableButton15, toGoTable};
 
+            tableBoxes = new PictureBox[16]{pictureBox1,pictureBox2,pictureBox3,pictureBox4,pictureBox5,pictureBox6,pictureBox7,
+                        pictureBox8,pictureBox9,pictureBox10,pictureBox11,pictureBox12,pictureBox13,pictureBox14,pictureBox15,pictureBox16};
             //update button names
             for(int i = 0; i < buttons.Length;i++)
             {
@@ -147,6 +149,8 @@ namespace WaitStaffApplicataion
             {
                 return;
             }
+
+            tableBoxes[indexSelected].BackColor = Color.Silver;
             //creates form based on which table was clicked
             TableForm2 tableForm = new TableForm2(tables[indexSelected], buttons[indexSelected], menu);
             tableForm.Visible = true;
@@ -263,6 +267,7 @@ namespace WaitStaffApplicataion
             string itemOrdered;
             string canMake;
             int commaIndex;
+            Receipt tempReceipt;
             foreach(string input in cookInput)
             {
                 try
@@ -285,9 +290,12 @@ namespace WaitStaffApplicataion
                 }
                 else
                 {
+                   
+                    tableBoxes[tableNum -1].BackColor = Color.Red;
+              
+                    tables[tableNum - 1].getReceipt().removeAllItem(menu.getFoodItem(itemOrdered));
                     menu.outOfStock(itemOrdered);
-                    
-                       
+
                 }
 
 
