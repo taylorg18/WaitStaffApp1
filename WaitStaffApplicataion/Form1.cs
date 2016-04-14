@@ -80,6 +80,7 @@ namespace WaitStaffApplicataion
                 }
             }
 
+
             string userName = Environment.UserName;
             Console.WriteLine(userName);
             string[] menuFile = System.IO.File.ReadAllLines(@"C:\Users\" + userName + @"\Dropbox\CS 341\Waitstaff\menu.txt");
@@ -208,7 +209,7 @@ namespace WaitStaffApplicataion
                     //check for a togo order
                     if (temp == tables[15])
                     {
-                        toGo += tableInfo + "\r\n";
+                        toGo += tableInfo;
                     }
                     else
                     {
@@ -255,6 +256,7 @@ namespace WaitStaffApplicataion
         */
         private void updateRec_Click(object sender, EventArgs e)
         {
+            /*
             string userName = Environment.UserName;
             System.IO.File.WriteAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Reception\waitRec.txt"), "");
 
@@ -275,7 +277,7 @@ namespace WaitStaffApplicataion
             }
 
             System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Reception\waitRec.txt"), "\r\n");
-
+            */
 
         }
 
@@ -286,7 +288,7 @@ namespace WaitStaffApplicataion
         private void updateMan_Click(object sender, EventArgs e)
         {
             string userName = Environment.UserName;
-            //System.IO.File.WriteAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Management\waitMan.txt"), "");
+           
             string dayOweek = DateTime.Now.DayOfWeek.ToString();
             dayOweek = dayOweek.ToUpper().Substring(0,3);
 

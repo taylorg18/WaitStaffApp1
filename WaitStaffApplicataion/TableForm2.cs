@@ -60,6 +60,23 @@ namespace WaitStaffApplicataion
 
         private void Clean_Click(object sender, EventArgs e)
         {
+            string userName = Environment.UserName;
+            if (tCurrentTable.getTableNum() == 16)
+            {
+                System.IO.File.WriteAllText(@"C:\Users\" + userName + @"\Dropbox\CS 341\Reception\waitRecName.txt", tCurrentTable.getSpecial());
+             }
+            else
+            {
+
+                if (System.IO.File.Exists(@"C:\Users\" + userName + @"\Dropbox\CS 341\Reception\waitRecNumber.txt"))
+                {
+                    return;
+                }
+                else
+                {
+                    System.IO.File.WriteAllText(@"C:\Users\" + userName + @"\Dropbox\CS 341\Reception\waitRecNumber.txt", tCurrentTable.getTableNum() + "");
+                }
+            }
             tCurrentTable.updateTableStatus();
             tCurrentTable.setTableMerged(-1);
             tCurrentButton.BackColor=Color.Green;
@@ -69,6 +86,8 @@ namespace WaitStaffApplicataion
 
             textBox1.Text = "Table Number: " + tCurrentTable.getTableNum() + "\r\n Number of People: " + tCurrentTable.getNumPeople()
                    + " \r\n" + tCurrentTable.getSpecial();
+
+
 
         }
     }

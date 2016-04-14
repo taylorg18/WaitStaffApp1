@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.Section1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.toGoTable = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableButton3 = new System.Windows.Forms.Button();
@@ -66,9 +68,8 @@
             this.refreshButton = new System.Windows.Forms.Button();
             this.updateRec = new System.Windows.Forms.Button();
             this.updateMan = new System.Windows.Forms.Button();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.toGoTable = new System.Windows.Forms.Button();
             this.Section1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -88,7 +89,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.SuspendLayout();
             // 
             // Section1
@@ -109,6 +109,15 @@
             this.Section1.Text = "Section 1";
             this.Section1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox16.Location = new System.Drawing.Point(87, 443);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(30, 24);
+            this.pictureBox16.TabIndex = 19;
+            this.pictureBox16.TabStop = false;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Silver;
@@ -117,6 +126,16 @@
             this.pictureBox3.Size = new System.Drawing.Size(30, 24);
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
+            // 
+            // toGoTable
+            // 
+            this.toGoTable.Location = new System.Drawing.Point(6, 415);
+            this.toGoTable.Name = "toGoTable";
+            this.toGoTable.Size = new System.Drawing.Size(75, 81);
+            this.toGoTable.TabIndex = 18;
+            this.toGoTable.Text = "button13";
+            this.toGoTable.UseVisualStyleBackColor = true;
+            this.toGoTable.Click += new System.EventHandler(this.tableClick);
             // 
             // pictureBox2
             // 
@@ -473,7 +492,7 @@
             this.updateRec.Name = "updateRec";
             this.updateRec.Size = new System.Drawing.Size(116, 23);
             this.updateRec.TabIndex = 5;
-            this.updateRec.Text = "Send Update";
+            this.updateRec.Text = "Check Orders";
             this.updateRec.UseVisualStyleBackColor = true;
             this.updateRec.Click += new System.EventHandler(this.updateRec_Click);
             // 
@@ -486,25 +505,6 @@
             this.updateMan.Text = "Update Management";
             this.updateMan.UseVisualStyleBackColor = true;
             this.updateMan.Click += new System.EventHandler(this.updateMan_Click);
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.BackColor = System.Drawing.Color.Silver;
-            this.pictureBox16.Location = new System.Drawing.Point(87, 443);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(30, 24);
-            this.pictureBox16.TabIndex = 19;
-            this.pictureBox16.TabStop = false;
-            // 
-            // toGoTable
-            // 
-            this.toGoTable.Location = new System.Drawing.Point(6, 415);
-            this.toGoTable.Name = "toGoTable";
-            this.toGoTable.Size = new System.Drawing.Size(75, 81);
-            this.toGoTable.TabIndex = 18;
-            this.toGoTable.Text = "button13";
-            this.toGoTable.UseVisualStyleBackColor = true;
-            this.toGoTable.Click += new System.EventHandler(this.tableClick);
             // 
             // Sections
             // 
@@ -523,6 +523,7 @@
             this.Text = "Table Sections";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Section1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -542,7 +543,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.ResumeLayout(false);
 
         }
