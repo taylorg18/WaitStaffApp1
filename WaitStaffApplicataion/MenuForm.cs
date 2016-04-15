@@ -1254,7 +1254,7 @@ namespace WaitStaffApplicataion
                 {  
                     //gonna decide how to get the names in there later when I do the importing of menuItems from the txt file
                     string Orders = tbFoodNames[i].Text + " " + nudSelectors[i].Value + "\r\n";
-                    System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Cooks\WaitStaffCooking.txt"), Orders);
+                    System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\WaitStaffCooking.txt"), Orders);
 
                     curMenu.buyItem(i, (int)nudSelectors[i].Value);
                     
@@ -1262,7 +1262,7 @@ namespace WaitStaffApplicataion
                     {
                         usingReceipt.addItem(curMenu.getFoodItem(i));
                     }
-                    //
+                    //change to array then try again??????????
                 }
             }
 

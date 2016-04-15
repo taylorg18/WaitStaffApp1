@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System;
 
 namespace WaitStaffApplicataion
 {
@@ -14,7 +15,7 @@ namespace WaitStaffApplicataion
     public class Receipt
     {
         private string sDesc;
-        private ArrayList items = new ArrayList();//foods on the reciept
+        private ArrayList itemsBought = new ArrayList();//foods on the reciept
         private bool bPaymentType = false;//payed with cash or credit
         public double fTip; //tip given on bill
         private float fBill; //ammount owed by customer
@@ -28,7 +29,7 @@ namespace WaitStaffApplicataion
         public void addItem(FoodItem newItem)
         {
             fBill += newItem.getPrice();
-            items.Add(newItem);
+            itemsBought.Add(newItem);
             iNumItems++;
         }
 
@@ -43,11 +44,11 @@ namespace WaitStaffApplicataion
             fBill -= item.getPrice();
 
             int i = 0;
-            foreach (FoodItem list in items)
+            foreach (FoodItem list in itemsBought)
             {
                 if(list.getName().Equals(item.getName()))
                 {
-                    items.RemoveAt(i);
+                    itemsBought.RemoveAt(i);
                     iNumItems--;
                     return 0;
                 }
@@ -59,6 +60,26 @@ namespace WaitStaffApplicataion
             return 1;
         }
 
+
+        /**
+            Returns all the items on the receipt
+     */
+
+        public ArrayList getItems()
+        {
+            return itemsBought;
+
+        }
+
+
+        /**
+            Sets a new arraylist of items
+     */
+
+        public void setItems(ArrayList newList)
+        {
+            itemsBought = newList;
+        }
         /**
      * searches and removes one instance of a food item with the name of the given item
      *
@@ -70,19 +91,21 @@ namespace WaitStaffApplicataion
             fBill -= item.getPrice();
 
             int i = 0;
-            foreach (FoodItem list in items)
+            ArrayList temp = new ArrayList();
+            
+            foreach (FoodItem list in itemsBought)
             {
                 if (list.getName().Equals(item.getName()))
                 {
-                    items.RemoveAt(i);
-                    iNumItems--;
-                   
+                    itemsBought.Remove(list);                  
                 }
                 else
                 {
                     i++;
                 }
             }
+
+           
             return 1;
         }
 
@@ -94,9 +117,9 @@ namespace WaitStaffApplicataion
         public string printReceipt()
         {
             string temp = "";
-            if (items != null && items.Capacity != 0)
+            if (itemsBought != null && itemsBought.Capacity != 0)
             {
-                foreach (FoodItem fi in items)
+                foreach (FoodItem fi in itemsBought)
                 {
                     temp += fi.getName() + " " + fi.getPrice() + "\r\n";
                 }
@@ -160,5 +183,6 @@ namespace WaitStaffApplicataion
         {
             sDesc = newDesc;
         }
+
     }
 }

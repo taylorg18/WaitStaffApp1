@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -267,7 +268,7 @@ namespace WaitStaffApplicataion
             string itemOrdered;
             string canMake;
             int commaIndex;
-            Receipt tempReceipt;
+            ArrayList tempReceipt = new ArrayList();
             foreach(string input in cookInput)
             {
                 try
@@ -292,8 +293,23 @@ namespace WaitStaffApplicataion
                 {
                    
                     tableBoxes[tableNum -1].BackColor = Color.Red;
-              
-                    tables[tableNum - 1].getReceipt().removeAllItem(menu.getFoodItem(itemOrdered));
+
+                    tempReceipt = tables[tableNum - 1].getReceipt().getItems();
+                    foreach(FoodItem delete in tempReceipt)
+                    {
+                        if(delete.getName().Equals(itemOrdered))
+                        {
+                            tempReceipt.Remove(delete);
+                        }
+                    }
+
+                    tables[tableNum - 1].addNewReciept();
+                    foreach (FoodItem add in tempReceipt)
+                    {
+                        Console.WriteLine(add.getName());
+                        tables[tableNum - 1].getReceipt().addItem(add);
+                    }
+
                     menu.outOfStock(itemOrdered);
 
                 }
@@ -301,31 +317,6 @@ namespace WaitStaffApplicataion
 
 
             }
-
-
-
-            /*
-            string userName = Environment.UserName;
-            System.IO.File.WriteAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Reception\waitRec.txt"), "");
-
-            //if a table is open put in file
-            foreach (Table holderTable in tables)
-            {
-                if (holderTable.getTableStatus() == 0)
-                {
-                    string holderAddedLine = holderTable.getTableNum() + "\r\n";
-                    if(holderTable.getTableNum() == 16)
-                    {
-                        //makes it 17 because Table 17 is togo orders
-                        holderAddedLine = "17\r\n";
-                    }
-
-                    System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Reception\waitRec.txt"), holderAddedLine);
-                }
-            }
-
-            System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Reception\waitRec.txt"), "\r\n");
-            */
 
         }
 
