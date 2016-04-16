@@ -15,7 +15,7 @@ namespace WaitStaffApplicataion
     public class Receipt
     {
         private string sDesc;
-        private ArrayList itemsBought = new ArrayList();//foods on the reciept
+        private FoodItem[] itemsBought = new FoodItem[40];//foods on the reciept
         private bool bPaymentType = false;//payed with cash or credit
         public double fTip; //tip given on bill
         private float fBill; //ammount owed by customer
@@ -28,10 +28,37 @@ namespace WaitStaffApplicataion
         */
         public void addItem(FoodItem newItem)
         {
+            if(iNumItems >= itemsBought.Length)
+            {
+                return;
+            }
             fBill += newItem.getPrice();
-            itemsBought.Add(newItem);
+            itemsBought[iNumItems] = new FoodItem(newItem.getName(), newItem.getPrice(), newItem.getTime());
+            itemsBought[iNumItems].setAmountSold(1);
             iNumItems++;
+
+            this.updateTotalItemBought(newItem);
         }
+
+        /**
+        * searches and updates one common item to have a total count of the number sold
+        *
+        * returns 0 if successful
+        * returns 1 in nothing removed
+        */
+        public void updateTotalItemBought(FoodItem item)
+        {
+            for (int i = 0; i < itemsBought.Length; i++)
+            {
+                if (itemsBought[i] != null && itemsBought[i].getName().Equals(item.getName()))
+                {
+                    itemsBought[i].setAmountSold(itemsBought[i].getSold() + 1);
+                    return;             
+               }
+
+            }
+        }
+
 
         /**
         * searches and removes one instance of a food item with the name of the given item
@@ -43,43 +70,22 @@ namespace WaitStaffApplicataion
         {
             fBill -= item.getPrice();
 
-            int i = 0;
-            foreach (FoodItem list in itemsBought)
+            
+            for(int i = 0; i < itemsBought.Length; i++)
             {
-                if(list.getName().Equals(item.getName()))
+                if(itemsBought[i] != null && itemsBought[i].getName().Equals(item.getName()))
                 {
-                    itemsBought.RemoveAt(i);
-                    iNumItems--;
+                    itemsBought[i] = null;
+                    
                     return 0;
                 }
-                else
-                {
-                    i++;
-                }
+               
             }
             return 1;
         }
 
 
-        /**
-            Returns all the items on the receipt
-     */
-
-        public ArrayList getItems()
-        {
-            return itemsBought;
-
-        }
-
-
-        /**
-            Sets a new arraylist of items
-     */
-
-        public void setItems(ArrayList newList)
-        {
-            itemsBought = newList;
-        }
+        
         /**
      * searches and removes one instance of a food item with the name of the given item
      *
@@ -95,14 +101,11 @@ namespace WaitStaffApplicataion
             
             foreach (FoodItem list in itemsBought)
             {
-                if (list.getName().Equals(item.getName()))
+                if (list != null && list.getName().Equals(item.getName()))
                 {
-                    itemsBought.Remove(list);                  
+                    list.setAmountSold(0);                  
                 }
-                else
-                {
-                    i++;
-                }
+               
             }
 
            
@@ -117,15 +120,33 @@ namespace WaitStaffApplicataion
         public string printReceipt()
         {
             string temp = "";
-            if (itemsBought != null && itemsBought.Capacity != 0)
+            if (itemsBought != null && itemsBought.Length != 0)
             {
                 foreach (FoodItem fi in itemsBought)
                 {
-                    temp += fi.getName() + " " + fi.getPrice() + "\r\n";
+                    if (fi != null && fi.getSold() > 0)
+                    {
+                        temp += fi.getName() + " " + fi.getPrice() + "\r\n";
+                    }
                 }
             }
                 temp += "\r\n\r\n\r\n" + sDesc;
             return temp;
+        }
+
+        /**
+        * gets an item in the array
+        */
+        public FoodItem getItem(String name)
+        {
+            foreach(FoodItem item in itemsBought)
+            {
+                if(item != null && item.getName().Equals(name))
+                {
+                    return item;
+                }
+            }
+            return null;
         }
 
         /**

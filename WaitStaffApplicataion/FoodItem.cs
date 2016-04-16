@@ -25,12 +25,7 @@
         {
             sName = name;
         }
-        /*
-        public void setSpecial(string special)
-        {
-            sSpecial = special;
-        }
-        */
+       
         public void setPrice(int price)
         {
             fPrice = price;
@@ -46,6 +41,15 @@
             return sName;
         }
 
+        public int getTime()
+        {
+            return iTimeToPrepare;
+        }
+
+        public void setAmountSold(int sold)
+        {
+            this.iAmountSold = sold;
+        }
         /**
          * determines if item can be sold and returns amount of order not filled without selling any if order cannot be filled
          **/
@@ -54,6 +58,14 @@
             iAmountSold += sold;
         }
 
+
+        /**
+            removes the amount from the sold
+            **/
+        public void undoSold(int sold)
+        {
+            iAmountSold -= sold;
+        }
         /*
            Getters for items sold and amount in stock
         */

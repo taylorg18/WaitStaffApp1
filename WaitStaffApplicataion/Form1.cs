@@ -257,22 +257,22 @@ namespace WaitStaffApplicataion
         }
 
         /*
-            Sends our current tables statuses to Reception
+            Updates all the orders to see if any of the orders caused errors and cannot be fulfilled.
         */
         private void updateRec_Click(object sender, EventArgs e)
         {
             string userName = Environment.UserName;
             string[] cookInput = System.IO.File.ReadAllLines(@"C:\Users\" + userName + @"\Dropbox\CS 341\Cooks\CookWait.txt");
-            Table temp = null;
             int tableNum = -1;
             string itemOrdered;
             string canMake;
             int commaIndex;
-            ArrayList tempReceipt = new ArrayList();
+           
             foreach(string input in cookInput)
             {
                 try
                 {
+                    //check if the line is a number
                     tableNum = Int32.Parse(input);
                     continue;
                 }
@@ -280,43 +280,43 @@ namespace WaitStaffApplicataion
                 {
                     
                 }
-                commaIndex = input.IndexOf(",");
-                itemOrdered = input.Substring(0, commaIndex);
-                Console.WriteLine(itemOrdered);
-                canMake = input.Substring(commaIndex + 1);
-
-                if(canMake == "y")
+                try
                 {
-                    //do nothing
-                }
-                else
-                {
-                   
-                    tableBoxes[tableNum -1].BackColor = Color.Red;
+                    //split the item between the namem and whether or not it was fulfilled
+                    commaIndex = input.IndexOf(",");
+                    itemOrdered = input.Substring(0, commaIndex);
+                    Console.WriteLine(itemOrdered);
+                    canMake = input.Substring(commaIndex + 1);
 
-                    tempReceipt = tables[tableNum - 1].getReceipt().getItems();
-                    foreach(FoodItem delete in tempReceipt)
+                    if (canMake == "y")
                     {
-                        if(delete.getName().Equals(itemOrdered))
+                        //do nothing
+                    }
+                    else
+                    {
+
+                        tableBoxes[tableNum - 1].BackColor = Color.Red;
+
+                        if (tables[tableNum - 1].getReceipt().getItem(itemOrdered) != null)
                         {
-                            tempReceipt.Remove(delete);
+                            menu.undoBuy(tables[tableNum - 1].getReceipt().getItem(itemOrdered),
+                                tables[tableNum - 1].getReceipt().getItem(itemOrdered).getSold() - 1);
+
+                            tables[tableNum - 1].getReceipt().removeAllItem(menu.getFoodItem(itemOrdered));
                         }
-                    }
+                        menu.outOfStock(itemOrdered);
 
-                    tables[tableNum - 1].addNewReciept();
-                    foreach (FoodItem add in tempReceipt)
-                    {
-                        Console.WriteLine(add.getName());
-                        tables[tableNum - 1].getReceipt().addItem(add);
                     }
-
-                    menu.outOfStock(itemOrdered);
 
                 }
+                catch(Exception excep)
+                {
 
-
+                }
 
             }
+            //clear file
+            System.IO.File.WriteAllLines(@"C:\Users\" + userName + @"\Dropbox\CS 341\Cooks\CookWait.txt", new string[] { "" });
 
         }
 
@@ -338,7 +338,6 @@ namespace WaitStaffApplicataion
                 totalTips += (int)emp.getTips();
             }
 
-          //  System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Management\waitMan.txt"), "Day,Meal,Number_Times_Ordered,Price,Tips\r\n");
 
             string empLine;
             for (int i = 0; i < menu.getNumItems(); i++)
@@ -346,6 +345,11 @@ namespace WaitStaffApplicataion
                 if(menu.getFoodItem(i).getName() == "0")
                 {
                     continue;
+                }
+
+                if(menu.getFoodItem(i).getSold() < 0)
+                {
+                    menu.getFoodItem(i).setAmountSold(0);
                 }
                 empLine = dayOweek + "," + menu.getFoodItem(i).getName() +","+ menu.getFoodItem(i).getPrice() +","+menu.getFoodItem(i).getSold() + "," + totalTips + "\r\n";
                 totalTips = 0;

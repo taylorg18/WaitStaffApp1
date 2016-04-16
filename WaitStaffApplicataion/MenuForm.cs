@@ -48,12 +48,6 @@ namespace WaitStaffApplicataion
         private TextBox drinkAdult1;
         private TextBox drinkAdult2;
         private TextBox drinkAdult3;
-        private TextBox drinkAdultName;
-        private TextBox entreeName;
-        private TextBox drinkKidName;
-        private TextBox soupSaladName;
-        private TextBox dessertsName;
-        private TextBox appetizersName;
         private TextBox priceSoupSalad2;
         private TextBox priceSoupSalad1;
         private TextBox priceAppetizer3;
@@ -113,7 +107,9 @@ namespace WaitStaffApplicataion
         private TextBox drinkAdult3Avail;
         private FoodMenu curMenu;
 
-        public MenuForm(Receipt curReceipt, FoodMenu menu)
+        private Table table;
+
+        public MenuForm(Table curTable, FoodMenu menu)
         {
             InitializeComponent();
 
@@ -152,8 +148,8 @@ namespace WaitStaffApplicataion
             this.drinkAdult3Avail.Visible = !(curMenu.getAvaliable(17));
 
 
-
-            usingReceipt = curReceipt;
+            table = curTable;
+            usingReceipt = curTable.getReceipt();
          
 
             //For setting the prices in the GUI
@@ -233,12 +229,6 @@ namespace WaitStaffApplicataion
             this.selectDrinkAdult1 = new System.Windows.Forms.NumericUpDown();
             this.selectDrinkAdult2 = new System.Windows.Forms.NumericUpDown();
             this.selectDrinkAdult3 = new System.Windows.Forms.NumericUpDown();
-            this.drinkAdultName = new System.Windows.Forms.TextBox();
-            this.entreeName = new System.Windows.Forms.TextBox();
-            this.drinkKidName = new System.Windows.Forms.TextBox();
-            this.soupSaladName = new System.Windows.Forms.TextBox();
-            this.dessertsName = new System.Windows.Forms.TextBox();
-            this.appetizersName = new System.Windows.Forms.TextBox();
             this.priceSoupSalad2 = new System.Windows.Forms.TextBox();
             this.priceSoupSalad1 = new System.Windows.Forms.TextBox();
             this.priceAppetizer3 = new System.Windows.Forms.TextBox();
@@ -626,66 +616,6 @@ namespace WaitStaffApplicataion
             this.selectDrinkAdult3.Size = new System.Drawing.Size(44, 20);
             this.selectDrinkAdult3.TabIndex = 19;
             this.selectDrinkAdult3.ValueChanged += new System.EventHandler(this.numericUpDown11_ValueChanged);
-            // 
-            // drinkAdultName
-            // 
-            this.drinkAdultName.Location = new System.Drawing.Point(443, 135);
-            this.drinkAdultName.Name = "drinkAdultName";
-            this.drinkAdultName.ReadOnly = true;
-            this.drinkAdultName.Size = new System.Drawing.Size(116, 20);
-            this.drinkAdultName.TabIndex = 44;
-            this.drinkAdultName.Text = "Drinks for Adults ";
-            this.drinkAdultName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // entreeName
-            // 
-            this.entreeName.Location = new System.Drawing.Point(12, 252);
-            this.entreeName.Name = "entreeName";
-            this.entreeName.ReadOnly = true;
-            this.entreeName.Size = new System.Drawing.Size(116, 20);
-            this.entreeName.TabIndex = 45;
-            this.entreeName.Text = "Entrees";
-            this.entreeName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // drinkKidName
-            // 
-            this.drinkKidName.Location = new System.Drawing.Point(443, 12);
-            this.drinkKidName.Name = "drinkKidName";
-            this.drinkKidName.ReadOnly = true;
-            this.drinkKidName.Size = new System.Drawing.Size(116, 20);
-            this.drinkKidName.TabIndex = 46;
-            this.drinkKidName.Text = "Drinks for Kiddies";
-            this.drinkKidName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // soupSaladName
-            // 
-            this.soupSaladName.Location = new System.Drawing.Point(11, 135);
-            this.soupSaladName.Name = "soupSaladName";
-            this.soupSaladName.ReadOnly = true;
-            this.soupSaladName.Size = new System.Drawing.Size(116, 20);
-            this.soupSaladName.TabIndex = 47;
-            this.soupSaladName.Text = "Soups and Salads";
-            this.soupSaladName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // dessertsName
-            // 
-            this.dessertsName.Location = new System.Drawing.Point(11, 373);
-            this.dessertsName.Name = "dessertsName";
-            this.dessertsName.ReadOnly = true;
-            this.dessertsName.Size = new System.Drawing.Size(116, 20);
-            this.dessertsName.TabIndex = 48;
-            this.dessertsName.Text = "Desserts";
-            this.dessertsName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // appetizersName
-            // 
-            this.appetizersName.Location = new System.Drawing.Point(11, 12);
-            this.appetizersName.Name = "appetizersName";
-            this.appetizersName.ReadOnly = true;
-            this.appetizersName.Size = new System.Drawing.Size(116, 20);
-            this.appetizersName.TabIndex = 49;
-            this.appetizersName.Text = "Appetizers";
-            this.appetizersName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // priceSoupSalad2
             // 
@@ -1165,12 +1095,6 @@ namespace WaitStaffApplicataion
             this.Controls.Add(this.priceEntree2);
             this.Controls.Add(this.priceEntree1);
             this.Controls.Add(this.priceSoupSalad3);
-            this.Controls.Add(this.appetizersName);
-            this.Controls.Add(this.dessertsName);
-            this.Controls.Add(this.soupSaladName);
-            this.Controls.Add(this.drinkKidName);
-            this.Controls.Add(this.entreeName);
-            this.Controls.Add(this.drinkAdultName);
             this.Controls.Add(this.selectDesserts3);
             this.Controls.Add(this.selectDrinkKid1);
             this.Controls.Add(this.selectDrinkKid2);
@@ -1245,16 +1169,16 @@ namespace WaitStaffApplicataion
         //send order button
         private void button2_Click(object sender, EventArgs e)
         {
-            // System.IO.File.WriteAllText(@"C:\waitData\MenuItemOrdered.txt", "");
             string userName = Environment.UserName;
+
+            System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Cooks\WaitStaffCooking.txt"), table.getTableNum()+ "\r\n");
 
             for (int i = 0; i < tbFoodNames.Length; i++)
             {
                 if ( nudSelectors[i].Value != 0 && nudSelectors[i].Value >0)
                 {  
-                    //gonna decide how to get the names in there later when I do the importing of menuItems from the txt file
                     string Orders = tbFoodNames[i].Text + " " + nudSelectors[i].Value + "\r\n";
-                    System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\WaitStaffCooking.txt"), Orders);
+                    System.IO.File.AppendAllText((@"C:\Users\" + userName + @"\Dropbox\CS 341\Cooks\WaitStaffCooking.txt"), Orders);
 
                     curMenu.buyItem(i, (int)nudSelectors[i].Value);
                     
@@ -1262,7 +1186,6 @@ namespace WaitStaffApplicataion
                     {
                         usingReceipt.addItem(curMenu.getFoodItem(i));
                     }
-                    //change to array then try again??????????
                 }
             }
 

@@ -51,6 +51,17 @@ namespace WaitStaffApplicataion
         {
             items[index].updateSold(amountSold);
         }
+        
+        public void undoBuy(FoodItem item, int undo)
+        {
+            for(int i = 0; i < items.Length; i++)
+            {
+               if (items[i].getName().Equals(item.getName()))
+                {
+                    items[i].undoSold(undo);
+                 }
+            }
+        }
 
         public bool getAvaliable(int index)
         {

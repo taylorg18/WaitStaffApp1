@@ -38,7 +38,7 @@ namespace WaitStaffApplicataion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MenuForm MenuForm = new MenuForm(tCurrentTable.getReceipt(), curMenu);
+            MenuForm MenuForm = new MenuForm(tCurrentTable, curMenu);
             MenuForm.Visible = true;
         }
 
