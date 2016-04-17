@@ -22,17 +22,27 @@ namespace WaitStaffApplicataion
             tCurrentTable = newTable;
             tCurrentButton = inButton;
             curMenu = menu;
-
+            int waitTime=0;
             if (tCurrentTable.getTableMerged() > 0)
             {
-                textBox1.Text = "Table Number: " + tCurrentTable.getTableNum() + "\r\n Number of People: " + tCurrentTable.getNumPeople()
+                if(this.tCurrentTable.getReceipt()!= null)
+                {
+                    waitTime = this.tCurrentTable.getReceipt().getWaitTime();
+                }
+                textBox1.Text = "Table Number: " + tCurrentTable.getTableNum() + "    " + waitTime + " Wait Time\r\n Number of People: " + tCurrentTable.getNumPeople()
                     + " \r\n" + tCurrentTable.getSpecial() + "Table Merged with: Table " + tCurrentTable.getTableMerged();
             }
             else
             {
-                textBox1.Text = "Table Number: " + tCurrentTable.getTableNum() + "\r\n Number of People: " + tCurrentTable.getNumPeople()
+                if (this.tCurrentTable.getReceipt() != null)
+                {
+                    waitTime = this.tCurrentTable.getReceipt().getWaitTime();
+                }
+                textBox1.Text = "Table Number: " + tCurrentTable.getTableNum() + "     " + waitTime + " Wait Time\r\n Number of People: " + tCurrentTable.getNumPeople()
                     + " \r\n" + tCurrentTable.getSpecial();
             }
+
+            
         }
 
 

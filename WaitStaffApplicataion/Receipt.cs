@@ -112,6 +112,19 @@ namespace WaitStaffApplicataion
             return 1;
         }
 
+        public int getWaitTime()
+        {
+            int WaitTime = 0;
+            for(int i = 0; i < itemsBought.Length; i++)
+            {
+                if(itemsBought[i] != null && itemsBought[i].getTime() > WaitTime)
+                {
+                    WaitTime = itemsBought[i].getTime();
+                }
+            }
+            return WaitTime;
+        }
+
         /**
         * generates a text to display
         *
