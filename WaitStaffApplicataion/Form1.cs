@@ -253,7 +253,7 @@ namespace WaitStaffApplicataion
                 }
                 counter++;          
             }
-            System.IO.File.WriteAllLines((@"C:\Users\" + userName + @"\Dropbox\CS 341\Waitstaff\recWait.txt"), new string[]{""});
+            System.IO.File.Delete((@"C:\Users\" + userName + @"\Dropbox\CS 341\Waitstaff\recWait.txt"));
         }
 
         /*
@@ -262,7 +262,7 @@ namespace WaitStaffApplicataion
         private void updateRec_Click(object sender, EventArgs e)
         {
             string userName = Environment.UserName;
-            string[] cookInput = System.IO.File.ReadAllLines(@"C:\Users\" + userName + @"\Dropbox\CS 341\Cooks\CookWait.txt");
+            string[] cookInput = System.IO.File.ReadAllLines(@"C:\Users\" + userName + @"\Dropbox\CS 341\Waitstaff\CookWait.txt");
             int tableNum = -1;
             string itemOrdered;
             string canMake;
@@ -316,7 +316,7 @@ namespace WaitStaffApplicataion
 
             }
             //clear file
-            System.IO.File.WriteAllLines(@"C:\Users\" + userName + @"\Dropbox\CS 341\Cooks\CookWait.txt", new string[] { "" });
+            System.IO.File.Delete(@"C:\Users\" + userName + @"\Dropbox\CS 341\Waitstaff\CookWait.txt");
 
         }
 
